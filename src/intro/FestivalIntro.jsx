@@ -20,7 +20,7 @@ export default function FestivalIntro({ onComplete }) {
       context = gsap.context(() => {}, root);
       context.add(() => createIntroSequence(root.current, onComplete));
       root.current.querySelector('button')?.focus({ preventScroll: true });
-      timer = setTimeout(interrupt, 4000); // Fail open if animation scheduling stalls.
+      timer = setTimeout(interrupt, 10000); // Fail open if animation scheduling stalls.
     } catch {
       context?.revert();
       onComplete();
@@ -49,6 +49,7 @@ export default function FestivalIntro({ onComplete }) {
       <span className="intro-beam beam-sports"/>
       <span className="intro-beam beam-cultural"/>
       <span className="intro-beam beam-technical"/>
+      <svg className="intro-orbits" viewBox="-500 -300 1000 600" fill="none"><ellipse className="intro-trace trace-sports" rx="400" ry="145" transform="rotate(-28)" pathLength="1"/><ellipse className="intro-trace trace-cultural" rx="330" ry="210" transform="rotate(28)" pathLength="1"/><path className="intro-trace trace-technical" d="M0-240 400 0 0 240-400 0Z M-400 0H400 M0-240V240" pathLength="1"/></svg>
     </div>
     <span className="intro-word" aria-hidden="true">UDHBHAV</span>
     <span className="intro-year" aria-hidden="true">2K27</span>

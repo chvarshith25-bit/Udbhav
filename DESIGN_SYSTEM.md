@@ -23,9 +23,9 @@ GSAP controls hero entrance, static section reveals and hero image parallax. Mot
 
 ## Assets
 
-Hero/gallery concept visual is generated and labeled; optimized WebP is 138KB desktop / 45KB mobile. Gallery and future event images lazy load. Official event images are absent, represented by deliberate category artwork. Never pass generic imagery off as past UDHBHAV photography.
+No official photos, posters, video or logos are installed. Original SVG/CSS motion studies use the same lime, clay and periwinkle palette and line-based geometry as the route transitions. The hero uses orbital tracks, a fine coordinate grid and two flowing lines; gallery uses the same visual language. Category and event placeholders are deliberate original typographic artwork. None represents event coverage.
 
-The top-right institutional logo uses the original red/navy/black colors over the dark header. An SVG alpha mask remove the white plate while preserving the source artwork. It is sized responsively without stretching. Mobile hides the small festival-brand caption to preserve room for the complete institutional lockup and menu.
+The top-right VJIT area is an explicit text placeholder with “OFFICIAL LOGO PENDING”, not an invented institutional mark. Approved media is configured in src/data/assets.js and events.js. AssetVisual handles missing/failed assets. Keep fixed art dimensions/crops so replacing assets does not move the layout. Read public/ASSET_GUIDE.md.
 
 ## Multi-page motion system
 
@@ -37,6 +37,6 @@ Keep the outgoing page mounted until covered; mount the destination before uncov
 
 ## Opening: THE BIRTH OF UDHBHAV
 
-An original 3.2-second brand ident: near-black stage and warm vertical spark (0–0.5s); three restrained lime/clay/periwinkle trajectories converge (0.5–1.3s); clipped UDHBHAV wordmark and spaced 2K27 resolve from their movement (1.3–2.2s); the wordmark moves to the measured hero position while the real image, dates, logo and category entries appear (2.2–3.2s). Existing fonts, colors and homepage composition are retained.
+An original eight-second brand ident: near-black stage and warm spark (0–0.8s); three trajectories and SVG ellipses/diamond paths draw a shared energy field (0.8–3.5s); clipped UDHBHAV wordmark and spaced 2K27 resolve from that geometry (3.5–5s); a brief identity hold leads into the measured homepage handoff (6.3–8s). It uses only GSAP, SVG, CSS and typography, with no image, logo or media dependencies. Existing typography and colors are retained.
 
 `IntroSequence` exclusively owns the opening overlay and initial hero handoff. The normal hero animation must stay disabled for that initial mount; category transition choreography is unchanged. GSAP context revert restores every affected inline style on completion, skip or interruption. The fixed overlay occupies no layout space and the underlying site is inert while it plays. Reduced motion bypasses immediately. No sound, heavy media or external animation dependencies.

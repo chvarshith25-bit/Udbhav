@@ -20,7 +20,7 @@ React 19, Vite 7, Tailwind CSS 4, GSAP + ScrollTrigger, Motion for React, Lucide
 
 Edit `src/data/events.js` for all event facts. Events support multiple `{ src, alt }` images, two student coordinators, optional date, start/end times, venue and contacts. Local times are IST. Dates use `YYYY-MM-DD`. Missing fields stay `null`; never substitute invented information. Descriptions are draft editorial summaries, not confirmed rules. The programme remains empty until assignments are confirmed.
 
-Event images go in `public/images/events/<event-id>/`; institutional marks go in `public/logos/`. The header uses the supplied VJIT logo, prepared as a WebP asset in public/logos/. Existing AI-generated hero imagery is explicitly labeled as concept art and must not be described as documentary event photography. See `public/images/ASSETS.md`.
+No official photographs, posters, videos or logos have been supplied. The current visuals are original SVG/CSS studies, not event photography or official marks. `src/data/assets.js` holds the hero, institutional logo, gallery and category slots; individual event images stay in `src/data/events.js`. All slots start null/empty. See `public/ASSET_GUIDE.md` for directories and replacement instructions. AssetVisual restores the designed placeholder when a supplied asset fails.
 
 ## Deployment
 
@@ -42,7 +42,7 @@ Vercel rewrites and `public/_redirects` provide SPA entry handling for direct ca
 
 ## Opening ident
 
-`src/intro/IntroController.jsx` mounts once above the route transition provider. The original 3.2-second GSAP sequence lives in `IntroSequence.js`; the overlay, skip control and lifecycle cleanup live in `FestivalIntro.jsx`. No video, WebGL or audio is downloaded.
+`src/intro/IntroController.jsx` mounts once above the route transition provider. The original eight-second GSAP sequence lives in `IntroSequence.js`; the overlay, skip control and lifecycle cleanup live in `FestivalIntro.jsx`. The ident uses GSAP, SVG, CSS and typography only; it reads no image/logo slots. No video, WebGL or audio is downloaded.
 
 Session key: `udbhav:intro:v1`. `started` prevents interruption/remount/refresh replay; `complete` is recorded on finishing or skipping. Reduced motion and direct non-home visits bypass and consume the opening. A new independent browser tab/session can play it again. Storage failures fall back to document memory. For development replay, remove that sessionStorage key and reload the homepage (with reduced motion off).
 

@@ -76,3 +76,14 @@ Restored the supplied red/navy/black artwork inside the existing transparent alp
 - Injected initialization failure: PASS; original homepage opacity, interactivity and scroll state restored.
 - Existing full route regression: PASS, including category transitions, browser Back/Forward, rapid clicks, interrupted history, dialogs/search, keyboard focus, mobile navigation and responsive route layouts. Desktop/mobile opening and homepage screenshots reviewed.
 - Build/data integrity checks run before publication; publication outcome is recorded in the chat. Physical devices, Safari/Firefox and assistive-technology review remain pending.
+
+## Asset availability correction and eight-second procedural opening
+
+- Current source of truth: no official photographs, posters, videos or logos have been supplied. Removed prior generated concert WebPs and the prepared logo from the published asset tree. Earlier entries above describe historical versions, not available official assets.
+- Replaced hero/gallery imagery with original inline SVG/CSS orbital tracks, coordinate grid and flowing lines. Category and event artwork remain deliberate procedural placeholders. The header explicitly reserves an “OFFICIAL LOGO PENDING” slot using institution text, without inventing a logo.
+- Added centralized src/data/assets.js for hero, institutional logo, gallery and category photo/poster slots. All are null/empty. Individual event photographs remain in events.js. AssetVisual restores designed placeholders if a future source fails.
+- Added clean public/images/events, categories, gallery, posters, logos and videos folders plus public/ASSET_GUIDE.md. These are ready for approved assets without UI edits or layout changes.
+- Extended THE BIRTH OF UDHBHAV to eight seconds, using only GSAP, SVG, CSS and typography. Three drawn orbital/diamond paths join the spark and energy trajectories before the identity reveal and homepage handoff. Updated fail-open recovery timer to ten seconds; skip, reduced motion, session rules and cleanup remain intact.
+- Chromium PASS: measured eight-second intro with all image/media requests blocked; full intro/session/skip/mobile/interruption suite; initialization-failure recovery; existing route/history/category-transition regression.
+- Chromium PASS: zero image/media requests across default homepage, three category pages and gallery; deliberately broken future hero/logo/category/gallery sources restore designed placeholders. No runtime errors in exercised flows. Desktop/mobile placeholder screenshots reviewed.
+- Data checks and production build run before publication. Official assets, approved event details, Safari/Firefox and physical-device/assistive-technology review remain pending. The latest deployment result is recorded in chat.
