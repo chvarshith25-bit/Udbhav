@@ -25,4 +25,4 @@ GSAP controls hero entrance, static section reveals and hero image parallax. Mot
 
 Hero/gallery concept visual is generated and labeled; optimized WebP is 138KB desktop / 45KB mobile. Gallery and future event images lazy load. Official event images are absent, represented by deliberate category artwork. Never pass generic imagery off as past UDHBHAV photography.
 
-The top-right institutional logo uses a monochrome light treatment over the dark header. An SVG alpha mask remove the white plate while preserving the source artwork. It is sized responsively without stretching. Mobile hides the small festival-brand caption to preserve room for the complete institutional lockup and menu.
+The top-right institutional logo uses the original red/navy/black colors over the dark header. An SVG alpha mask remove the white plate while preserving the source artwork. It is sized responsively without stretching. Mobile hides the small festival-brand caption to preserve room for the complete institutional lockup and menu.

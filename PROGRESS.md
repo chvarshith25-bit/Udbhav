@@ -49,3 +49,7 @@ Replaced the top-right VJIT text with a WebP logo prepared from the supplied ref
 ## Logo theme refinement
 
 Removed the white logo plate and adapted the existing artwork to a restrained light monochrome treatment using an SVG alpha mask. Source artwork remains unchanged. Increased visible logo sizing slightly for legibility, keeping mobile menu spacing. Build/data checks and responsive Chromium header checks pass.
+
+## Logo color restoration
+
+Restored the supplied red/navy/black artwork inside the existing transparent alpha mask. The white background stays removed; header sizing and placement are unchanged. Production build and event checks pass.
