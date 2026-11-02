@@ -18,16 +18,21 @@
 - Browser: Annual Day schedule state, ICS download and mobile navigation: PASS.
 - Browser: no horizontal overflow at 360, 390, 768, 1024, 1440 and 1920px: PASS.
 - Browser: no runtime errors in the exercised flows; desktop/mobile screenshots visually reviewed.
+- Normal-motion browser pass: hero entrance, scroll navigation, category transition and lazy dialog transition passed without runtime errors.
 - Fixed during QA: platform-dependent decorative glyphs replaced with SVG marks; explicit modal Tab containment added.
 - Production bundle: about 490KB JS before gzip (about 166KB gzip), plus lazy dialog. Hero WebP about 138KB desktop / 45KB mobile.
 
-## In progress
+## Deployment and source status
 
-Publication and source synchronization are performed after this final source checkpoint. The chat reports the returned deployment result. GitHub remains the canonical collaboration remote; Sites uses a separate deployment mirror.
+- Published successfully as an owner-private Sites preview: https://udbhav-2k27-vjit.arcaneharp16.chatgpt.site
+- Deployed application source commit: `88e2c692d9b89151177e2c68a1ab4a80ed1aed63`.
+- Application source pushed to `main` at https://github.com/chvarshith25-bit/Udbhav. This final progress-log update follows as a documentation-only commit; application source is unchanged.
+- Sites uses a separate deployment mirror; GitHub remains the canonical repository for Codex and Antigravity.
+- No feature implementation remains in progress. Organizer content and broader device review remain in NEXT_STEPS.md.
 
 ## Known bugs and verification limits
 
-No known functional bugs in exercised flows. Browser checks used Chromium on Linux and reduced-motion preference; Safari, Firefox, assistive-technology review, slower physical devices and a full normal-motion performance audit remain to be done. No official event imagery was supplied to test real per-event image compositions. Sites helper scripts are absent from this environment; source synchronization and archive packaging use standard Git/tar instead.
+No known functional bugs in exercised flows. Browser checks used Chromium on Linux with both reduced and normal motion; Safari, Firefox, assistive-technology review, slower physical devices and a full motion performance audit remain to be done. No official event imagery was supplied to test real per-event image compositions. Sites helper scripts are absent from this environment; source synchronization and archive packaging use standard Git/tar instead.
 
 ## Pending assets
 
