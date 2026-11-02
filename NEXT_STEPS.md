@@ -8,3 +8,5 @@
 6. Review Safari/Firefox, screen-reader behavior, real devices and normal-motion performance. Confirm imagery, copy and accessibility with organizers before a public launch.
 7. Both Codex and Antigravity should pull from the canonical GitHub repository before changes and update the six handoff documents after each session. Preserve the Sites identity and deployment mirror separately.
 8. Deploy with Vercel from the same GitHub repository if desired; Vite configuration is included. Preserve private access on Sites until the owner requests a public audience.
+
+- The header now uses a monochrome logo treatment. Prefer an approved transparent vector lockup if one becomes available.

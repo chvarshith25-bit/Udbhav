@@ -45,3 +45,7 @@ For every event: approved descriptions/rules, location, date assignment, start/e
 ## Header logo update
 
 Replaced the top-right VJIT text with a WebP logo prepared from the supplied reference. The complete red/navy/black lockup appears on white, with responsive desktop/mobile sizing and descriptive alt text. Build and event integrity checks passed; header layout checked in Chromium at mobile, tablet and desktop widths.
+
+## Logo theme refinement
+
+Removed the white logo plate and adapted the existing artwork to a restrained light monochrome treatment using an SVG alpha mask. Source artwork remains unchanged. Increased visible logo sizing slightly for legibility, keeping mobile menu spacing. Build/data checks and responsive Chromium header checks pass.
