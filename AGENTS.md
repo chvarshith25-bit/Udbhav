@@ -9,9 +9,9 @@ Read README.md, PROJECT_BRIEF.md, DESIGN_SYSTEM.md, PROGRESS.md and NEXT_STEPS.m
 - Keep exactly the three primary categories. Gaming and strategy are Cultural subgroups. Do not invent official events.
 - Unknown venue, dates, timings, contacts, names and URLs stay null. Render a clearly marked coming-soon state. No dummy contact destinations.
 - Photography entries use `{ src, alt }`. Store real assets predictably beneath public/images/events/<id>. Official logo beneath public/logos. Preserve concept-image disclosure until real assets replace it.
-- GSAP owns static page motion; Motion owns dialog/category UI transitions. No overlapping control. Always clean up effects and support reduced motion.
+- GSAP owns hero and route-transition motion; Motion owns dialog UI transitions. No overlapping control. Always clean up effects and support reduced motion.
 - Preserve semantic controls, keyboard tab behavior, native dialog focus management, touch targets and deliberate mobile layouts.
-- Do not add a router, backend or new dependency without a real requirement.
+- React Router is required for the multi-page structure. Use TransitionLink for internal navigation; never turn category navigation back into section scrolling. Do not add a backend or new dependency without a real requirement.
 - Preserve .openai/hosting.json identity. Never write tokens, passwords or deployment archives into Git.
 
 ## Required end-of-session steps

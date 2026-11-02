@@ -10,3 +10,6 @@
 8. Deploy with Vercel from the same GitHub repository if desired; Vite configuration is included. Preserve private access on Sites until the owner requests a public audience.
 
 - The header now preserves original logo colors with a transparent background. Prefer an approved transparent vector lockup if one becomes available.
+
+- Keep `/` a single-screen hero. Maintain dedicated category routes and SPA fallback rules.
+- Test transition changes with both motion preferences, direct reloads, rapid clicks, and interrupted browser Back/Forward. Review the cinematic choreography on Safari/Firefox and physical mid-range phones.

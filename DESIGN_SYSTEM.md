@@ -26,3 +26,11 @@ GSAP controls hero entrance, static section reveals and hero image parallax. Mot
 Hero/gallery concept visual is generated and labeled; optimized WebP is 138KB desktop / 45KB mobile. Gallery and future event images lazy load. Official event images are absent, represented by deliberate category artwork. Never pass generic imagery off as past UDHBHAV photography.
 
 The top-right institutional logo uses the original red/navy/black colors over the dark header. An SVG alpha mask remove the white plate while preserving the source artwork. It is sized responsively without stretching. Mobile hides the small festival-brand caption to preserve room for the complete institutional lockup and menu.
+
+## Multi-page motion system
+
+Homepage: one viewport on desktop, fluid type based on both width and height; mobile/short screens preserve accessible content through a minimum height. No long homepage, no category anchors. Supporting pages retain the established design.
+
+Route transitions use GSAP exclusively. Sports: sharp diagonal lime cover with oversized sans typography. Cultural: opposing clay-colored curtains with editorial italic typography. Technical: four precise periwinkle columns with monospaced typography. Festival information uses neutral paper panels. Each transition lasts roughly one second. Overlay panels and route-shell fading have a single owner; hero GSAP only touches children, and Motion only handles event dialogs. Category content no longer runs a competing entrance animation.
+
+Keep the outgoing page mounted until covered; mount the destination before uncovering it. Never lazy-load the destination without adding an explicit readiness handshake. Block duplicate clicks synchronously, preserve native modified-link clicks, and support history interruptions. A three-second recovery timer prevents stale inert/scroll-lock states. Reduced motion skips all route choreography. Route headings receive focus after navigation, and a polite live region announces progress.

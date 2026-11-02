@@ -1,20 +1,22 @@
-# Project brief
+# UDHBHAV 2K27 — project brief
 
 ## Confirmed facts
 
-- UDHBHAV 2K27, annual college festival of Vidya Jyothi Institute of Technology, Hyderabad.
-- January 28, 29 and 30, 2027. Annual Day January 30.
-- Three primary categories: Sports (9), Cultural & Activities (13), Technical (4).
-- Dancing Competition includes Freestyle, Techno and Mass. Gaming/strategy stays under Cultural & Activities.
+Vidya Jyothi Institute of Technology, Hyderabad. Festival dates: January 28–30, 2027. Annual Day: January 30. Three primary categories: Sports (9 events), Cultural & Activities (13), Technical (4). Gaming remains a Cultural subgroup. Event assignments, times, venues and contacts remain unconfirmed.
 
-## Experience
+## Experience and routes
 
-Concept: THE FESTIVAL IN MOTION. Premium editorial composition, oversized typography, cinema-like concert atmosphere, lime accents, expressive whitespace and restrained motion. Hero category entries lead into the same event explorer. Searchable lists replace a repeated card grid. Accessible event dialogs share one data model. Schedule reveals only supplied facts; calendar exports the confirmed festival dates, not individual event assignments.
+Preserve THE FESTIVAL IN MOTION: editorial typography, cinematic concert concept imagery, ink/paper/lime palette and restrained motion. The homepage is a single-screen invitation, not a long landing page.
 
-## Modular structure
+- `/`: full-viewport hero, dates, VJIT logo and category entry links. No category lists or supporting sections below it. Mobile/short screens can scroll when necessary to keep content accessible.
+- `/sports`, `/cultural`, `/technical`: separate React page components; category-specific artwork, searchable event list and reusable event dialog.
+- `/about`, `/schedule`, `/gallery`, `/contact`: retained festival information on dedicated pages. Schedule includes Annual Day; contact includes partner announcement state.
+- Unknown paths have an accessible return-home state.
 
-Header → Hero → About → EventExplorer → Schedule → AnnualDay → Gallery → Partners → Contact → Footer. Supporting sections live together in `src/sections/Supporting.jsx` and may be separated when real content makes them more complex. No invented sponsors, performers, institutional achievements or registration links.
+## Navigation and transition contract
+
+React Router owns history and real URLs. A GSAP overlay covers the old page before replacing the route DOM, then uncovers the committed destination. Sports uses a diagonal lime wipe; Cultural uses opposing clay curtains; Technical uses staggered periwinkle panels. Reduced motion navigates immediately without choreography. The same controller handles Back/Forward. No category anchor scrolling or category pages below the homepage.
 
 ## Publication readiness
 
-The site is deployable as a static Vite build. Public launch still requires organizer-approved content, official photography, confirmed contact information and working registration destinations. The current version intentionally communicates these gaps. Hero/gallery concept art is labeled. The supplied institutional logo appears in the top-right header.
+Static Vite deployment with SPA rewrites for direct URLs. Approved official photography and detailed organizer content are still pending. Generated concert art is visibly labeled. The VJIT logo preserves its supplied colors with a transparent alpha mask. No invented performers, sponsors, contact destinations, schedules or institutional claims.

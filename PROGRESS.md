@@ -53,3 +53,15 @@ Removed the white logo plate and adapted the existing artwork to a restrained li
 ## Logo color restoration
 
 Restored the supplied red/navy/black artwork inside the existing transparent alpha mask. The white background stays removed; header sizing and placement are unchanged. Production build and event checks pass.
+
+## Multi-page navigation and cinematic transitions
+
+- Homepage now renders only its full-viewport hero. Desktop layouts fit normal and short viewports without vertical scrolling; mobile/very short screens retain a minimum accessible content height.
+- Added React Router and separate Home, Sports, Cultural and Technical page components. Category entry points and category navigation use real URLs, not section anchors. Event data and all 26 events remain unchanged.
+- Preserved About, Schedule/Annual Day, Gallery and Contact/Partners as separate routes. Existing logo/color treatment is retained.
+- Added a reusable GSAP transition provider: diagonal lime Sports wipe, opposing Cultural curtains and staggered Technical panels. Old route stays mounted until fully covered; new route commits before uncovering. Normal transitions take roughly one second.
+- Added synchronous duplicate-click protection, history interruption handling, eager route readiness, heading focus, polite navigation announcements, reduced-motion immediate navigation, error/unknown-route fallbacks, GSAP cleanup and a recovery timer for stale overlays/locks.
+- Added SPA deployment rewrites and split GSAP/Motion into cacheable bundles. The main application bundle is about 283KB before gzip; GSAP about 114KB and Motion about 136KB.
+- `npm run check` and `npm run build`: PASS. Chromium route tests: PASS for category counts, direct entry/reload, all three transition themes, Back/Forward, rapid repeated clicks, interrupted history navigation, keyboard/focus, search/dialogs, retained information pages, reduced motion and mobile navigation. Four desktop size checks confirm no hero overlap and no homepage scrolling. No runtime errors or stale scroll locks in exercised flows.
+- Safari/Firefox, screen-reader review, physical-device motion performance and official event content remain pending. The latest publication result is recorded in the chat; earlier deployment commit IDs above describe previous versions.
+- Final stable-layout pass: all four main routes at 360, 390, 768, 1024, 1440 and 1920px showed no horizontal overflow. The homepage fits a 900px viewport at every tested width. Desktop additionally fits 1440×900, 1366×768, 1024×600 and 844×390 without overlapping its category controls.
