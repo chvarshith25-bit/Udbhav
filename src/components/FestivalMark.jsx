@@ -1,0 +1,1 @@
+export default function FestivalMark(){return <svg className="festival-mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">{[0,45,90,135].map(angle=><path key={angle} d="M50 7V93" transform={`rotate(${angle} 50 50)`} stroke="currentColor" strokeWidth="8"/>)}</svg>}
