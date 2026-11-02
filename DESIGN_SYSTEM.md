@@ -1,46 +1,30 @@
 # Design system
 
-## Tokens
+## Tokens and composition
 
-- Ink #171914; paper #f3f2eb; lime #d7f34d.
-- Muted #77796f; rules #d6d7cd. Category art: sage, warm clay and soft periwinkle.
-- Sans: Arial/Helvetica system stack, no external font requests. Editorial italic: Georgia.
-- Gutters: clamp(22px, 4.5vw, 88px). Section padding: 95px desktop / 65px mobile.
-- Display type: fluid clamp scale, tight tracking, limited line length. Small uppercase labels use spaced tracking.
-- Main easing: cubic-bezier(.22,1,.36,1). Motion durations 220–1150ms, transform/opacity only.
+Ink #171914; paper #f3f2eb; lime #d7f34d. Muted #77796f; rules #d6d7cd. Sports artwork uses sage, Cultural clay and Technical soft periwinkle. Use the system Arial/Helvetica stack and Georgia for editorial italics. No external font downloads.
 
-## Visual grammar
+Gutters: clamp(22px, 4.5vw, 88px). Standard section padding: 95px desktop / 65px mobile. Breakpoints: 760px mobile and 1100px intermediate. Fluid display type uses tight tracking; small labels use spaced uppercase. Prefer hairline dividers, straight edges and expressive whitespace over repeated cards.
 
-Large type, hairline dividers, flat color, straight edges and asymmetrical proportions. Asterisk and diagonal arrow express motion. No custom cursor, decorative glass, WebGL or scroll hijacking. Avoid identical event cards.
+The restored golden concert concept image supports the warm spark/lime identity. Its responsive WebPs and the colored logo reference are centralized in assets.js. The logo's alpha mask removes the white plate without recoloring its artwork. Do not add unrelated visual effects or imagery.
 
 ## Motion ownership
 
-GSAP controls hero entrance, static section reveals and hero image parallax. Motion controls category transitions and dialog content. Never have both control the same node. GSAP matchMedia/context revert on unmount; reduced-motion skips its choreography. MotionConfig respects the OS setting; CSS disables smooth scrolling and transitions when reduced motion is requested.
+- IntroSequence: eight-second opening and initial homepage handoff only. GSAP context reverts every affected inline style.
+- useFestivalMotion: normal homepage entrance on mounts not owned by the intro; scoped GSAP lifecycle and reduced-motion handling.
+- PageTransitionProvider/choreography: route-shell fading, cover/reveal panels and transition labels. GSAP only.
+- Motion: event dialog UI. Do not assign a second animation system to the same node.
 
-## Responsive and accessible
+Opening timing: spark 0–0.8s; drawn three-energy field 0.8–3.5s; wordmark/year reveal around 3.5–5s; identity hold; homepage alignment/reveal 6.3–8s. Ten-second recovery timer. No media/sound/WebGL dependency. Session key `udbhav:intro:v1`; direct category entry and reduced motion bypass it. Skip/Escape and interruption recovery remain available.
 
-760px mobile breakpoint and 1100px intermediate adaptation. Mobile hero uses a separate year line and stacked category entry points. Event art and descriptions stack; schedule day controls become horizontal. Native dialog provides focus containment and Escape behavior; focus restores to its opener and body scroll locks. Tabs support arrows and Home/End; search has an accessible label; focus indicators are always visible. Dates are interpreted in Asia/Kolkata. Use semantic headings, real buttons/links and helpful alt text.
+Route choreography: diagonal lime Sports cover, opposing clay Cultural curtains, staggered periwinkle Technical columns; paper panels for other destinations. Roughly one second per navigation. Keep the old route mounted until fully covered and the destination ready before revealing. Three-second recovery timer prevents stale overlays/locks. Reduced motion skips choreography immediately.
 
-## Assets
+## Responsive and accessible behavior
 
-No verified official photos, posters, video or logos are assumed. The hero and logo currently use the restored display references documented below. Original SVG/CSS motion studies use the same lime, clay and periwinkle palette and line-based geometry as the route transitions. The procedural hero fallback uses orbital tracks, a fine coordinate grid and two flowing lines; gallery uses the same visual language. Category and event placeholders are deliberate original typographic artwork. None represents event coverage.
+Desktop home fits one viewport using width/height-aware typography. Mobile home uses a separate year line and stacked category entries; very short screens may scroll. Category art/descriptions stack on mobile. Category navigation uses real links and aria-current; schedule tabs support arrows and Home/End. Dialogs retain focus, close on Escape and return focus to the opener. Route headings receive focus without scroll jumps. Preserve visible focus indicators, labeled inputs and touch targets.
 
-The top-right VJIT area displays the restored colored logo reference; its fallback is an explicit text placeholder with “OFFICIAL LOGO PENDING”. Approved media is configured in src/data/assets.js and events.js. AssetVisual handles missing/failed assets. Keep fixed art dimensions/crops so replacing assets does not move the layout. Read public/ASSET_GUIDE.md.
+## Asset slots and fallbacks
 
-## Multi-page motion system
+The concert is disclosed AI-generated concept art; the logo is a restored display reference, not verified official provenance. Gallery/category/event artwork is original SVG/CSS. Hero fallback uses orbital tracks, a coordinate grid and flowing lines; gallery shares that language. No invented event coverage.
 
-Homepage: one viewport on desktop, fluid type based on both width and height; mobile/short screens preserve accessible content through a minimum height. No long homepage, no category anchors. Supporting pages retain the established design.
-
-Route transitions use GSAP exclusively. Sports: sharp diagonal lime cover with oversized sans typography. Cultural: opposing clay-colored curtains with editorial italic typography. Technical: four precise periwinkle columns with monospaced typography. Festival information uses neutral paper panels. Each transition lasts roughly one second. Overlay panels and route-shell fading have a single owner; hero GSAP only touches children, and Motion only handles event dialogs. Category content no longer runs a competing entrance animation.
-
-Keep the outgoing page mounted until covered; mount the destination before uncovering it. Never lazy-load the destination without adding an explicit readiness handshake. Block duplicate clicks synchronously, preserve native modified-link clicks, and support history interruptions. A three-second recovery timer prevents stale inert/scroll-lock states. Reduced motion skips all route choreography. Route headings receive focus after navigation, and a polite live region announces progress.
-
-## Opening: THE BIRTH OF UDHBHAV
-
-An original eight-second brand ident: near-black stage and warm spark (0–0.8s); three trajectories and SVG ellipses/diamond paths draw a shared energy field (0.8–3.5s); clipped UDHBHAV wordmark and spaced 2K27 resolve from that geometry (3.5–5s); a brief identity hold leads into the measured homepage handoff (6.3–8s). It uses only GSAP, SVG, CSS and typography, with no image, logo or media dependencies. Existing typography and colors are retained.
-
-`IntroSequence` exclusively owns the opening overlay and initial hero handoff. The normal hero animation must stay disabled for that initial mount; category transition choreography is unchanged. GSAP context revert restores every affected inline style on completion, skip or interruption. The fixed overlay occupies no layout space and the underlying site is inert while it plays. Reduced motion bypasses immediately. No sound, heavy media or external animation dependencies.
-
-## Restored display references
-
-At the user's request, the homepage again uses the previous golden concert concept image, and the header uses the previous colored logo reference with its white background masked away. The concert artwork is AI-generated, not real UDHBHAV photography; official asset approval is not assumed. The gallery/category/event placeholders and eight-second image-independent opening remain unchanged. All references remain centralized in src/data/assets.js with procedural fallbacks.
+Use src/data/assets.js for site/category references and events.js for event photos. AssetVisual handles errors and optional responsive srcSet/sizes. The logo's whiteBackgroundMask option is specific to the current 1000×355 reference; a verified transparent logo can use the normal image path. Preserve fixed visual regions and crops to avoid layout shift when replacing media. See public/ASSET_GUIDE.md.

@@ -1,23 +1,19 @@
 # Instructions for Codex and Antigravity
 
-Read README.md, PROJECT_BRIEF.md, DESIGN_SYSTEM.md, PROGRESS.md and NEXT_STEPS.md before changing this project. Preserve working components and the canonical GitHub origin. Both agents work in https://github.com/chvarshith25-bit/Udbhav.git; fetch and inspect collaborator changes before editing. Avoid force pushes.
+Read README.md, PROJECT_BRIEF.md, DESIGN_SYSTEM.md, PROGRESS.md and NEXT_STEPS.md before editing. These documents describe the current implementation; docs/SESSION_HISTORY.md is historical context only. Canonical repository: https://github.com/chvarshith25-bit/Udbhav.git. Fetch collaborator changes before work, preserve origin and avoid force pushes.
 
-## Architecture and conventions
+## Conventions
 
-- React + Vite + Tailwind v4. Plain JavaScript ESM, JSX components, named supporting sections.
-- All event and schedule content belongs in src/data/events.js. Never embed new contact or programme facts in UI code.
-- Keep exactly the three primary categories. Gaming and strategy are Cultural subgroups. Do not invent official events.
-- Unknown venue, dates, timings, contacts, names and URLs stay null. Render a clearly marked coming-soon state. No dummy contact destinations.
-- Photography entries use `{ src, alt }`. Store real assets predictably beneath public/images/events/<id>. Official logo beneath public/logos. No official assets currently exist. Never add generated/stock imagery as official coverage. Keep original SVG/CSS fallbacks; use src/data/assets.js for approved site/category assets.
-- GSAP owns the opening ident, hero and route-transition motion; Motion owns dialog UI transitions. No overlapping control. Always clean up effects and support reduced motion.
-- Preserve semantic controls, keyboard tab behavior, native dialog focus management, touch targets and deliberate mobile layouts.
-- React Router is required for the multi-page structure. Use TransitionLink for internal navigation; never turn category navigation back into section scrolling. Do not add a backend or new dependency without a real requirement.
-- Preserve .openai/hosting.json identity. Never write tokens, passwords or deployment archives into Git.
+- React + Vite + Tailwind v4; JavaScript ESM and JSX. React Router is required. Use TransitionLink for internal navigation. Keep `/` a single-screen hero and category pages at `/sports`, `/cultural`, `/technical`.
+- All official event facts belong in src/data/events.js. Preserve exactly three primary categories and 26 requested events. Gaming is a Cultural subgroup. Unknown dates, venues, times, people, contacts and URLs stay null; no invented claims or arbitrary destinations.
+- Site/category media references belong in src/data/assets.js. The restored golden concert image is disclosed AI-generated concept art; the colored logo is a restored display reference. Neither establishes official approval. Do not remove these requested references merely because official assets are pending. Never present generated/stock imagery as real event coverage.
+- Keep SVG/CSS fallbacks and AssetVisual error handling. Use public/ASSET_GUIDE.md for future media placement and accurate alt text. Preserve aspect ratios/crops when assets change.
+- GSAP owns the intro, normal hero entrance and route transitions on distinct nodes. Motion owns dialog UI. Clean up effects and respect reduced motion. No overlapping animation ownership.
+- IntroController stays above the route provider, never in a route. Preserve eight-second playback, session key `udbhav:intro:v1`, skip/Escape, ten-second fail-open timer and interruption cleanup. Suppress the normal hero entrance only for the intro-owned mount. Direct category visits bypass the opening; returning home cannot replay it.
+- Route transitions keep the old page until covered and the destination until ready. Preserve Back/Forward, modified clicks, duplicate-click protection, heading focus and three-second recovery timer.
+- Preserve semantic controls, focus handling, native dialog behavior and deliberate mobile layouts. Do not add dependencies/backends without a requirement.
+- Preserve .openai/hosting.json identity and private audience. Never commit credentials, node_modules, dist or deployment archives.
 
-## Required end-of-session steps
+## End of session
 
-Run npm run check and npm run build; run meaningful browser checks when the environment supports them. Report verification limits honestly. Update PROGRESS.md and NEXT_STEPS.md with completed work, failures, pending assets/content and actionable next tasks. Update the brief/design documentation if decisions changed. Commit meaningful source changes and synchronize with the shared repository without overwriting collaborators.
-
-## Opening ownership
-
-Keep the eight-second, image-independent IntroController mounted above the route transition provider, never inside a route. Preserve session key `udbhav:intro:v1`, fail-open behavior, reduced-motion bypass and accessible skip. The opening owns the initial homepage handoff; do not run the usual hero entrance concurrently on that mount. Direct category visits must bypass the ident and category navigation must never replay it.
+Run npm run check and npm run build. Use meaningful browser verification for behavior/layout changes when available; report limits honestly. Update current progress, actionable next steps and affected design/brief instructions. Preserve useful history in docs/SESSION_HISTORY.md rather than appending contradictory current-state claims. Commit and synchronize authorized source changes to the shared repository.

@@ -1,10 +1,13 @@
 # UDHBHAV 2K27
 
-The festival in motion. A responsive multi-page festival experience for Vidya Jyothi Institute of Technology, Hyderabad. Festival: January 28–30, 2027; Annual Day: January 30.
+THE FESTIVAL IN MOTION — a responsive multi-page festival website for Vidya Jyothi Institute of Technology, Hyderabad. Festival: January 28–30, 2027. Annual Day: January 30.
 
-## Develop
+Live owner-private preview: https://udbhav-2k27-vjit.arcaneharp16.chatgpt.site/
+Canonical collaboration repository: https://github.com/chvarshith25-bit/Udbhav
 
-Requires Node.js 20.19+ or 22.12+ (verified with Node 24).
+## Development
+
+Node 20.19+ or 22.12+ is required; verified with Node 24.
 
 ```sh
 npm ci
@@ -14,40 +17,47 @@ npm run build
 npm run preview
 ```
 
-React 19, Vite 7, Tailwind CSS 4, GSAP + ScrollTrigger, Motion for React, Lucide React. Package versions are locked in package-lock.json. React Router provides client-side navigation; no backend, accounts or WebGL is needed.
+Stack: React 19, Vite 7, Tailwind 4, React Router 7, GSAP/ScrollTrigger, Motion and Lucide. Versions are locked in package-lock.json. No backend, runtime secrets, video, audio or WebGL is required.
 
-## Content
+## Current experience
 
-Edit `src/data/events.js` for all event facts. Events support multiple `{ src, alt }` images, two student coordinators, optional date, start/end times, venue and contacts. Local times are IST. Dates use `YYYY-MM-DD`. Missing fields stay `null`; never substitute invented information. Descriptions are draft editorial summaries, not confirmed rules. The programme remains empty until assignments are confirmed.
+| Route | Content |
+| --- | --- |
+| `/` | Single-screen hero, restored concert concept background, colored logo reference, dates and three category links |
+| `/sports` | Nine sports events |
+| `/cultural` | Thirteen cultural/activity events, including gaming/strategy |
+| `/technical` | Four technical events |
+| `/about` | Festival introduction |
+| `/schedule` | Confirmed festival dates, calendar export and Annual Day highlight |
+| `/gallery` | Procedural placeholder awaiting real photography |
+| `/contact` | Registration/contact and partner announcement states |
 
-No official photographs, posters, videos or logos have been supplied. The hero currently uses the restored AI-generated concert concept art; other placeholders are original SVG/CSS studies. The logo is a restored display reference. These are not verified official event assets. `src/data/assets.js` holds the hero, institutional logo, gallery and category slots; individual event images stay in `src/data/events.js`. Gallery/category slots remain empty; hero and logo display references are configured centrally. See `public/ASSET_GUIDE.md` for directories and replacement instructions. AssetVisual restores the designed placeholder when a supplied asset fails.
+The eight-second first-session opening uses only GSAP, SVG, CSS and typography, then aligns its wordmark into the homepage. Skip/Escape, reduced motion, interruption handling and fail-open recovery are supported. Session key `udbhav:intro:v1` prevents replay after completion, interruption, refresh or category navigation. Direct non-home entries bypass and consume the opening. To replay during development, remove that sessionStorage key and reload `/` with reduced motion off.
 
-## Deployment
+Category navigation uses real React Router URLs and distinct GSAP transitions: diagonal Sports wipe, Cultural curtains and Technical panels. Use TransitionLink for internal links. The old route stays mounted until covered; the new route commits before uncovering. Modified clicks, Back/Forward, heading focus and error recovery are preserved.
 
-Vercel: import this repository, select Vite, build `npm run build`, output `dist`. The committed `vercel.json` sets these defaults. All interactions are browser-local; no environment variables are required. Sites deployment identity lives in `.openai/hosting.json`; preserve it on edits. Never commit credentials or archives.
+## Content and assets
 
-## Shared development
+`src/data/events.js` contains all 26 events, descriptions, nullable details, two coordinator slots per event and the confirmed festival dates. Unconfirmed rules, dates, timings, venues, people and contacts must never be invented. Times are IST; dates use `YYYY-MM-DD`. The detailed programme remains empty.
 
-Canonical GitHub remote: https://github.com/chvarshith25-bit/Udbhav.git. Codex and Antigravity should use this same repository. Read AGENTS.md and PROGRESS.md before editing. Commit on a feature branch, pull/rebase before work, and avoid overwriting collaborators. The Sites source remote is a deployment mirror, not a replacement for GitHub.
+`src/data/assets.js` holds site/category asset references. The restored golden concert artwork is AI-generated concept art, not real UDHBHAV photography. The restored colored VJIT logo is a display reference, not verified official approval. No new official photography, posters, video or logos are assumed available. Gallery/category/event visuals remain original SVG/CSS placeholders. AssetVisual restores fallbacks for missing/broken sources and preserves the logo's transparent alpha-mask treatment.
 
-See PROJECT_BRIEF.md, DESIGN_SYSTEM.md, PROGRESS.md and NEXT_STEPS.md for decisions, checks and remaining content.
+See public/ASSET_GUIDE.md for directories and replacement instructions. The opening does not depend on image/logo references.
 
-## Routes and transition architecture
+## Source structure
 
-The homepage `/` contains only the full-screen hero. `/sports`, `/cultural` and `/technical` render their own page components. Supporting information lives at `/about`, `/schedule`, `/gallery` and `/contact`.
+- `src/intro/`: opening controller, session state, sequence and overlay.
+- `src/transitions/`: route readiness/history controller and GSAP choreography.
+- `src/pages/`: home, category and festival-information pages.
+- `src/sections/`, `src/components/`: reusable content, dialogs, navigation and visual fallbacks.
+- `src/data/`: event facts and media references.
+- `src/styles/`, `src/animations/`: shared tokens, responsive layouts and page motion.
+- `public/`: local assets, reserved official-asset folders and hosting redirects.
+- `scripts/check-events.mjs`: event-data integrity checks.
+- `docs/SESSION_HISTORY.md`: historical implementation notes; PROGRESS.md is the current snapshot.
 
-Use `TransitionLink` for internal links. It preserves real hrefs and modified-click behavior, prevents repeated navigation while transitioning, and delegates history to React Router. `src/transitions/PageTransitionProvider.jsx` retains the outgoing route until the GSAP cover is opaque. It mounts the destination underneath, waits for its DOM commit, then removes the cover. Category choreography and timings live in `src/transitions/choreography.js`. Native dialog UI remains lazy loaded; route components are eagerly imported to keep destination preparation deterministic.
+## Deployment and collaboration
 
-Vercel rewrites and `public/_redirects` provide SPA entry handling for direct category URLs. Keep those configurations when changing hosting. Unknown routes and route rendering errors have return-home fallbacks.
+Vercel: import the GitHub repository; build `npm run build`, output `dist`. vercel.json and public/_redirects preserve direct-route SPA entry handling. Sites identity is tracked in .openai/hosting.json; preserve it. dist/ and node_modules/ are generated and ignored. Never commit credentials or deployment archives.
 
-## Opening ident
-
-`src/intro/IntroController.jsx` mounts once above the route transition provider. The original eight-second GSAP sequence lives in `IntroSequence.js`; the overlay, skip control and lifecycle cleanup live in `FestivalIntro.jsx`. The ident uses GSAP, SVG, CSS and typography only; it reads no image/logo slots. No video, WebGL or audio is downloaded.
-
-Session key: `udbhav:intro:v1`. `started` prevents interruption/remount/refresh replay; `complete` is recorded on finishing or skipping. Reduced motion and direct non-home visits bypass and consume the opening. A new independent browser tab/session can play it again. Storage failures fall back to document memory. For development replay, remove that sessionStorage key and reload the homepage (with reduced motion off).
-
-The homepage mounts underneath immediately. Its usual entrance animation is suppressed only for the mount owned by the opening, so returning home retains its original entrance. The intro aligns its wordmark to the real homepage DOM before handing it over. Skip/Escape, resizing, tab hiding, page departure and motion-preference changes safely finish it. A recovery timer and guarded initialization restore the underlying page if animation setup fails.
-
-## Restored display references
-
-At the user's request, the homepage again uses the previous golden concert concept image, and the header uses the previous colored logo reference with its white background masked away. The concert artwork is AI-generated, not real UDHBHAV photography; official asset approval is not assumed. The gallery/category/event placeholders and eight-second image-independent opening remain unchanged. All references remain centralized in src/data/assets.js with procedural fallbacks.
+Codex and Antigravity use the same GitHub repository. Read AGENTS.md and the project documents before editing, fetch collaborator changes, avoid force pushes, and update progress/next steps after each session. The Sites source repository is a separate deployment mirror. The application source, assets and configuration in this checkout are the current implementation.

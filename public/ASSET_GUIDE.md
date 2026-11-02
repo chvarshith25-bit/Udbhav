@@ -1,13 +1,23 @@
-# Official asset handoff
+# Asset handoff
 
-No verified official photographs, posters, video or logos are assumed. At the user’s request, the previous AI-generated concert concept image is restored in the hero and the previous prepared logo reference is restored in the header. These display references do not establish official provenance. Fallback artwork remains original SVG/CSS.
+## Current display assets
 
-- `logos/`: official VJIT or festival logo, once supplied. Set `siteAssets.institutionLogo` in src/data/assets.js.
-- `images/`: approved hero image; set `siteAssets.hero`.
-- `images/categories/<category>/`: category photos; set categoryAssets[category].photos.
-- `images/events/<event-id>/`: individual photos; populate that event's images in src/data/events.js.
-- `images/gallery/`: real festival gallery photos; populate siteAssets.gallery. The current gallery feature uses its first entry.
-- `posters/<event-id>/`: approved posters; category poster arrays are reserved for future presentation.
-- `videos/`: optional approved videos. No video is currently loaded or required.
+The homepage uses festival-atmosphere.webp and its responsive small variant: previous AI-generated golden concert concept art, not an actual UDHBHAV photograph. The header uses the previous prepared logo reference at logos/vjit-logo.webp, with white background masked away. These were restored at the user's request; no official approval is inferred. Keep concept disclosure and accurate alt text.
 
-Images use `{ src: '/images/...', alt: 'Accurate description' }`. Keep null/empty arrays until approved assets exist. AssetVisual renders the designed fallback if an image fails. Preserve existing crop/aspect ratios, test mobile crops, optimize dimensions and formats, and never label unrelated images as real festival coverage. The opening animation never reads this manifest and is independent of imagery.
+All other gallery/category/event visuals are original SVG/CSS placeholders. No verified event photos, posters or video are currently installed.
+
+## Where to add approved assets
+
+| Directory | Central reference |
+| --- | --- |
+| `logos/` | siteAssets.institutionLogo in src/data/assets.js |
+| `images/` | siteAssets.hero |
+| `images/categories/<category>/` | categoryAssets[category].photos |
+| `images/events/<event-id>/` | matching event.images in src/data/events.js |
+| `images/gallery/` | siteAssets.gallery; current feature uses its first entry |
+| `posters/<event-id>/` | category poster slots reserved for future presentation |
+| `videos/` | reserved; no video is currently loaded or required |
+
+Images use `{ src: '/images/...', alt: 'Accurate description' }`. Hero images may also provide srcSet and sizes. Unfilled slots remain null/empty. The current logo reference uses whiteBackgroundMask for its 1000×355 white-backed artwork; omit that option for an approved transparent logo.
+
+AssetVisual restores the designed fallback if a source fails. Preserve existing image regions/aspect ratios, test mobile crops and optimize formats/dimensions. Do not represent unrelated imagery as real festival coverage. The eight-second opening itself reads no asset references and remains functional with images blocked.

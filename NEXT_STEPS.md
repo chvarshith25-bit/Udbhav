@@ -1,22 +1,12 @@
 # Next steps
 
-1. Obtain official festival photography. Replace procedural placeholders only with approved media, and supply accurate alt text and provenance.
-2. Confirm event descriptions/rules, dates, times, venues and both student coordinators. Populate src/data/events.js; retain nulls for unknown facts. Add multiple `{ src, alt }` photos per event as available.
-3. Supply and verify official WhatsApp registration links, phone numbers and email addresses before enabling contact actions. There is no live registration backend in this static site.
-4. Populate festival.schedule with confirmed event assignments and publish the Annual Day programme when approved. Do not infer a day from category ordering.
-5. Add only confirmed sponsors/partners and approved logos; replace the announcement state when ready.
-6. Review Safari/Firefox, screen-reader behavior, real devices and normal-motion performance. Confirm imagery, copy and accessibility with organizers before a public launch.
-7. Both Codex and Antigravity should pull from the canonical GitHub repository before changes and update the six handoff documents after each session. Preserve the Sites identity and deployment mirror separately.
-8. Deploy with Vercel from the same GitHub repository if desired; Vite configuration is included. Preserve private access on Sites until the owner requests a public audience.
+1. Obtain verified official logo files, real festival/event photography and approved posters. Replace the current concert concept art and logo display reference through src/data/assets.js; retain correct disclosure/provenance until approved replacements exist. Follow public/ASSET_GUIDE.md.
+2. Confirm event descriptions/rules, date assignments, times, venues, both student coordinators and registration/contact details. Populate events.js; keep unknown values null. Verify destinations before enabling actions.
+3. Add confirmed schedule entries and the Annual Day programme. Never infer dates/times from category order. Add only approved sponsors/partners.
+4. Review Safari/Firefox, screen readers and physical iOS/Android devices, including mid-range motion performance. Current browser verification used Chromium on Linux.
+5. Preserve the single-screen homepage and dedicated category routes. Test direct reloads, Back/Forward, rapid clicks, keyboard focus and interrupted transitions when changing navigation.
+6. Keep the opening eight seconds and independent of images/video/audio. Test new-session playback, refresh suppression, skip, reduced motion, interruption recovery and category-return behavior after intro changes.
+7. Codex and Antigravity should fetch the same GitHub repository before work and update the current handoff documents afterward. Preserve Sites identity and its separate deployment mirror.
+8. Vercel deployment is ready if requested: Vite build to dist with committed SPA rewrites. Preserve owner-private access on Sites until the owner requests otherwise.
 
-- The header currently shows the restored logo reference, with a logo-pending text fallback. Add an organizer-supplied official logo through siteAssets.institutionLogo when available.
-
-- Keep `/` a single-screen hero. Maintain dedicated category routes and SPA fallback rules.
-- Test transition changes with both motion preferences, direct reloads, rapid clicks, and interrupted browser Back/Forward. Review the cinematic choreography on Safari/Firefox and physical mid-range phones.
-
-- Review the opening ident on physical iOS/Android devices and Safari/Firefox. Keep it eight seconds, preserve skip/reduced-motion behavior and test session refresh, direct category URLs and interrupted playback whenever changing it.
-- Optional audio is intentionally not implemented; introduce sound only with an explicit user-activated control if requested later.
-
-- Obtain the official logo, event photographs, posters and any approved video. Nothing is currently assumed available. Populate src/data/assets.js and individual event images; follow public/ASSET_GUIDE.md. Do not substitute unrelated or generated event photography.
-
-- The previous concert concept artwork and colored logo reference have been restored for display at the user’s request. Replace them with verified official assets when available; retain accurate provenance and concept-art disclosure until then.
+Optional sound is not implemented. Add it only if requested, with an explicit user-activated control.

@@ -1,34 +1,27 @@
-# UDHBHAV 2K27 — project brief
+# UDHBHAV 2K27 — current project brief
 
-## Confirmed facts
+## Confirmed information
 
-Vidya Jyothi Institute of Technology, Hyderabad. Festival dates: January 28–30, 2027. Annual Day: January 30. Three primary categories: Sports (9 events), Cultural & Activities (13), Technical (4). Gaming remains a Cultural subgroup. Event assignments, times, venues and contacts remain unconfirmed.
+Vidya Jyothi Institute of Technology, Hyderabad. Festival: January 28–30, 2027. Annual Day: January 30. Twenty-six events across Sports (9), Cultural & Activities (13) and Technical (4). Gaming remains under Cultural & Activities. Individual date assignments, times, venues, coordinators and contact destinations are unconfirmed.
 
-## Experience and routes
+## Experience
 
-Preserve THE FESTIVAL IN MOTION: editorial typography, original procedural vector studies, ink/paper/lime palette and restrained motion. The homepage is a single-screen invitation, not a long landing page.
+Preserve THE FESTIVAL IN MOTION: oversized editorial type, ink/paper/lime colors, original line-based graphics, intentional whitespace and restrained movement. The homepage occupies one desktop viewport; mobile/short screens keep accessible content rather than clipping it. Category pages are distinct React Router routes, with searchable event lists and accessible reusable detail dialogs.
 
-- `/`: full-viewport hero, dates, VJIT logo and category entry links. No category lists or supporting sections below it. Mobile/short screens can scroll when necessary to keep content accessible.
-- `/sports`, `/cultural`, `/technical`: separate React page components; category-specific artwork, searchable event list and reusable event dialog.
-- `/about`, `/schedule`, `/gallery`, `/contact`: retained festival information on dedicated pages. Schedule includes Annual Day; contact includes partner announcement state.
-- Unknown paths have an accessible return-home state.
+Routes: `/`, `/sports`, `/cultural`, `/technical`, `/about`, `/schedule`, `/gallery`, `/contact`. Category navigation must not become anchor scrolling. Supporting content is preserved on its own routes. Unknown paths and rendering errors have return-home states.
 
-## Navigation and transition contract
+## Opening and navigation
 
-React Router owns history and real URLs. A GSAP overlay covers the old page before replacing the route DOM, then uncovers the committed destination. Sports uses a diagonal lime wipe; Cultural uses opposing clay curtains; Technical uses staggered periwinkle panels. Reduced motion navigates immediately without choreography. The same controller handles Back/Forward. No category anchor scrolling or category pages below the homepage.
+THE BIRTH OF UDHBHAV is an eight-second GSAP/SVG/CSS ident: spark, three converging trajectories, drawn orbital/diamond paths, identity reveal, then measured homepage handoff. It is independent of external media and runs once per tab session. Skip/Escape, reduced-motion bypass, interruption recovery and session persistence are required.
 
-## Publication readiness
+GSAP route transitions remain separate: diagonal lime Sports wipe, clay Cultural curtains and periwinkle Technical panels. The previous page remains until covered; the destination commits before reveal. Preserve Back/Forward, duplicate-click protection, native link modifiers, focus and recovery timers.
 
-Static Vite deployment with SPA rewrites for direct URLs. Approved official photography and detailed organizer content are still pending. No official visual assets are supplied. Procedural artwork is labeled as a visual study; the VJIT slot is an explicit logo-pending text placeholder. No invented performers, sponsors, contact destinations, schedules or institutional claims.
+## Current visual assets
 
-## First-session opening
+At the user's latest request, the homepage displays the previous golden concert concept artwork and the header displays the previous colored logo reference with a transparent background. The concert is AI-generated, not actual event photography. The references are not proof of official approval. Keep the concept disclosure and accurate provenance.
 
-The homepage optionally begins with THE BIRTH OF UDHBHAV, an original eight-second GSAP ident. It uses a spark and three converging energy lines to reveal the festival wordmark and align it into the existing hero. It plays once per tab session, has Skip/Escape controls, respects reduced motion and never delays direct category visits. This is an added experience; existing category pages and their transitions are preserved.
+Gallery/category/event fallbacks remain original procedural artwork. Real photographs, posters, verified logos and video are pending. Site/category references belong in src/data/assets.js; event photographs belong in events.js. Missing or failed sources must show designed fallbacks. Follow public/ASSET_GUIDE.md.
 
-## Asset availability update
+## Remaining launch content
 
-No official images, posters, videos or logos are assumed. Previous generated imagery and the prepared logo are removed from the published tree. All future approved asset references are centralized; visual fallbacks retain the same layout and color system. The ident is independent of all external imagery.
-
-## Restored display references
-
-At the user's request, the homepage again uses the previous golden concert concept image, and the header uses the previous colored logo reference with its white background masked away. The concert artwork is AI-generated, not real UDHBHAV photography; official asset approval is not assumed. The gallery/category/event placeholders and eight-second image-independent opening remain unchanged. All references remain centralized in src/data/assets.js with procedural fallbacks.
+Organizer-approved event descriptions/rules, schedules, venues, both student coordinators, registration/WhatsApp links, phone/email contacts, real imagery, official logo approval and confirmed partners. Do not invent performers, sponsors, institutional claims or destinations. Keep unconfirmed values null and show coming-soon states.
