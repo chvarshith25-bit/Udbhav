@@ -20,7 +20,7 @@ React 19, Vite 7, Tailwind CSS 4, GSAP + ScrollTrigger, Motion for React, Lucide
 
 Edit `src/data/events.js` for all event facts. Events support multiple `{ src, alt }` images, two student coordinators, optional date, start/end times, venue and contacts. Local times are IST. Dates use `YYYY-MM-DD`. Missing fields stay `null`; never substitute invented information. Descriptions are draft editorial summaries, not confirmed rules. The programme remains empty until assignments are confirmed.
 
-Event images go in `public/images/events/<event-id>/`; institutional marks go in `public/logos/`. The VJIT header is a typographic fallback, not an official logo. Existing AI-generated hero imagery is explicitly labeled as concept art and must not be described as documentary event photography. See `public/images/ASSETS.md`.
+Event images go in `public/images/events/<event-id>/`; institutional marks go in `public/logos/`. The header uses the supplied VJIT logo, prepared as a WebP asset in public/logos/. Existing AI-generated hero imagery is explicitly labeled as concept art and must not be described as documentary event photography. See `public/images/ASSETS.md`.
 
 ## Deployment
 

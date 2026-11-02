@@ -18,3 +18,8 @@
 /* Vector marks keep editorial symbols consistent across platforms. */
 .festival-mark{width:1em;height:1em;display:block}.brand-star{width:.85em}.college-brand strong{display:flex;align-items:flex-start}.college-brand strong span{padding-top:2px}.year-symbol{width:.7em}.hero-title>.hero-year .festival-mark{width:1em;height:1em}.festival-strip>span:nth-child(even){width:1em;flex-shrink:0}.about-star{display:block;width:1em;height:1em}.category-art-symbol>svg,.art-mark>svg{width:1em;height:1em}.annual-asterisk{display:block;width:1em;height:1em}.gallery-symbol>svg{width:1em;height:1em}
 @media(max-width:760px){.hero-title>.hero-year{display:flex;align-items:center}.year-symbol{width:.7em;margin:0 10px;letter-spacing:0}.annual-asterisk{width:1em;height:1em}}
+/* Supplied institutional logo, kept legible in its original colors. */
+.college-brand{background:#fff;padding:7px 10px;flex-shrink:0}.college-brand img{width:190px;height:auto;object-fit:contain}
+@media(max-width:1100px){.college-brand img{width:170px}.desktop-nav{gap:17px}}
+@media(max-width:760px){.college-brand{padding:6px 8px;margin-right:15px}.college-brand img{width:150px}.brand small{display:none}}
+@media(max-width:380px){.college-brand img{width:136px}.college-brand{margin-right:12px}}

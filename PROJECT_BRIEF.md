@@ -17,4 +17,4 @@ Header → Hero → About → EventExplorer → Schedule → AnnualDay → Galle
 
 ## Publication readiness
 
-The site is deployable as a static Vite build. Public launch still requires organizer-approved content, official logo and photography, confirmed contact information and working registration destinations. The current version intentionally communicates these gaps. Hero/gallery concept art is labeled. Institutional text is a logo fallback.
+The site is deployable as a static Vite build. Public launch still requires organizer-approved content, official photography, confirmed contact information and working registration destinations. The current version intentionally communicates these gaps. Hero/gallery concept art is labeled. The supplied institutional logo appears in the top-right header.

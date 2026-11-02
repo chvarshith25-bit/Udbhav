@@ -1,6 +1,6 @@
 # Next steps
 
-1. Obtain the organizer-approved VJIT logo and real festival photography. Replace the textual fallback and concept imagery, update alt text and provenance, and only remove concept-art disclosures once imagery is real and approved.
+1. Obtain real festival photography. Replace concept imagery, update alt text and provenance, and only remove concept-art disclosures once imagery is real and approved.
 2. Confirm event descriptions/rules, dates, times, venues and both student coordinators. Populate src/data/events.js; retain nulls for unknown facts. Add multiple `{ src, alt }` photos per event as available.
 3. Supply and verify official WhatsApp registration links, phone numbers and email addresses before enabling contact actions. There is no live registration backend in this static site.
 4. Populate festival.schedule with confirmed event assignments and publish the Annual Day programme when approved. Do not infer a day from category ordering.

@@ -36,8 +36,12 @@ No known functional bugs in exercised flows. Browser checks used Chromium on Lin
 
 ## Pending assets
 
-Official VJIT logo; organizer-approved real hero, gallery and event photography; any event videos. Current header is a typography fallback; concert visual is disclosed AI-generated concept art. Partners/sponsors remain unannounced.
+Organizer-approved real hero, gallery and event photography; any event videos. The supplied VJIT logo is integrated in the header; concert visual is disclosed AI-generated concept art. Partners/sponsors remain unannounced.
 
 ## Pending event information
 
 For every event: approved descriptions/rules, location, date assignment, start/end times, both coordinator names/phones, WhatsApp registration URL, contact phone and email. Detailed schedule, Annual Day programme and any confirmed performers are not supplied. No unsupported claims or arbitrary contact destinations were added.
+
+## Header logo update
+
+Replaced the top-right VJIT text with a WebP logo prepared from the supplied reference. The complete red/navy/black lockup appears on white, with responsive desktop/mobile sizing and descriptive alt text. Build and event integrity checks passed; header layout checked in Chromium at mobile, tablet and desktop widths.
