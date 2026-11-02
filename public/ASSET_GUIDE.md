@@ -1,6 +1,6 @@
 # Official asset handoff
 
-No official photographs, posters, video or logos are currently supplied. All visible fallback artwork is original SVG/CSS, not event photography or an institutional logo.
+No verified official photographs, posters, video or logos are assumed. At the user’s request, the previous AI-generated concert concept image is restored in the hero and the previous prepared logo reference is restored in the header. These display references do not establish official provenance. Fallback artwork remains original SVG/CSS.
 
 - `logos/`: official VJIT or festival logo, once supplied. Set `siteAssets.institutionLogo` in src/data/assets.js.
 - `images/`: approved hero image; set `siteAssets.hero`.

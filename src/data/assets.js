@@ -1,8 +1,17 @@
-// Populate these slots only with organizer-supplied, approved assets.
-// Image shape: { src: '/images/...', alt: 'Accurate description' }.
+// Display references restored at the user's request; not verified official assets.
+// Future image shape: { src: '/images/...', alt: 'Accurate description' }.
 export const siteAssets = {
-  institutionLogo: null,
-  hero: null,
+  institutionLogo: {
+    src: '/logos/vjit-logo.webp',
+    alt: 'Vidya Jyothi Institute of Technology — previously prepared logo reference',
+    whiteBackgroundMask: true,
+  },
+  hero: {
+    src: '/images/festival-atmosphere.webp',
+    srcSet: '/images/festival-atmosphere-small.webp 900w, /images/festival-atmosphere.webp 1672w',
+    sizes: '100vw',
+    alt: 'AI-generated concert concept art with silhouetted crowds and golden lights; not an actual UDHBHAV event photograph',
+  },
   gallery: [],
 };
 export const categoryAssets = {

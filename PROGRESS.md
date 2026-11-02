@@ -87,3 +87,8 @@ Restored the supplied red/navy/black artwork inside the existing transparent alp
 - Chromium PASS: measured eight-second intro with all image/media requests blocked; full intro/session/skip/mobile/interruption suite; initialization-failure recovery; existing route/history/category-transition regression.
 - Chromium PASS: zero image/media requests across default homepage, three category pages and gallery; deliberately broken future hero/logo/category/gallery sources restore designed placeholders. No runtime errors in exercised flows. Desktop/mobile placeholder screenshots reviewed.
 - Data checks and production build run before publication. Official assets, approved event details, Safari/Firefox and physical-device/assistive-technology review remain pending. The latest deployment result is recorded in chat.
+
+## Concert background and logo restoration
+
+Restored the exact previous optimized golden concert concept WebPs and colored logo reference at the user's request. The logo keeps the previous transparent alpha-mask treatment. Centralized asset references and designed error fallbacks remain. The concert is labeled as illustrative concept art, not actual event coverage; no official provenance is inferred. The eight-second procedural intro, category pages, gallery placeholders and navigation are preserved. Build/data checks and Chromium visual/intro verification are performed before publication.
+- Restoration verification: PASS for eight-second intro handoff, real file loading, colored logo alpha mask, five responsive widths, category navigation and same-session intro suppression. No runtime errors. Desktop/mobile visual review passed.

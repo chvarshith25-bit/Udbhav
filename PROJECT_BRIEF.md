@@ -28,3 +28,7 @@ The homepage optionally begins with THE BIRTH OF UDHBHAV, an original eight-seco
 ## Asset availability update
 
 No official images, posters, videos or logos are assumed. Previous generated imagery and the prepared logo are removed from the published tree. All future approved asset references are centralized; visual fallbacks retain the same layout and color system. The ident is independent of all external imagery.
+
+## Restored display references
+
+At the user's request, the homepage again uses the previous golden concert concept image, and the header uses the previous colored logo reference with its white background masked away. The concert artwork is AI-generated, not real UDHBHAV photography; official asset approval is not assumed. The gallery/category/event placeholders and eight-second image-independent opening remain unchanged. All references remain centralized in src/data/assets.js with procedural fallbacks.

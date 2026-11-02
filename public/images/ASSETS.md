@@ -1,3 +1,3 @@
-# Current asset status
+# Asset provenance
 
-No official photographs or logos are installed. Previous generated concert imagery and the prepared logo have been removed from the published asset tree. See ../ASSET_GUIDE.md for placement and the centralized src/data/assets.js manifest. Visible motion studies are original SVG/CSS illustrations, not event coverage or official institutional marks.
+Restored at the user's request: festival-atmosphere.webp and festival-atmosphere-small.webp are the previous AI-generated golden concert concept artwork. They do not depict an actual UDHBHAV event. The homepage carries a concept-visual disclosure and accurate alt text. The previous prepared logo reference is restored at /logos/vjit-logo.webp, displayed with an alpha mask to remove white while retaining original colors. No official approval is assumed. All other category/event/gallery placeholders remain original SVG/CSS; no new imagery was generated. See ../ASSET_GUIDE.md and src/data/assets.js.

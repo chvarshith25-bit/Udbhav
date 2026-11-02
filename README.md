@@ -20,7 +20,7 @@ React 19, Vite 7, Tailwind CSS 4, GSAP + ScrollTrigger, Motion for React, Lucide
 
 Edit `src/data/events.js` for all event facts. Events support multiple `{ src, alt }` images, two student coordinators, optional date, start/end times, venue and contacts. Local times are IST. Dates use `YYYY-MM-DD`. Missing fields stay `null`; never substitute invented information. Descriptions are draft editorial summaries, not confirmed rules. The programme remains empty until assignments are confirmed.
 
-No official photographs, posters, videos or logos have been supplied. The current visuals are original SVG/CSS studies, not event photography or official marks. `src/data/assets.js` holds the hero, institutional logo, gallery and category slots; individual event images stay in `src/data/events.js`. All slots start null/empty. See `public/ASSET_GUIDE.md` for directories and replacement instructions. AssetVisual restores the designed placeholder when a supplied asset fails.
+No official photographs, posters, videos or logos have been supplied. The hero currently uses the restored AI-generated concert concept art; other placeholders are original SVG/CSS studies. The logo is a restored display reference. These are not verified official event assets. `src/data/assets.js` holds the hero, institutional logo, gallery and category slots; individual event images stay in `src/data/events.js`. Gallery/category slots remain empty; hero and logo display references are configured centrally. See `public/ASSET_GUIDE.md` for directories and replacement instructions. AssetVisual restores the designed placeholder when a supplied asset fails.
 
 ## Deployment
 
@@ -47,3 +47,7 @@ Vercel rewrites and `public/_redirects` provide SPA entry handling for direct ca
 Session key: `udbhav:intro:v1`. `started` prevents interruption/remount/refresh replay; `complete` is recorded on finishing or skipping. Reduced motion and direct non-home visits bypass and consume the opening. A new independent browser tab/session can play it again. Storage failures fall back to document memory. For development replay, remove that sessionStorage key and reload the homepage (with reduced motion off).
 
 The homepage mounts underneath immediately. Its usual entrance animation is suppressed only for the mount owned by the opening, so returning home retains its original entrance. The intro aligns its wordmark to the real homepage DOM before handing it over. Skip/Escape, resizing, tab hiding, page departure and motion-preference changes safely finish it. A recovery timer and guarded initialization restore the underlying page if animation setup fails.
+
+## Restored display references
+
+At the user's request, the homepage again uses the previous golden concert concept image, and the header uses the previous colored logo reference with its white background masked away. The concert artwork is AI-generated, not real UDHBHAV photography; official asset approval is not assumed. The gallery/category/event placeholders and eight-second image-independent opening remain unchanged. All references remain centralized in src/data/assets.js with procedural fallbacks.
