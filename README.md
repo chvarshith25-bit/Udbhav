@@ -39,3 +39,11 @@ The homepage `/` contains only the full-screen hero. `/sports`, `/cultural` and 
 Use `TransitionLink` for internal links. It preserves real hrefs and modified-click behavior, prevents repeated navigation while transitioning, and delegates history to React Router. `src/transitions/PageTransitionProvider.jsx` retains the outgoing route until the GSAP cover is opaque. It mounts the destination underneath, waits for its DOM commit, then removes the cover. Category choreography and timings live in `src/transitions/choreography.js`. Native dialog UI remains lazy loaded; route components are eagerly imported to keep destination preparation deterministic.
 
 Vercel rewrites and `public/_redirects` provide SPA entry handling for direct category URLs. Keep those configurations when changing hosting. Unknown routes and route rendering errors have return-home fallbacks.
+
+## Opening ident
+
+`src/intro/IntroController.jsx` mounts once above the route transition provider. The original 3.2-second GSAP sequence lives in `IntroSequence.js`; the overlay, skip control and lifecycle cleanup live in `FestivalIntro.jsx`. No video, WebGL or audio is downloaded.
+
+Session key: `udbhav:intro:v1`. `started` prevents interruption/remount/refresh replay; `complete` is recorded on finishing or skipping. Reduced motion and direct non-home visits bypass and consume the opening. A new independent browser tab/session can play it again. Storage failures fall back to document memory. For development replay, remove that sessionStorage key and reload the homepage (with reduced motion off).
+
+The homepage mounts underneath immediately. Its usual entrance animation is suppressed only for the mount owned by the opening, so returning home retains its original entrance. The intro aligns its wordmark to the real homepage DOM before handing it over. Skip/Escape, resizing, tab hiding, page departure and motion-preference changes safely finish it. A recovery timer and guarded initialization restore the underlying page if animation setup fails.

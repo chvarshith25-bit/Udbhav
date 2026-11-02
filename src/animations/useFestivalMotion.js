@@ -2,8 +2,9 @@ import { useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
-export function useFestivalMotion(root) {
+export function useFestivalMotion(root, enabled = true) {
   useLayoutEffect(() => {
+    if (!enabled) return;
     const media = gsap.matchMedia();
     media.add('(prefers-reduced-motion: no-preference)', () => {
       const ctx = gsap.context(() => {
@@ -15,5 +16,5 @@ export function useFestivalMotion(root) {
       return () => ctx.revert();
     });
     return () => media.revert();
-  }, [root]);
+  }, [root, enabled]);
 }

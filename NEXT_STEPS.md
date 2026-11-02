@@ -13,3 +13,6 @@
 
 - Keep `/` a single-screen hero. Maintain dedicated category routes and SPA fallback rules.
 - Test transition changes with both motion preferences, direct reloads, rapid clicks, and interrupted browser Back/Forward. Review the cinematic choreography on Safari/Firefox and physical mid-range phones.
+
+- Review the opening ident on physical iOS/Android devices and Safari/Firefox. Keep it 2.5–3.5 seconds, preserve skip/reduced-motion behavior and test session refresh, direct category URLs and interrupted playback whenever changing it.
+- Optional audio is intentionally not implemented; introduce sound only with an explicit user-activated control if requested later.

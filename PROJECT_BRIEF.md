@@ -20,3 +20,7 @@ React Router owns history and real URLs. A GSAP overlay covers the old page befo
 ## Publication readiness
 
 Static Vite deployment with SPA rewrites for direct URLs. Approved official photography and detailed organizer content are still pending. Generated concert art is visibly labeled. The VJIT logo preserves its supplied colors with a transparent alpha mask. No invented performers, sponsors, contact destinations, schedules or institutional claims.
+
+## First-session opening
+
+The homepage optionally begins with THE BIRTH OF UDHBHAV, an original 3.2-second GSAP ident. It uses a spark and three converging energy lines to reveal the festival wordmark and align it into the existing hero. It plays once per tab session, has Skip/Escape controls, respects reduced motion and never delays direct category visits. This is an added experience; existing category pages and their transitions are preserved.
