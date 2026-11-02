@@ -1,3 +1,5 @@
+import { sportsJourney } from '../src/data/sportsJourney.js';
+import { sportsAssets } from '../src/data/sportsAssets.js';
 import assert from 'node:assert/strict';
 import { events, categories, festival } from '../src/data/events.js';
 assert.equal(events.length,26,'All 26 requested events must be present');
@@ -15,3 +17,7 @@ for(const e of events){
 assert.equal(festival.annualDay,'2027-01-30');
 assert.equal(festival.schedule.length,0,'Do not assign an unconfirmed event schedule');
 console.log('PASS: all 26 events, category counts, unique IDs, detail schema, festival dates and unconfirmed schedule.');
+
+assert.deepEqual(sportsJourney.map(chapter=>chapter.event.title),['Basketball','Football','Volleyball','Table Tennis','Cricket','Badminton','Chess','Carroms','Kabaddi'],'Sports journey must retain the requested order');
+for(const chapter of sportsJourney){assert.equal(chapter.event.category,'sports');assert.ok(sportsAssets[chapter.id]);assert.equal(chapter.event.images,sportsAssets[chapter.id].images);}
+console.log('PASS: all nine arena chapters in order with centralized sports image mappings.');

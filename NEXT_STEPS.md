@@ -10,3 +10,6 @@
 8. Vercel deployment is ready if requested: Vite build to dist with committed SPA rewrites. Preserve owner-private access on Sites until the owner requests otherwise.
 
 Optional sound is not implemented. Add it only if requested, with an explicit user-activated control.
+
+9. Add approved Sports photographs in public/images/events/<sport-id>/ and populate src/data/sportsAssets.js. Verify main/additional images, crop, alt text and broken-image fallback before replacing the vector studies.
+10. Review the Sports winding path and nine opening effects on physical devices and Safari/Firefox. Recheck marker alignment after layout changes, native detail scrolling, source-position restoration, keyboard jump controls and reduced motion.

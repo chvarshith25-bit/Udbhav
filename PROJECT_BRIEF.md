@@ -6,7 +6,7 @@ Vidya Jyothi Institute of Technology, Hyderabad. Festival: January 28–30, 2027
 
 ## Experience
 
-Preserve THE FESTIVAL IN MOTION: oversized editorial type, ink/paper/lime colors, original line-based graphics, intentional whitespace and restrained movement. The homepage occupies one desktop viewport; mobile/short screens keep accessible content rather than clipping it. Category pages are distinct React Router routes, with searchable event lists and accessible reusable detail dialogs.
+Preserve THE FESTIVAL IN MOTION: oversized editorial type, ink/paper/lime colors, original line-based graphics, intentional whitespace and restrained movement. The homepage occupies one desktop viewport; mobile/short screens keep accessible content rather than clipping it. Category pages are distinct React Router routes. Sports is a winding nine-arena journey; Cultural/Technical retain searchable editorial lists. All use accessible reusable event details.
 
 Routes: `/`, `/sports`, `/cultural`, `/technical`, `/about`, `/schedule`, `/gallery`, `/contact`. Category navigation must not become anchor scrolling. Supporting content is preserved on its own routes. Unknown paths and rendering errors have return-home states.
 
@@ -25,3 +25,7 @@ Gallery/category/event fallbacks remain original procedural artwork. Real photog
 ## Remaining launch content
 
 Organizer-approved event descriptions/rules, schedules, venues, both student coordinators, registration/WhatsApp links, phone/email contacts, real imagery, official logo approval and confirmed partners. Do not invent performers, sponsors, institutional claims or destinations. Keep unconfirmed values null and show coming-soon states.
+
+## Sports: THE ROAD TO GLORY
+
+Sports alone is redesigned as an interactive journey: Basketball, Football, Volleyball, Table Tennis, Cricket, Badminton, Chess, Carroms and Kabaddi. A continuous responsive SVG passes through measured waypoint positions, illuminates with scroll progress and tracks the active arena. Alternating desktop chapters become a simplified mobile side rail. Distinct sport graphics and roughly 0.85–0.95-second opening effects lead into a fullscreen native detail dialog. Reduced motion reveals details immediately. Close restores source scroll/focus; route changes clean up the modal. No event-specific routes are introduced. Existing homepage, intro, category transition controller and Cultural/Technical layouts remain unchanged.

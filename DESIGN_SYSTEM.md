@@ -13,7 +13,7 @@ The restored golden concert concept image supports the warm spark/lime identity.
 - IntroSequence: eight-second opening and initial homepage handoff only. GSAP context reverts every affected inline style.
 - useFestivalMotion: normal homepage entrance on mounts not owned by the intro; scoped GSAP lifecycle and reduced-motion handling.
 - PageTransitionProvider/choreography: route-shell fading, cover/reveal panels and transition labels. GSAP only.
-- Motion: event dialog UI. Do not assign a second animation system to the same node.
+- Motion: standard Cultural/Technical dialog UI. Sports details disable that entrance and use their own GSAP cover. Do not assign a second animation system to the same node.
 
 Opening timing: spark 0–0.8s; drawn three-energy field 0.8–3.5s; wordmark/year reveal around 3.5–5s; identity hold; homepage alignment/reveal 6.3–8s. Ten-second recovery timer. No media/sound/WebGL dependency. Session key `udbhav:intro:v1`; direct category entry and reduced motion bypass it. Skip/Escape and interruption recovery remain available.
 
@@ -28,3 +28,11 @@ Desktop home fits one viewport using width/height-aware typography. Mobile home 
 The concert is disclosed AI-generated concept art; the logo is a restored display reference, not verified official provenance. Gallery/category/event artwork is original SVG/CSS. Hero fallback uses orbital tracks, a coordinate grid and flowing lines; gallery shares that language. No invented event coverage.
 
 Use src/data/assets.js for site/category references and events.js for event photos. AssetVisual handles errors and optional responsive srcSet/sizes. The logo's whiteBackgroundMask option is specific to the current 1000×355 reference; a verified transparent logo can use the normal image path. Preserve fixed visual regions and crops to avoid layout shift when replacing media. See public/ASSET_GUIDE.md.
+
+## Sports journey design
+
+Ink/lime hero introduces THE ROAD TO GLORY. Paper chapters alternate text and unframed sport artwork with ample whitespace. The winding circuit is a muted 32px road, fine dashed center and 3px illuminated progress stroke. Markers and inter-chapter crossing positions are measured from the DOM, not hardcoded to a viewport. Rounded desktop turns stay outside the text/art regions so the road remains visibly continuous. ResizeObserver rebuilds the SVG; ScrollTrigger drives progress and subtle chapter entrances. Mobile uses a narrow gently curved left rail. A sticky progress/arena jump control avoids forcing visitors through the whole journey.
+
+Nine vector identities share the same stroke language: Basketball court/ball, Football pitch/direction, Volleyball net, Table Tennis paddle/ball, Cricket bat/stadium arcs, Badminton shuttle, Chess board/knight, Carroms board/striker ripples and Kabaddi boundaries. Photos replace these within fixed regions through SportImage and centralized sportsAssets.
+
+SportOpening exclusively owns the fullscreen cover inside the existing native dialog: Basketball circle/court lines; Football directional pitch wipe; Volleyball net strips; Table Tennis moving ball/split panels; Cricket sweeping ellipse; Badminton diagonal lift; Chess 16 tiles; Carroms expanding circle/ripple; Kabaddi expanding boundary. Effects last roughly 0.85–0.95s, have a 1.6s recovery timer, and bypass immediately for reduced motion. Content remains inert until covered, then reveals beneath the retracting cover. Closing restores body padding/scroll and opener focus. All listeners, observers, ScrollTriggers and GSAP contexts are cleaned up.

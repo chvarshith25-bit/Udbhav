@@ -13,7 +13,7 @@ All other gallery/category/event visuals are original SVG/CSS placeholders. No v
 | `logos/` | siteAssets.institutionLogo in src/data/assets.js |
 | `images/` | siteAssets.hero |
 | `images/categories/<category>/` | categoryAssets[category].photos |
-| `images/events/<event-id>/` | matching event.images in src/data/events.js |
+| `images/events/<event-id>/` | Sports: src/data/sportsAssets.js (feeds events.js); other events: event.images in events.js |
 | `images/gallery/` | siteAssets.gallery; current feature uses its first entry |
 | `posters/<event-id>/` | category poster slots reserved for future presentation |
 | `videos/` | reserved; no video is currently loaded or required |
@@ -21,3 +21,5 @@ All other gallery/category/event visuals are original SVG/CSS placeholders. No v
 Images use `{ src: '/images/...', alt: 'Accurate description' }`. Hero images may also provide srcSet and sizes. Unfilled slots remain null/empty. The current logo reference uses whiteBackgroundMask for its 1000×355 white-backed artwork; omit that option for an approved transparent logo.
 
 AssetVisual restores the designed fallback if a source fails. Preserve existing image regions/aspect ratios, test mobile crops and optimize formats/dimensions. Do not represent unrelated imagery as real festival coverage. The eight-second opening itself reads no asset references and remains functional with images blocked.
+
+Sports has all nine named folders and a mapping guide at images/events/SPORTS_ASSETS.md. SportImage displays the first photo on the journey and supports additional detail images; missing or failed photos restore the sport’s SVG study.

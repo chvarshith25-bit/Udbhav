@@ -1,3 +1,4 @@
+import { sportsAssets } from './sportsAssets.js';
 export const categories = [
   { id: 'sports', label: 'Sports', number: '01', heading: 'Play for the moment.', intro: 'The rush. The rivalry. The last point. Bring your game and leave it all on the field.', cue: 'FIND YOUR COMPETITIVE EDGE', art: 'sports' },
   { id: 'cultural', label: 'Cultural', number: '02', heading: 'Take the spotlight.', intro: 'For the voices, the moves, the stories and the players. Find your stage, and make it yours.', cue: 'LET YOUR EXPRESSION TAKE OVER', art: 'cultural' },
@@ -39,7 +40,7 @@ const descriptions = {
 export const events = Object.entries(groups).flatMap(([category, titles]) => titles.map(title => ({
   id: title.toLowerCase().replace(/[^a-z0-9]+/g, '-'), title, category,
   subgroup: ['BGMI','Free Fire','Valorant Tournament','IPL Auction'].includes(title) ? 'Gaming & strategy' : category === 'cultural' ? 'Arts & activities' : null,
-  description: descriptions[title], images: [], venue: null, date: null, startTime: null, endTime: null,
+  description: descriptions[title], images: sportsAssets[title.toLowerCase().replace(/[^a-z0-9]+/g, '-')]?.images || [], venue: null, date: null, startTime: null, endTime: null,
   coordinators: [{ name: null, phone: null }, { name: null, phone: null }],
   registrationWhatsapp: null, contactPhone: null, contactEmail: null, status: 'details-coming-soon',
 })));
