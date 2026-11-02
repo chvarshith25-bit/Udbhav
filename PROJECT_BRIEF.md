@@ -29,3 +29,7 @@ Organizer-approved event descriptions/rules, schedules, venues, both student coo
 ## Sports: THE ROAD TO GLORY
 
 Sports alone is redesigned as an interactive journey: Basketball, Football, Volleyball, Table Tennis, Cricket, Badminton, Chess, Carroms and Kabaddi. A continuous responsive SVG passes through measured waypoint positions, illuminates with scroll progress and tracks the active arena. Alternating desktop chapters become a simplified mobile side rail. Distinct sport graphics and roughly 0.85–0.95-second opening effects lead into a fullscreen native detail dialog. Reduced motion reveals details immediately. Close restores source scroll/focus; route changes clean up the modal. No event-specific routes are introduced. Existing homepage, intro, category transition controller and Cultural/Technical layouts remain unchanged.
+
+## Cricket media
+
+Four user-supplied Cricket photos are installed through sportsAssets.js. The first is the arena/main image; all four are available in the detail gallery. Remaining arenas retain their procedural placeholders. The provided photos do not establish individual event dates or a festival-year claim.

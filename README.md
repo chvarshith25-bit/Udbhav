@@ -67,10 +67,12 @@ Codex and Antigravity use the same GitHub repository. Read AGENTS.md and the pro
 
 Sports has nine arenas in the requested order, connected by a continuous SVG measured from the actual waypoint positions. Desktop chapters alternate composition; mobile uses a gently curved side rail. Natural scrolling draws the path and updates the sticky progress/jump control. Opening an arena uses its game-specific GSAP transition inside the shared native dialog; all existing event fields and image controls remain. Closing restores the source scroll position and button focus. There are no event-specific routes; browser Back/Forward continues between category pages and cleans up any open detail.
 
-Populate sportsAssets[<event-id>].images with approved `{ src, alt }` objects. The first image is the main journey/detail image; remaining images appear in the detail controls. Missing/broken images restore the matching original SVG sport graphic. No actual Sports photographs are installed. See public/images/events/SPORTS_ASSETS.md.
+Populate sportsAssets[<event-id>].images with approved `{ src, alt }` objects. The first image is the main journey/detail image; remaining images appear in the detail controls. Missing/broken images restore the matching original SVG sport graphic. Cricket currently has four user-supplied photographs; all other Sports arenas retain vector placeholders. See public/images/events/SPORTS_ASSETS.md.
 
 Focused React correctness lint for Sports changes can be run without adding a runtime dependency:
 
 ```sh
 npm exec --yes --package=@biomejs/biome -- biome lint --only=correctness/noUnusedVariables --only=correctness/noUnusedImports --only=correctness/useExhaustiveDependencies --only=correctness/useJsxKeyInIterable --only=suspicious/noAssignInExpressions --only=suspicious/noDuplicateObjectKeys src/sports src/pages/SportsPage.jsx src/data/sportsAssets.js src/data/sportsJourney.js src/components/EventDialog.jsx
 ```
+
+Cricket uses four user-supplied photographs from the uploaded ZIP. The first appears on the journey; all four are available through the detail gallery controls. Detail photographs use contain sizing to preserve the complete scene. See public/images/events/cricket/ASSETS.md for provenance.

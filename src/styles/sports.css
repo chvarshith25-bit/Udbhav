@@ -49,3 +49,5 @@
 .sports-detail-dialog>.dialog-content{scrollbar-color:#aab59b var(--paper)}
 @media(max-width:760px){.journey-jump{max-width:120px;font-size:9px}.journey-position{gap:10px}}
 @media(min-width:761px){.arena-waypoint{left:4%}.arena-chapter:nth-of-type(even) .arena-waypoint{right:4%}}
+/* Preserve the full composition of supplied photographs inside arena details. */
+.sports-detail-dialog .sports-event-photo{object-fit:contain;background:var(--ink)}

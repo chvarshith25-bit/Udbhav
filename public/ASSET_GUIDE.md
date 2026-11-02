@@ -4,7 +4,7 @@
 
 The homepage uses festival-atmosphere.webp and its responsive small variant: previous AI-generated golden concert concept art, not an actual UDHBHAV photograph. The header uses the previous prepared logo reference at logos/vjit-logo.webp, with white background masked away. These were restored at the user's request; no official approval is inferred. Keep concept disclosure and accurate alt text.
 
-All other gallery/category/event visuals are original SVG/CSS placeholders. No verified event photos, posters or video are currently installed.
+All other gallery/category/event visuals are original SVG/CSS placeholders. Cricket has four user-supplied photos, documented in images/events/cricket/ASSETS.md. Other event photo slots remain empty; no posters or video are installed. No event date or festival-year attribution is inferred from the Cricket photos.
 
 ## Where to add approved assets
 
