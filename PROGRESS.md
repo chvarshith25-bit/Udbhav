@@ -1,5 +1,9 @@
 # Current progress — November 4, 2026
 
+## UI/UX agent tooling
+
+Installed project-local UI UX Pro Max, selected Vercel web/React skills, Anthropic frontend-design, 21st.dev skills and Motion AI Kit. Added project Codex MCP settings for free Motion and Figma. Website code, assets and dependencies are unchanged; check/build passed. Account authorization and live MCP activation remain pending in this managed environment. See UI_UX_SKILLS.md for exact versions, verification and local setup steps.
+
 ## Current website
 
 - Multi-page React/Vite festival site with a single-screen homepage and real Sports/Cultural/Technical routes. About, schedule/Annual Day, gallery and contact remain separate routes.
