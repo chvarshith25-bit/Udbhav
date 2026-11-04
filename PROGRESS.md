@@ -1,5 +1,13 @@
 # Current progress — November 4, 2026
 
+## Homepage spacing refinement
+
+Preserved THE FESTIVAL IS YOURS design, original type sizes/colors, SVG details, entrance interactions and Sponsors. Homepage layout now uses a shared CSS Grid with a responsive 8–10px spacing unit, consistent gaps, more separated zone placement and a dedicated footer row. The SVG path/detail data is unchanged; only its layout viewport and static placement transforms adapt the same illustration. No homepage interaction or animation code changed.
+
+Visually reviewed and browser-verified at 1920×1080, 1440×900, 1366×768 and 390×844: each fits one viewport, full illustration is visible, there is no horizontal overflow, and title/art/entrances/footer have clear separation. Font metrics and logo geometry compare exactly to the previous CSS. Smaller screens retain natural scrolling; Sponsors remains reachable. Keyboard/hover lighting, sponsor Escape/focus return, all three category transitions/Back, reduced motion and unchanged intro handoff/session behavior pass, without runtime/GSAP errors. Existing event checks and build pass. Physical-device and Safari/Firefox review remain outstanding.
+
+Website code changes are limited to src/home/arena.css and the layout viewBox in src/home/FestivalArena.jsx. Shared header/logo, intro, category pages, data, interactions, animation handlers, transitions, assets and dependencies remain unchanged.
+
 ## Homepage: THE FESTIVAL IS YOURS
 
 Replaced only the homepage presentation with an original interactive festival ground: sports court, cultural stage and technical pavilion, unified by ink/ivory/lime, original SVG scenery and the existing UDHBHAV typography. Header/college branding is unchanged. No external photography, fonts, component kits, WebGL or new dependencies. This illustration makes no real-campus geography claim; the previous concert concept asset remains available in the registry.

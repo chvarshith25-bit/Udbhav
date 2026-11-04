@@ -1,5 +1,7 @@
 # Next steps
 
+The homepage spacing/grid refinement is verified at 1920×1080, 1440×900, 1366×768 and 390×844. Preserve the responsive spacing unit, separated art/entrance/footer rows, original type sizes and static zone-placement transforms. Recheck on physical devices and Safari/Firefox; let smaller/zoomed screens scroll rather than clipping content.
+
 Review THE FESTIVAL IS YOURS homepage on physical iOS/Android and Safari/Firefox. Keep the shared VJIT branding, approved nine-second intro and existing category transitions unchanged. Verify hover/focus/touch lighting, small-screen signs and the Sponsors overlay. Add only organizer-approved sponsor records to src/data/sponsors.js; do not invent tiers, names or logos.
 
 The intro’s imagined-ground/campus caption is removed; preserve the existing nine-second animation and control-free playback.

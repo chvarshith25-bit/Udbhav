@@ -14,7 +14,7 @@ export function ZoneSymbol({ kind }) {
 
 export default function FestivalArena({ sceneRef }) {
   return <div ref={sceneRef} className="arena-scenery" aria-hidden="true">
-    <svg className="arena-ground" viewBox="0 0 1600 720" fill="none">
+    <svg className="arena-ground" viewBox="-300 80 2200 640" fill="none">
       <defs>
         <linearGradient id="arena-floor" x2="0" y2="1"><stop stopColor="#283022"/><stop offset="1" stopColor="#171914"/></linearGradient>
         <linearGradient id="arena-beam" x1=".5" y1="0" x2=".5" y2="1"><stop stopColor="#f1efcc" stopOpacity=".45"/><stop offset="1" stopColor="#d7f34d" stopOpacity="0"/></linearGradient>
