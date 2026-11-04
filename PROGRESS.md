@@ -1,5 +1,13 @@
 # Current progress — November 4, 2026
 
+## Isolated concept review: THE CAMPUS TAKEOVER
+
+Built a separate nine-second React/GSAP prototype in prototypes/campus-takeover. One original night-time festival ground contains a sports court, central stage/display and technology pavilion. Floodlights activate, the physical display counts 03/02/01, the whole ground lights up and the identity moves into a read-only reuse of the current homepage components. The illustration explicitly does not represent VJIT's real campus. No new photography, fonts, video, audio or runtime dependencies.
+
+Replay, Pause/Play, keyboard timeline scrubbing, Skip/Escape, reduced-motion still, hidden-tab pause, resize recalculation and replay after preview category navigation passed Chromium checks. Full playback measured approximately nine seconds; desktop, 390×844, 360×640 and 844×390 layouts were checked, with no runtime errors or horizontal overflow. The title bridge aligns with the homepage within browser rounding. Normal event checks and production build passed; the production entry, intro/session controller, category pages, styles, assets and package files remain unchanged.
+
+Private isolated review: https://udbhav-campus-takeover-review.arcaneharp16.chatgpt.site/ . This separate Site has its own identity; the existing UDHBHAV deployment is not replaced. **Awaiting creative approval before any integration.** See prototypes/campus-takeover/README.md for local commands and art direction.
+
 ## UI/UX agent tooling
 
 Installed project-local UI UX Pro Max, selected Vercel web/React skills, Anthropic frontend-design, 21st.dev skills and Motion AI Kit. Added project Codex MCP settings for free Motion and Figma. Website code, assets and dependencies are unchanged; check/build passed. The Figma plugin is connected and its authenticated account check passed. Separate local CLI MCP activation, Motion live connectivity and 21st.dev login remain pending. See UI_UX_SKILLS.md for exact versions, verification and local setup steps.

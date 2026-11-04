@@ -1,5 +1,9 @@
 # Design system
 
+## Isolated motion study — pending approval
+
+THE CAMPUS TAKEOVER lives only in prototypes/campus-takeover. Its single elevated festival-ground illustration extends the existing ink/paper/lime with night #080f12, warm floodlight #efce8d and desaturated pavilion blue. Layered scenery, physical floodlights, a countdown display, crowd/festoon/perimeter illumination and a measured homepage typography handoff replace montage only within this prototype. It makes no claim about VJIT's actual campus layout. Prototype-only styles and GSAP nodes are separate from all production animation owners; do not apply this direction to the existing website until approved.
+
 ## Tokens and composition
 
 Ink #171914; paper #f3f2eb; lime #d7f34d. Muted #77796f; rules #d6d7cd. Sports artwork uses sage, Cultural clay and Technical soft periwinkle. Use the system Arial/Helvetica stack and Georgia for editorial italics. No external font downloads.
