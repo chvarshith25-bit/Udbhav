@@ -1,5 +1,9 @@
 # Current progress — November 4, 2026
 
+## VJIT logo rendering
+
+The existing logo asset and header placement are retained. Simplified its white-background removal to a single color-preserving SVG alpha filter with sanitized fragment IDs, avoiding a nested SVG mask dependency that can render invisibly. No logo artwork, colors, sizing, header layout, intro or homepage spacing was replaced.
+
 ## Homepage spacing refinement
 
 Preserved THE FESTIVAL IS YOURS design, original type sizes/colors, SVG details, entrance interactions and Sponsors. Homepage layout now uses a shared CSS Grid with a responsive 8–10px spacing unit, consistent gaps, more separated zone placement and a dedicated footer row. The SVG path/detail data is unchanged; only its layout viewport and static placement transforms adapt the same illustration. No homepage interaction or animation code changed.
