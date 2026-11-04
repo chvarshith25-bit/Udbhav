@@ -1,3 +1,4 @@
+import { coverCultural, revealCultural } from '../cultural/culturalTransition';
 import gsap from 'gsap';
 
 export const transitionThemes = {
@@ -10,6 +11,7 @@ export function themeFor(path) { return transitionThemes[path.slice(1)] ? path.s
 
 // Only the provider owns these nodes. Page GSAP and Motion never animate them.
 export function coverPage(overlay, shell, theme, trigger, onCovered) {
+  if (theme === 'cultural') return coverCultural(overlay, shell, onCovered);
   const panels = overlay.querySelectorAll('.transition-panel');
   const copy = overlay.querySelector('.transition-copy');
   gsap.set(overlay, { visibility: 'visible' });
@@ -20,9 +22,6 @@ export function coverPage(overlay, shell, theme, trigger, onCovered) {
   if (trigger?.isConnected && trigger.matches('.hero-categories a')) tl.to(trigger, { x: 8, duration: .18, ease: 'power2.out' }, 0);
   if (theme === 'sports') {
     tl.fromTo(panels[0], { xPercent: -115 }, { xPercent: 0, duration: .42, ease: 'power4.inOut' }, 0);
-  } else if (theme === 'cultural') {
-    tl.fromTo(panels[0], { yPercent: -100 }, { yPercent: 0, duration: .48, ease: 'power3.inOut' }, 0);
-    tl.fromTo(panels[1], { yPercent: 100 }, { yPercent: 0, duration: .48, ease: 'power3.inOut' }, .045);
   } else {
     tl.fromTo(panels, { yPercent: -100 }, { yPercent: 0, duration: .3, stagger: .045, ease: 'power3.inOut' }, 0);
   }
@@ -31,14 +30,12 @@ export function coverPage(overlay, shell, theme, trigger, onCovered) {
   return tl;
 }
 export function revealPage(overlay, theme, onRevealed) {
+  if (theme === 'cultural') return revealCultural(overlay, onRevealed);
   const panels = overlay.querySelectorAll('.transition-panel');
   const tl = gsap.timeline({ onComplete: onRevealed });
   tl.to(overlay.querySelector('.transition-copy'), { opacity: 0, y: -22, duration: .18, ease: 'power2.in' }, 0);
   if (theme === 'sports') {
     tl.to(panels[0], { xPercent: 115, duration: .42, ease: 'power4.inOut' }, .08);
-  } else if (theme === 'cultural') {
-    tl.to(panels[0], { yPercent: 100, duration: .44, ease: 'power3.inOut' }, .06);
-    tl.to(panels[1], { yPercent: -100, duration: .44, ease: 'power3.inOut' }, .1);
   } else {
     tl.to(panels, { yPercent: 100, duration: .32, stagger: .04, ease: 'power3.inOut' }, .06);
   }

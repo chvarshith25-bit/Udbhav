@@ -6,7 +6,7 @@ Vidya Jyothi Institute of Technology, Hyderabad. Festival: January 28–30, 2027
 
 ## Experience
 
-Preserve THE FESTIVAL IN MOTION: oversized editorial type, ink/paper/lime colors, original line-based graphics, intentional whitespace and restrained movement. The homepage is THE FESTIVAL IS YOURS: one original interactive SVG festival ground, three spatial entrances, finite category lighting, real event-name previews and a secondary native Sponsors overlay. It occupies one viewport at common desktop/mobile sizes; exceptional short/zoomed screens retain accessible content rather than clipping it. Mobile uses distinct vector signs rather than essential map interaction. Sponsors data stays empty until approved records are supplied. Category pages are distinct React Router routes. Sports is a winding nine-arena journey; Cultural/Technical retain searchable editorial lists. All use accessible reusable event details.
+Preserve THE FESTIVAL IN MOTION: oversized editorial type, ink/paper/lime colors, original line-based graphics, intentional whitespace and restrained movement. The homepage is THE FESTIVAL IS YOURS: one original interactive SVG festival ground, three spatial entrances, finite category lighting, real event-name previews and a secondary native Sponsors overlay. It occupies one viewport at common desktop/mobile sizes; exceptional short/zoomed screens retain accessible content rather than clipping it. Mobile uses distinct vector signs rather than essential map interaction. Sponsors data stays empty until approved records are supplied. Category pages are distinct React Router routes. Sports is a winding nine-arena journey; Cultural is THE STAGE COMES ALIVE: warm theatrical scenery, three curated acts and an interactive typographic playbill with poster previews and its own accessible native event detail. Technical retains its searchable editorial list.
 
 Routes: `/`, `/sports`, `/cultural`, `/technical`, `/about`, `/schedule`, `/gallery`, `/contact`. Category navigation must not become anchor scrolling. Supporting content is preserved on its own routes. Unknown paths and rendering errors have return-home states.
 
@@ -16,7 +16,7 @@ THE CAMPUS TAKEOVER is approved and integrated: a nine-second continuous illustr
 
 No visible intro controls, replay, skip, pause, progress or debugging UI. Automatic first home-entry playback claims `udbhav:intro:v1` at start, before initialization. Refresh, navigation, return home and Back/Forward cannot replay it. Reduced motion and direct category entries bypass/consume the opening. Fail open on initialization errors; restore all homepage styles and access. The separate review entry reuses production code.
 
-GSAP route transitions remain separate: diagonal lime Sports wipe, clay Cultural curtains and periwinkle Technical panels. The previous page remains until covered; the destination commits before reveal. Preserve Back/Forward, duplicate-click protection, native link modifiers, focus and recovery timers.
+GSAP route transitions remain separate: diagonal lime Sports wipe, warm spotlights, rhythmic wave, performance graphic, expanded Cultural typography and fabric curtains and periwinkle Technical panels. The previous page remains until covered; the destination commits before reveal. Preserve Back/Forward, duplicate-click protection, native link modifiers, focus and recovery timers.
 
 ## Current visual assets
 
@@ -30,7 +30,7 @@ Organizer-approved event descriptions/rules, schedules, venues, both student coo
 
 ## Sports: THE ROAD TO GLORY
 
-Sports alone is redesigned as an interactive journey: Basketball, Football, Volleyball, Table Tennis, Cricket, Badminton, Chess, Carroms and Kabaddi. A continuous responsive SVG passes through measured waypoint positions, illuminates with scroll progress and tracks the active arena. Alternating desktop chapters become a simplified mobile side rail. Distinct sport graphics and roughly 0.85–0.95-second opening effects lead into a fullscreen native detail dialog. Reduced motion reveals details immediately. Close restores source scroll/focus; route changes clean up the modal. No event-specific routes are introduced. Existing homepage, intro, category transition controller and Cultural/Technical layouts remain unchanged.
+Sports alone is redesigned as an interactive journey: Basketball, Football, Volleyball, Table Tennis, Cricket, Badminton, Chess, Carroms and Kabaddi. A continuous responsive SVG passes through measured waypoint positions, illuminates with scroll progress and tracks the active arena. Alternating desktop chapters become a simplified mobile side rail. Distinct sport graphics and roughly 0.85–0.95-second opening effects lead into a fullscreen native detail dialog. Reduced motion reveals details immediately. Close restores source scroll/focus; route changes clean up the modal. No event-specific routes are introduced. Existing homepage, intro, category transition controller and Technical layouts remain unchanged.
 
 ## Cricket media
 

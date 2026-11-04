@@ -1,3 +1,4 @@
+import CulturalTransition from '../cultural/CulturalTransition';
 import { createContext, useContext, useLayoutEffect, useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
@@ -130,6 +131,7 @@ export default function PageTransitionProvider({ children }) {
   return <TransitionContext.Provider value={{ go, busyRef, displayLocation }}>
     <div ref={shell} className="route-shell" data-pathname={displayLocation.pathname} inert={busy} aria-busy={busy}>{children(displayLocation)}</div>
     <div ref={overlay} className="transition-overlay" data-theme={theme} aria-hidden="true">
+      <CulturalTransition/>
       {[0,1,2,3].map(i => <div className={`transition-panel panel-${i}`} key={i}/>)}
       <div className="transition-copy"><span className="eyebrow">UDHBHAV 2K27 / {copy.number}</span><span className="transition-title">{copy.title}</span><span className="eyebrow">{copy.caption}</span></div>
     </div>

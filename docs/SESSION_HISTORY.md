@@ -224,3 +224,7 @@ Earlier implementation notes are preserved in docs/SESSION_HISTORY.md. Current s
 ## Homepage before The Festival Is Yours — November 4, 2026
 
 The previous home used the restored golden concert concept artwork, oversized UDHBHAV/2027 type and three basic category links. The approved nine-second Campus Takeover intro and control-free once-per-tab session behavior were already shipped; its imagined-ground caption was removed at the owner's request. The new homepage-only brief authorizes replacing that home visual while keeping the header/logo, intro, category pages, events and route transitions unchanged. The old artwork stays in the asset registry and Git history; it is not official festival photography.
+
+## Cultural redesign — November 4, 2026
+
+The former shared Cultural editorial list and clay curtain effect were replaced by THE STAGE COMES ALIVE. Technical retains the original shared category template. Homepage, intro, Sports, shared branding and canonical event data were preserved.

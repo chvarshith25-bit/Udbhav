@@ -38,7 +38,7 @@ There are no playback controls or replay options. On the first home entry in a t
 
 Run session regression tests with `node src/intro/introSession.test.mjs`. Browser verification covers playback, controls absence, session refresh/history/navigation, mobile rotation, reduced motion and initialization failure.
 
-Category navigation uses real React Router URLs and distinct GSAP transitions: diagonal Sports wipe, Cultural curtains and Technical panels. Use TransitionLink for internal links. The old route stays mounted until covered; the new route commits before uncovering. Modified clicks, Back/Forward, heading focus and error recovery are preserved.
+Category navigation uses real React Router URLs and distinct GSAP transitions: diagonal Sports wipe, Cultural spotlight-and-curtain stage reveal and Technical panels. Use TransitionLink for internal links. The old route stays mounted until covered; the new route commits before uncovering. Modified clicks, Back/Forward, heading focus and error recovery are preserved.
 
 ## Interactive homepage
 
@@ -88,3 +88,7 @@ npm exec --yes --package=@biomejs/biome -- biome lint --only=correctness/noUnuse
 ```
 
 Cricket uses four user-supplied photographs from the uploaded ZIP. The first appears on the journey; all four are available through the detail gallery controls. Detail photographs use contain sizing to preserve the complete scene. See public/images/events/cricket/ASSETS.md for provenance.
+
+### Cultural: The Stage Comes Alive
+
+The dedicated /cultural route uses original theatrical SVG scenery and a three-act interactive playbill: Performance (4), Visual stories (3), Festival play (6). Hover/focus previews a poster; selecting any title opens a large accessible native detail panel. Event facts/gallery references remain centralized in events.js. Pending contacts, schedules and registration stay unconfirmed. No new dependencies or external media are required.

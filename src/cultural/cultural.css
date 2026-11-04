@@ -1,0 +1,121 @@
+.cultural-stage-page,.cultural-detail{--culture-ink:#181611;--culture-paper:#f1eadc;--culture-amber:#edc394;--culture-muted:#b8ad9b;--culture-rule:#d6bd9633;background:var(--culture-ink);color:var(--culture-paper);font-family:Arial,Helvetica,sans-serif}
+.cultural-stage-page{overflow:clip;isolation:isolate}
+.cultural-mainstage{position:relative;min-height:min(850px,calc(100svh - 88px));padding:34px var(--gutter) 34px;overflow:hidden;background:radial-gradient(ellipse at 77% 66%,#7053352e,transparent 56%),#181611;isolation:isolate}
+.culture-hero-top{display:flex;justify-content:space-between;align-items:center;gap:24px;color:#b8ad9b;font-size:10px;letter-spacing:.03em;position:relative;z-index:2}
+.culture-hero-top>a{display:flex;align-items:center;gap:10px;min-height:32px;color:var(--culture-paper)}
+.culture-hero-title{position:relative;z-index:2;font-size:clamp(90px,17.8vw,300px);letter-spacing:-.075em;font-weight:800;line-height:.86;margin:42px 0 0;outline:none}
+.culture-hero-scenery{position:absolute;inset:150px -4% 0 33%;pointer-events:none;z-index:0}
+.cultural-artwork{display:block;width:100%;height:100%;overflow:visible}
+.culture-hero-story{position:relative;z-index:1;max-width:550px;margin-top:68px;padding-bottom:65px}
+.culture-eyebrow{font-size:11px;line-height:1.5;color:var(--culture-amber);letter-spacing:.03em}
+.culture-hero-story h2{font-size:clamp(36px,4.1vw,68px);font-family:Georgia,serif;font-weight:400;line-height:1.06;letter-spacing:-.055em;margin:18px 0 0}
+.culture-hero-story h2 em{color:var(--culture-amber);font-weight:400}
+.culture-hero-intro{font-size:12px;color:var(--culture-muted);line-height:1.75;margin-top:24px}
+.culture-find-act{display:inline-flex;gap:35px;align-items:center;min-height:48px;border-bottom:1px solid #ddbd8566;margin-top:24px;padding:0 0 7px;font-size:12px}
+.culture-find-act>svg{color:var(--culture-amber)}
+.culture-hero-bottom{position:relative;z-index:2;display:flex;justify-content:space-between;gap:20px;font-size:10px;letter-spacing:.05em;color:var(--culture-muted);padding-top:22px;border-top:1px solid var(--culture-rule)}
+.cultural-playbill{padding:88px var(--gutter) 95px;border-top:1px solid var(--culture-rule);scroll-margin-top:25px;background:linear-gradient(180deg,#211d15,#181611 44%)}
+.culture-program-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:45px}
+.culture-program-heading h2{font-family:Georgia,serif;font-size:clamp(50px,6.3vw,94px);font-weight:400;line-height:1;letter-spacing:-.065em;margin-top:14px}
+.culture-program-heading>p{font-size:12px;line-height:1.7;color:var(--culture-muted);max-width:260px;text-align:right}
+.culture-act-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--culture-rule);border-bottom:1px solid var(--culture-rule);margin-bottom:48px;gap:32px}
+.culture-act-tabs button{min-width:0;min-height:110px;padding:23px 0;display:grid;grid-template-columns:auto 1fr;gap:8px 18px;text-align:left;align-content:center;background:transparent;border:0;border-top:2px solid transparent;margin-top:-1px;color:var(--culture-muted);cursor:pointer;touch-action:manipulation}
+.culture-act-tabs button>span{font-size:9px;letter-spacing:.12em;grid-column:1;align-self:center}
+.culture-act-tabs button>strong{font-size:clamp(17px,1.8vw,27px);font-weight:500;letter-spacing:-.04em;line-height:1.15;grid-column:2}
+.culture-act-tabs button>small{grid-column:2;font-size:10px;color:#918778}
+.culture-act-tabs button[aria-selected=true]{color:var(--culture-paper);border-top-color:var(--culture-amber)}
+.culture-act-tabs button[aria-selected=true]>span{color:var(--culture-amber)}
+.culture-act-panel{display:grid;grid-template-columns:minmax(260px,.82fr) minmax(0,1.4fr);gap:clamp(40px,6vw,110px);align-items:start;min-height:590px}
+.culture-poster-column{width:100%;max-width:450px;margin-left:auto}
+.culture-poster-window{overflow:hidden}
+.culture-poster{position:relative;display:flex;flex-direction:column;min-height:540px;width:100%;padding:22px;text-align:left;background:#d9c7a8;color:#29241b;border:1px solid #f4e4c3;overflow:hidden}
+button.culture-poster{cursor:pointer;touch-action:manipulation}
+.culture-poster::after{content:'';position:absolute;inset:8px;border:1px solid #57442933;pointer-events:none}
+.culture-poster-top{display:flex;gap:10px;justify-content:space-between;font-size:8px;letter-spacing:.12em;position:relative;z-index:1}
+.culture-poster-art{position:absolute;top:52px;left:-23%;right:-23%;height:360px;opacity:.72;mix-blend-mode:multiply;pointer-events:none}
+.culture-poster-type{position:relative;z-index:1;margin-top:auto;padding-top:270px;display:flex;flex-direction:column;gap:10px}
+.culture-poster-type>span{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#54452f}
+.culture-poster-type>strong{font-family:Georgia,serif;font-size:clamp(30px,3.1vw,48px);line-height:.98;font-weight:400;letter-spacing:-.06em;text-wrap:balance;overflow-wrap:break-word}
+.culture-poster-type>small{font-size:10px;line-height:1.4}
+.culture-poster-bottom{position:relative;z-index:1;margin-top:24px;padding-top:14px;border-top:1px solid #5744294d;display:flex;justify-content:space-between;gap:12px;font-size:8px;line-height:1.5}
+.culture-preview-note{font-size:10px;color:#968a76;line-height:1.6;margin-top:16px}
+.culture-lineup{display:flex;flex-direction:column;min-height:540px}
+.culture-act-intro{display:flex;align-items:center;gap:20px;margin-bottom:32px;border-bottom:1px solid var(--culture-rule);padding-bottom:22px}
+.culture-act-intro>span{font-size:9px;letter-spacing:.15em;color:var(--culture-amber);flex-shrink:0}
+.culture-act-intro h3{font-size:14px;font-weight:400;color:var(--culture-muted);line-height:1.4}
+.culture-lineup-type{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px 24px;align-content:start;flex:1}
+.culture-event-title{position:relative;grid-column:span 6;min-width:0;min-height:90px;display:flex;gap:11px;align-items:flex-start;justify-content:flex-start;padding:8px 4px;background:transparent;border:0;color:var(--culture-paper);text-align:left;cursor:pointer;touch-action:manipulation;transition:color .18s}
+.culture-event-title .culture-event-order{font-size:8px;color:#968a76;letter-spacing:.08em;line-height:2.7;flex-shrink:0}
+.culture-event-word{font-size:clamp(23px,2.5vw,39px);line-height:1.05;letter-spacing:-.055em;font-weight:500;overflow-wrap:normal;min-width:0;text-wrap:balance}
+.culture-event-word>small{display:block;font-size:10px;letter-spacing:0;font-weight:400;line-height:1.5;color:var(--culture-muted);margin-top:12px}
+.culture-event-title>svg{flex-shrink:0;width:18px;height:18px;margin:5px 0 0 auto;color:#968a76;transition:transform .2s,color .2s}
+.culture-event-title.culture-event-0{grid-column:span 12;min-height:126px}
+.culture-event-0 .culture-event-word{font-family:Georgia,serif;font-size:clamp(42px,5.2vw,80px);font-weight:400;max-width:550px}
+.culture-event-2 .culture-event-word{font-family:Georgia,serif;font-weight:400;font-style:italic}
+.culture-event-title.culture-event-3{grid-column:span 12;min-height:80px;padding-top:18px;border-top:1px solid var(--culture-rule)}
+.culture-event-title[data-selected=true],.culture-event-title:hover{color:var(--culture-amber)}
+.culture-event-title[data-selected=true]>svg,.culture-event-title:hover>svg{color:var(--culture-amber);transform:translate(3px,-3px)}
+.culture-lineup-cue{display:flex;gap:16px;justify-content:space-between;font-size:10px;color:#968a76;border-top:1px solid var(--culture-rule);margin-top:24px;padding-top:22px}
+.culture-lineup-cue>span{color:var(--culture-amber)}
+.culture-act-visual .culture-event-title.culture-event-1,.culture-act-visual .culture-event-title.culture-event-2{padding-top:22px}
+.culture-act-play .culture-event-title.culture-event-0{grid-column:span 7;min-height:100px}
+.culture-act-play .culture-event-0 .culture-event-word{font-size:clamp(32px,3.6vw,58px)}
+.culture-act-play .culture-event-title.culture-event-1{grid-column:span 5;padding-top:35px}
+.culture-act-play .culture-event-title.culture-event-2,.culture-act-play .culture-event-title.culture-event-3{grid-column:span 4;min-height:75px;padding-top:12px;border:0}
+.culture-act-play .culture-event-title.culture-event-4{grid-column:span 8}
+.culture-act-play .culture-event-title.culture-event-5{grid-column:span 12;padding-top:18px;border-top:1px solid var(--culture-rule)}
+.culture-closing{padding:65px var(--gutter) 48px;border-top:1px solid var(--culture-rule);background:#211c15}
+.culture-closing>p{font-size:12px;color:var(--culture-amber)}
+.culture-closing h2{font-family:Georgia,serif;font-size:clamp(52px,7.8vw,120px);font-weight:400;line-height:.95;letter-spacing:-.065em;margin:25px 0 42px}
+.culture-closing h2 em{font-weight:400;color:var(--culture-amber)}
+.culture-closing>div{display:flex;justify-content:space-between;align-items:center;gap:25px;padding-top:25px;border-top:1px solid var(--culture-rule)}
+.culture-closing a{display:flex;align-items:center;gap:30px;font-size:12px;min-height:44px}.culture-closing>div>span{font-size:9px;color:#968a76}
+.cultural-stage-page button:focus-visible,.cultural-stage-page a:focus-visible{outline:2px solid var(--culture-amber);outline-offset:6px}
+
+.cultural-detail{position:fixed;inset:0;margin:auto;width:min(1280px,calc(100% - 40px));height:min(850px,calc(100svh - 40px));max-height:calc(100svh - 40px);padding:0;border:1px solid #b79a6a77;overflow:hidden}
+.cultural-detail[open]{display:grid;grid-template-rows:auto minmax(0,1fr)}
+.cultural-detail::backdrop{background:#100d0bea}
+.culture-detail-header{display:flex;align-items:center;gap:24px;justify-content:space-between;padding:12px 24px;border-bottom:1px solid var(--culture-rule);font-size:10px;letter-spacing:.05em;color:var(--culture-muted)}
+.culture-detail-header>span:nth-child(2){margin-left:auto}
+.culture-detail-header button{display:grid;place-items:center;min-width:44px;height:44px;background:transparent;border:1px solid var(--culture-rule);color:var(--culture-paper);cursor:pointer}
+.culture-detail-scroll{overflow:auto;overscroll-behavior:contain;min-height:0}
+.culture-detail-body{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);min-height:100%}
+.culture-detail-media{position:relative;min-height:610px;background:#b8a182;overflow:hidden;display:flex;align-items:stretch}
+.culture-detail-media>.culture-poster{min-height:100%;border:0;padding:30px 34px}
+.culture-detail-media>.culture-poster .culture-poster-art{height:420px;top:55px}
+.culture-detail-media>.culture-poster .culture-poster-type{padding-top:340px}
+.culture-detail-media>img{width:100%;min-height:100%;height:auto;object-fit:contain;align-self:center}
+.culture-detail-curtain{position:absolute;inset:0;pointer-events:none;background:#483327;transform:scaleX(0);z-index:1}
+.culture-detail-info{padding:38px 42px 40px;min-width:0}
+.culture-detail-kicker{font-size:10px;line-height:1.5;color:var(--culture-amber)}
+.culture-detail-info h2{font-family:Georgia,serif;font-size:clamp(32px,3.2vw,52px);line-height:1.03;font-weight:400;letter-spacing:-.055em;margin-top:18px;text-wrap:balance}
+.culture-detail-info #culture-detail-description{font-size:13px;line-height:1.75;color:var(--culture-muted);margin-top:20px;max-width:470px}
+.culture-dance-styles{font-size:11px;color:var(--culture-amber);margin-top:14px;line-height:1.5}
+.culture-event-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:28px;padding:24px 0;border-top:1px solid var(--culture-rule);border-bottom:1px solid var(--culture-rule)}
+.culture-event-facts dt,.culture-contact-facts dt{font-size:9px;color:#968a76;letter-spacing:.05em}
+.culture-event-facts dd,.culture-contact-facts dd{font-size:12px;color:var(--culture-paper);margin-top:7px;line-height:1.5;overflow-wrap:anywhere}
+.culture-coordinators{margin-top:24px}.culture-coordinators h3,.culture-registration h3{font-size:12px;font-weight:500;color:var(--culture-paper)}
+.culture-coordinators>div{display:flex;gap:17px;align-items:flex-start;margin-top:18px}.culture-coordinators>div>span{font-size:9px;color:var(--culture-amber);padding-top:2px}.culture-coordinators p{display:flex;flex-direction:column;gap:6px;font-size:12px;line-height:1.4}.culture-coordinators small{font-size:10px;color:var(--culture-muted)}
+.culture-registration{margin-top:26px;padding-top:23px;border-top:1px solid var(--culture-rule)}.culture-registration>p{font-size:12px;line-height:1.6;color:var(--culture-muted);margin-top:9px}.culture-registration-link{display:inline-flex;align-items:center;gap:15px;min-height:44px;font-size:12px;color:var(--culture-amber);margin-top:10px}
+.culture-contact-facts{display:grid;gap:15px;margin-top:25px}.culture-contact-facts a{display:inline-flex;align-items:center;gap:8px;color:var(--culture-amber)}
+.culture-gallery-controls{position:absolute;left:18px;right:18px;bottom:18px;z-index:2;display:flex;align-items:center;justify-content:center;gap:16px;background:#181611e6;padding:7px;color:var(--culture-paper);font-size:11px}.culture-gallery-controls button{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--culture-rule);background:transparent;color:var(--culture-paper);cursor:pointer}
+.cultural-detail button:focus-visible,.cultural-detail a:focus-visible{outline:2px solid var(--culture-amber);outline-offset:3px}
+
+@media(min-width:1700px){.cultural-mainstage{min-height:940px}.culture-hero-story{margin-top:78px}.culture-hero-scenery{left:35%;top:170px}}
+@media(max-width:1100px){.culture-hero-story{max-width:450px}.culture-hero-scenery{inset:170px -17% 0 30%}.culture-act-panel{gap:35px;grid-template-columns:minmax(250px,.85fr) minmax(0,1.25fr)}.culture-poster{min-height:490px}.culture-poster-art{height:300px}.culture-poster-type{padding-top:245px}.culture-event-word{font-size:27px}.culture-event-0 .culture-event-word{font-size:52px}.culture-act-tabs{gap:20px}.culture-act-tabs button{gap:8px 12px}.culture-detail-info{padding:30px}.culture-detail-body{grid-template-columns:1fr 1.1fr}.culture-detail-media>.culture-poster{padding:24px}.culture-detail-media>.culture-poster .culture-poster-art{height:330px}.culture-detail-media>.culture-poster .culture-poster-type{padding-top:285px}}
+@media(max-width:760px){
+ .cultural-mainstage{padding:22px var(--gutter) 26px;min-height:760px}.culture-hero-top{font-size:8px;gap:12px;flex-wrap:wrap}.culture-hero-top>span:nth-child(2){display:none}.culture-hero-top>a{min-height:32px}.culture-hero-title{font-size:18.5vw;letter-spacing:-.075em;margin-top:32px}.culture-hero-story{margin-top:38px;max-width:100%;padding-bottom:275px}.culture-hero-story h2{font-size:40px;line-height:1.04;margin-top:14px}.culture-eyebrow{font-size:10px}.culture-hero-intro{font-size:12px;margin-top:18px}.culture-find-act{margin-top:19px;min-height:44px}.culture-hero-scenery{inset:auto -15% 50px 5%;height:330px;opacity:.85}.culture-hero-bottom{font-size:8px;line-height:1.6;gap:14px;padding-top:18px}.culture-hero-bottom>span:last-child{text-align:right}
+ .cultural-playbill{padding:52px var(--gutter) 52px;scroll-margin-top:16px}.culture-program-heading{align-items:flex-start;gap:20px;margin-bottom:30px}.culture-program-heading h2{font-size:52px}.culture-program-heading>p{font-size:10px;max-width:130px;padding-top:3px}.culture-program-heading .culture-eyebrow{font-size:9px;max-width:155px}
+ .culture-act-tabs{gap:12px;margin-bottom:28px}.culture-act-tabs button{min-height:99px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:8px;padding:15px 0}.culture-act-tabs button>span{align-self:flex-start;font-size:8px;letter-spacing:.08em}.culture-act-tabs button>strong{font-size:17px;line-height:1.05}.culture-act-tabs button>small{font-size:9px}
+ .culture-act-panel{display:flex;flex-direction:column;gap:32px;min-height:0}.culture-poster-column{max-width:100%;width:100%;margin:0}.culture-poster{min-height:360px;padding:20px}.culture-poster-art{left:9%;right:-26%;height:315px;top:24px;opacity:.6}.culture-poster-top{font-size:8px}.culture-poster-type{padding-top:180px;max-width:85%}.culture-poster-type>strong{font-size:39px;line-height:.98}.culture-poster-type>span{font-size:8px}.culture-poster-bottom{margin-top:20px;font-size:8px}.culture-preview-note{font-size:9px;margin-top:12px}
+ .culture-lineup{min-height:0;width:100%}.culture-act-intro{gap:17px;margin-bottom:22px;padding-bottom:19px}.culture-act-intro h3{font-size:12px}.culture-lineup-type{gap:22px 16px}.culture-event-title{min-height:85px;padding:6px 0;gap:8px}.culture-event-word{font-size:25px;line-height:1.05}.culture-event-title .culture-event-order{font-size:7px;line-height:2.8}.culture-event-title>svg{width:15px;height:15px;margin-top:6px}.culture-event-title.culture-event-0{min-height:105px}.culture-event-0 .culture-event-word{font-size:47px}.culture-event-title.culture-event-3{padding-top:20px}.culture-event-word>small{font-size:9px}.culture-lineup-cue{font-size:9px;margin-top:22px;padding-top:18px}.culture-act-play .culture-event-0 .culture-event-word{font-size:36px}.culture-act-play .culture-event-title.culture-event-1{padding-top:24px}.culture-act-play .culture-event-title.culture-event-4{grid-column:span 8}
+ .culture-closing{padding:42px var(--gutter) 30px}.culture-closing h2{font-size:65px;margin:20px 0 32px}.culture-closing>div{flex-direction:column;align-items:flex-start;gap:15px;padding-top:20px}.culture-closing a{font-size:12px}.culture-closing>div>span{font-size:8px}
+ .cultural-detail{width:calc(100% - 16px);height:calc(100svh - 16px);max-height:calc(100svh - 16px)}.culture-detail-header{padding:8px 12px;gap:12px;font-size:8px}.culture-detail-header>span:nth-child(2){display:none}.culture-detail-header button{margin-left:auto}.culture-detail-body{grid-template-columns:1fr}.culture-detail-media{min-height:365px}.culture-detail-media>.culture-poster{padding:22px;min-height:365px}.culture-detail-media>.culture-poster .culture-poster-art{height:310px;top:22px}.culture-detail-media>.culture-poster .culture-poster-type{padding-top:175px}.culture-detail-info{padding:28px 24px 35px}.culture-detail-info h2{font-size:39px}.culture-detail-kicker{font-size:9px}.culture-detail-info #culture-detail-description{font-size:12px}.culture-event-facts{gap:20px;margin-top:24px;padding:22px 0}.culture-event-facts dd{font-size:11px}.culture-contact-facts dd{font-size:11px}.culture-coordinators p{font-size:12px}
+}
+@media(max-width:380px){.culture-hero-story h2{font-size:36px}.culture-act-tabs{gap:10px}.culture-act-tabs button>strong{font-size:15px}.culture-event-word{font-size:22px}.culture-event-0 .culture-event-word{font-size:43px}.culture-act-play .culture-event-0 .culture-event-word{font-size:33px}.culture-poster-type>strong{font-size:35px}}
+@media(prefers-reduced-motion:reduce){.cultural-stage-page .culture-event-title,.cultural-stage-page .culture-event-title>svg{transition:none}}
+/* Reserve preview space so focus/hover cannot move the event under a pointer. */
+.culture-poster-window .culture-poster{height:600px;min-height:0}
+.culture-poster-window .culture-poster-type{padding-top:0;min-height:150px;justify-content:flex-end}
+@media(max-width:1100px) and (min-width:761px){.culture-poster-window .culture-poster{height:550px}.culture-poster-window .culture-poster-type>strong{font-size:34px}}
+@media(max-width:760px){.culture-poster-window .culture-poster{height:440px}.culture-poster-window .culture-poster-type{min-height:140px}.culture-poster-window .culture-poster-type>strong{font-size:38px}.culture-poster-window .culture-poster-art{height:260px;top:30px}}

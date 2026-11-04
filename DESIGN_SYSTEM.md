@@ -25,13 +25,13 @@ Sponsors & partners is a secondary venue-style entrance. Use the native dialog a
 - SponsorsOverlay: its dialog content entrance only, with a scoped GSAP lifecycle.
 - useFestivalMotion: normal homepage entrance on mounts not owned by the intro; scoped GSAP lifecycle and reduced-motion handling.
 - PageTransitionProvider/choreography: route-shell fading, cover/reveal panels and transition labels. GSAP only.
-- Motion: standard Cultural/Technical dialog UI. Sports details disable that entrance and use their own GSAP cover. Do not assign a second animation system to the same node.
+- Motion: standard Technical dialog UI. Cultural owns its native dialog reveal with GSAP. Sports details disable that entrance and use their own GSAP cover. Do not assign a second animation system to the same node.
 
 Opening timing remains identical to the approved prototype: quiet ground 0–1.1s; floodlights 1.1–3s; 03/02/01 display 3–6s; whole-ground/identity illumination 6–7.25s; camera and measured homepage handoff 7.25–9s. FestivalGround is the unchanged original SVG scenery. Intro styles live in src/intro/intro.css. No media, sound or WebGL dependency.
 
 Session key `udbhav:intro:v1` is claimed before initialization. No playback controls, Escape skip or replay handler. Reduced motion/direct category visits bypass the film. Resize preserves the current playhead; hidden-tab events do not deliberately pause or skip. Initialization failure and stalled-animation recovery restore access. Suppress normal hero entrance for the intro-owned mount; no second animation system owns the film nodes.
 
-Route choreography: diagonal lime Sports cover, opposing clay Cultural curtains, staggered periwinkle Technical columns; paper panels for other destinations. Roughly one second per navigation. Keep the old route mounted until fully covered and the destination ready before revealing. Three-second recovery timer prevents stale overlays/locks. Reduced motion skips choreography immediately.
+Route choreography: diagonal lime Sports cover, Cultural warm spotlight sweeps, microphone/ribbon, rhythmic wave and opposing fabric curtains, staggered periwinkle Technical columns; paper panels for other destinations. Cultural takes roughly two seconds; other routes retain their existing timing. Keep the old route mounted until fully covered and the destination ready before revealing. Three-second recovery timer prevents stale overlays/locks. Reduced motion skips choreography immediately.
 
 ## Responsive and accessible behavior
 
@@ -50,3 +50,7 @@ Ink/lime hero introduces THE ROAD TO GLORY. Paper chapters alternate text and un
 Nine vector identities share the same stroke language: Basketball court/ball, Football pitch/direction, Volleyball net, Table Tennis paddle/ball, Cricket bat/stadium arcs, Badminton shuttle, Chess board/knight, Carroms board/striker ripples and Kabaddi boundaries. Photos replace these within fixed regions through SportImage and centralized sportsAssets.
 
 SportOpening exclusively owns the fullscreen cover inside the existing native dialog: Basketball circle/court lines; Football directional pitch wipe; Volleyball net strips; Table Tennis moving ball/split panels; Cricket sweeping ellipse; Badminton diagonal lift; Chess 16 tiles; Carroms expanding circle/ripple; Kabaddi expanding boundary. Effects last roughly 0.85–0.95s, have a 1.6s recovery timer, and bypass immediately for reduced motion. Content remains inert until covered, then reveals beneath the retracting cover. Closing restores body padding/scroll and opener focus. All listeners, observers, ScrollTriggers and GSAP contexts are cleaned up.
+
+## Cultural — THE STAGE COMES ALIVE
+
+Cultural-only tokens: warm ink #181611, ivory #f1eadc, spotlight amber #edc394. Original SVG stage depth, curtains, truss, microphone, film and play studies; no external imagery required. Three acts organize the existing 13 canonical events. The playbill uses expressive typographic hierarchy, focus/hover poster previews and first-tap detail opening. Reserve fixed preview dimensions to prevent pointer displacement. Native modal owns scroll/focus containment and restores source position. All unknown facts remain pending; gallery references come from events.js. Finite GSAP motion cleans up on unmount and bypasses for reduced motion. Scoped styles must never alter shared header, homepage, intro, Sports or Technical.

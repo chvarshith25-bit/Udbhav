@@ -1,5 +1,7 @@
 # Next steps
 
+Review the new Cultural stage/playbill on physical iOS/Android, Safari/Firefox and with a screen reader. Preserve the three-act mapping and fixed preview dimensions; confirm schedules, venue, both coordinators and registration/contact details in events.js before enabling destinations. Supply approved event images via each record’s images array; original poster studies remain the missing/error fallback. Keep Cultural motion scoped away from homepage, intro, Sports and Technical.
+
 Verify the VJIT logo on the owner’s browser after refreshing the new deployment. The original asset/colors/placement are retained; the rendering no longer uses a nested SVG mask.
 
 The homepage spacing/grid refinement is verified at 1920×1080, 1440×900, 1366×768 and 390×844. Preserve the responsive spacing unit, separated art/entrance/footer rows, original type sizes and static zone-placement transforms. Recheck on physical devices and Safari/Firefox; let smaller/zoomed screens scroll rather than clipping content.
