@@ -75,6 +75,5 @@ export default function FestivalIntro({ onComplete }) {
     <div className="ct-vignette" />
     <div className="ct-bridge" aria-hidden="true">UDHBHAV</div>
     <div className="ct-film-meta"><span><i />UDHBHAV 2K27</span></div>
-    <p className="ct-disclosure">An imagined festival ground.<br/>Not a depiction of VJIT’s campus.</p>
   </section>;
 }

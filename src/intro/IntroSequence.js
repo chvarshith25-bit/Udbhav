@@ -74,7 +74,7 @@ export function createCampusTimeline(root, { onComplete }) {
     .to(q('.ct-screen-word'), { opacity: 0, duration: .08 }, 8.3)
     .to(q('.ct-world, .ct-night, .ct-vignette'), { opacity: 0, duration: .55 }, 8.3)
     .to(q('.ct-film'), { backgroundColor: 'rgba(8,15,18,0)', duration: .55 }, 8.3)
-    .to(q('.ct-film-meta, .ct-disclosure'), { autoAlpha: 0, duration: .2 }, 8.25)
+    .to(q('.ct-film-meta'), { autoAlpha: 0, duration: .2 }, 8.25)
     .to(q('.ct-homepage .site-header, .ct-homepage .hero-meta, .ct-homepage .hero-tagline, .ct-homepage .hero-bottom'), { opacity: 1, duration: .45 }, 8.5)
     .to(q('.ct-homepage .hero-title'), { opacity: 1, duration: .12 }, 8.88)
     .to(bridge, { autoAlpha: 0, duration: .12 }, 8.88)

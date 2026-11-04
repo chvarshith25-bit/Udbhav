@@ -2,6 +2,8 @@
 
 ## Approved opening: THE CAMPUS TAKEOVER
 
+Removed the visible imagined-ground/campus caption at the owner’s request. Scene illustration, timing, transitions and playback behavior are unchanged.
+
 The approved nine-second continuous festival-ground film is now the production opening. The prototype scenery is byte-identical; animation keyframes, easing, camera movement, lighting, countdown and homepage handoff timing are preserved. Court, stage and technology pavilion share one imagined environment, explicitly not VJIT's actual campus. No new media, fonts, audio, WebGL or dependencies.
 
 Playback is automatic once per browser-tab session, with no Pause, Play, Replay, Skip, progress or debug controls. `udbhav:intro:v1` is marked `complete` before animation initialization, so even a mid-animation refresh bypasses it. Route navigation, Back/Forward and returning home never replay it. Reduced motion bypasses immediately. Direct category visits retain their URLs and consume the opening rather than playing it later on return home. Blocked storage falls back to document memory.

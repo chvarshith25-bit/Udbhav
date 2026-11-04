@@ -1,5 +1,7 @@
 # Next steps
 
+The intro’s imagined-ground/campus caption is removed; preserve the existing nine-second animation and control-free playback.
+
 THE CAMPUS TAKEOVER is approved and integrated with automatic once-per-tab playback and no controls. Review the main and review URLs in a fresh browser session; a same-tab refresh intentionally bypasses the film. Preserve the approved animation unchanged. Physical-device and Safari/Firefox verification remain outstanding.
 
 UI/UX tooling: pull the setup and restart the local agent; complete 21st.dev login on your own machine, enable trusted project MCP configuration and verify Motion connectivity. Figma plugin authentication is verified in this session; authorize the separate local Codex CLI only if using it. Verify skill discovery in Antigravity. See UI_UX_SKILLS.md. No website redesign is part of this tooling installation.
