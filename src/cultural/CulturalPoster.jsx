@@ -1,5 +1,12 @@
-import FrequencyArtwork from './FrequencyArtwork';
+import { ArrowUpRight } from 'lucide-react';
+import { posterDesigns } from './acts';
+import PosterArtwork from './PosterArtwork';
 
-export default function CulturalPoster({event,act}) {
-  return <div className={`culture-poster frequency-poster-${act.kind}`}><div className="culture-poster-top"><span>LIVE FROM UDHBHAV 2K27</span><span>CH {act.number}</span></div><div className="culture-poster-art"><FrequencyArtwork kind={act.kind}/></div><div className="culture-poster-type"><span>{act.title}</span><strong>{event.title}</strong>{event.id==='dancing-competition'&&<small>Freestyle / Techno / Mass</small>}</div><div className="culture-poster-bottom"><span>Event photographs coming soon</span><span>THE FESTIVAL FREQUENCY</span></div></div>;
+export function PosterSurface({event,district,index=0}){
+ const design=posterDesigns[event.id];
+ return <><span className="street-poster-meta">UDHBHAV / 2K27 <span>{String(index+1).padStart(2,'0')}</span></span><span className="street-poster-headline">{design.headline.map(line=><span key={line}>{line}</span>)}</span><PosterArtwork kind={design.art}/><span className="street-poster-caption">{design.note}</span><span className="street-poster-footer"><span>{event.title}</span><ArrowUpRight size={17} aria-hidden="true"/></span><span className="sr-only">{district.title}</span></>;
+}
+export default function CulturalPoster({event,act}){
+ const design=posterDesigns[event.id];
+ return <div className={`culture-poster street-poster-surface tone-${design.tone} poster-${design.art}`}><PosterSurface event={event} district={act} index={act.events.findIndex(item=>item.id===event.id)}/><p className="street-photo-pending">Event photographs coming soon</p></div>;
 }

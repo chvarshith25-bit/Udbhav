@@ -1,11 +1,15 @@
 .cultural-route-stage{display:none}
-.transition-overlay[data-theme=cultural] .cultural-route-stage{display:block;position:absolute;inset:0;--signal-x:50%;--signal-y:60%;color:#dbad91}
+.transition-overlay[data-theme=cultural] .cultural-route-stage{display:block;position:absolute;inset:0;--street-x:50%;--street-y:60%}
 .transition-overlay[data-theme=cultural] .transition-copy,.transition-overlay[data-theme=cultural] .transition-panel[class]{display:none}
-.cultural-route-signal{position:absolute;inset:0;background:#19191b;clip-path:circle(0 at var(--signal-x) var(--signal-y));overflow:hidden}
-.cultural-route-flow{position:absolute;inset:0;width:100%;height:100%;opacity:.28;transform-origin:50% 50%}
-.cultural-route-pulse{position:absolute;left:var(--signal-x);top:var(--signal-y);width:100px;height:100px;margin:-50px 0 0 -50px;border-radius:50%;border:1px solid #f3d2b4;box-shadow:0 0 35px #dbad9130,inset 0 0 35px #dbad9130;opacity:0}
-.cultural-route-word{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:28px;color:#f0ede5;opacity:0}
-.cultural-route-word>span{font:10px Arial,Helvetica,sans-serif;letter-spacing:.09em;color:#dbad91}
-.cultural-route-word>strong{font:800 clamp(60px,16vw,250px)/.9 Arial,Helvetica,sans-serif;letter-spacing:-.085em}
-.cultural-route-word>small{font:italic clamp(20px,2.6vw,37px)/1.3 Georgia,serif;color:#dbad91}
-@media(max-width:760px){.cultural-route-word{gap:22px}.cultural-route-word>strong{font-size:18vw}.cultural-route-word>span{font-size:8px}}
+.street-route-celebration{position:absolute;inset:0;background:#171d36;clip-path:circle(0 at var(--street-x) var(--street-y));overflow:hidden}
+.street-route-light{position:absolute;inset:0;transform-origin:var(--street-x) var(--street-y);background:#e9ba8e33;clip-path:polygon(var(--street-x) var(--street-y),0 100%,100% 100%);opacity:0}
+.street-route-banner{position:absolute;width:140%;left:-20%;padding:0 8%;display:flex;align-items:center;justify-content:center;gap:35px;box-shadow:0 10px 0 #10172c44;transform-origin:50% 50%;color:#25263b}
+.street-route-banner-one{top:13%;height:37%;background:#f48673;transform:rotate(-8deg);flex-direction:column;gap:10px}
+.street-route-banner-one>span{font:9px Arial,Helvetica,sans-serif;letter-spacing:.13em}
+.street-route-banner-one>strong{font:800 clamp(60px,15vw,240px)/.85 Arial,Helvetica,sans-serif;letter-spacing:-.08em}
+.street-route-banner-two{top:53%;height:23%;background:#f5edda;transform:rotate(-8deg);flex-direction:column;gap:17px}
+.street-route-banner-two>strong{font:400 clamp(30px,5.2vw,85px)/1 Georgia,serif;letter-spacing:-.05em}
+.street-route-banner-two>span{font:9px Arial,Helvetica,sans-serif;letter-spacing:.1em}
+.street-route-banner-three{top:83%;height:11%;background:#d7f34d;transform:rotate(-8deg)}
+.street-route-banner-three>span{font:11px Arial,Helvetica,sans-serif;letter-spacing:.08em}
+@media(max-width:760px){.street-route-banner-one{top:22%;height:28%}.street-route-banner-one>strong{font-size:18vw}.street-route-banner-two{height:21%}.street-route-banner-two>strong{font-size:8vw}.street-route-banner-two>span{font-size:7px}.street-route-banner-three{top:79%}.street-route-banner-three>span{font-size:8px}}

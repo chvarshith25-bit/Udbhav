@@ -1,6 +1,6 @@
 # Next steps
 
-Review THE FESTIVAL FREQUENCY Cultural channels on physical iOS/Android, Safari/Firefox and screen readers. Preserve the distinct Stage/Frame/Playground compositions, fixed preview dimensions, keyboard channel navigation and native modal scroll/focus return. Confirm event facts and registration/contact destinations in events.js; populate approved photographs through images arrays. Original studies remain the missing/error fallback. Keep homepage, intro, Sports, Technical and all other transitions protected.
+Review THE FESTIVAL STREET on physical iOS/Android, Safari/Firefox and screen readers. Preserve connected street geometry, three distinct district compositions, tilted poster hit areas, native wayfinding, visible directory and fullscreen detail focus/scroll return. Confirm schedules, venues, both coordinators and contacts in events.js; add only approved event photographs through images arrays. Poster designs remain the missing/error fallback. Keep the approved intro, homepage/VJIT, Sports, Technical, sponsors and all other transitions untouched.
 
 Verify the VJIT logo on the owner’s browser after refreshing the new deployment. The original asset/colors/placement are retained; the rendering no longer uses a nested SVG mask.
 

@@ -37,10 +37,15 @@ export default function CulturalDetail({ event, act, onDismiss, opener }) {
   const close=()=>dialog.current.close();
   const date=event.date?new Date(`${event.date}T12:00:00+05:30`).toLocaleDateString('en-IN',{dateStyle:'long',timeZone:'Asia/Kolkata'}):pending;
   const time=event.startTime?`${event.startTime}${event.endTime?` – ${event.endTime}`:''} IST`:pending;
-  return <dialog ref={dialog} className="cultural-detail" aria-labelledby="culture-detail-title" aria-describedby="culture-detail-description" onClose={()=>{if(!dialog.current?.open)onDismiss()}} onCancel={e=>{e.preventDefault();close()}} onClick={e=>{
+  return <dialog ref={dialog} className="cultural-detail" aria-labelledby="culture-detail-title" aria-describedby="culture-detail-description" onClose={()=>{if(!dialog.current?.open)onDismiss()}} onCancel={e=>{e.preventDefault();close()}} onKeyDown={e=>{
+    if(e.key!=='Tab')return;
+    const controls=[...e.currentTarget.querySelectorAll('button:not([disabled]),a[href],input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex="0"]')].filter(control=>control.getClientRects().length);
+    const first=controls[0],last=controls.at(-1);
+    if((e.shiftKey&&document.activeElement===first)||(!e.shiftKey&&document.activeElement===last)){e.preventDefault();(e.shiftKey?last:first)?.focus()}
+  }} onClick={e=>{
     if(e.target!==e.currentTarget)return;const r=e.currentTarget.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)close();
   }}>
-    <header className="culture-detail-header"><span>UDHBHAV 2K27 / CH {act.number}</span><span>{act.title}</span><button type="button" onClick={close} aria-label="Close Cultural event details"><X size={23} aria-hidden="true"/></button></header>
+    <header className="culture-detail-header"><span>UDHBHAV 2K27 / DISTRICT {act.number}</span><span>{act.title}</span><button type="button" onClick={close} aria-label="Close Cultural event details"><X size={23} aria-hidden="true"/></button></header>
     <div className="culture-detail-scroll"><div className="culture-detail-body">
       <div className="culture-detail-media">
         {image && failedSrc!==image.src ? <img src={image.src} alt={image.alt||event.title} onError={()=>setFailedSrc(image.src)} width="720" height="960"/> : <CulturalPoster event={event} act={act}/>}

@@ -38,7 +38,7 @@ There are no playback controls or replay options. On the first home entry in a t
 
 Run session regression tests with `node src/intro/introSession.test.mjs`. Browser verification covers playback, controls absence, session refresh/history/navigation, mobile rotation, reduced motion and initialization failure.
 
-Category navigation uses real React Router URLs and distinct GSAP transitions: diagonal Sports wipe, Cultural stage-origin signal reveal and Technical panels. Use TransitionLink for internal links. The old route stays mounted until covered; the new route commits before uncovering. Modified clicks, Back/Forward, heading focus and error recovery are preserved.
+Category navigation uses real React Router URLs and distinct GSAP transitions: diagonal Sports wipe, Cultural stage-origin festival-banner reveal and Technical panels. Use TransitionLink for internal links. The old route stays mounted until covered; the new route commits before uncovering. Modified clicks, Back/Forward, heading focus and error recovery are preserved.
 
 ## Interactive homepage
 
@@ -89,6 +89,6 @@ npm exec --yes --package=@biomejs/biome -- biome lint --only=correctness/noUnuse
 
 Cricket uses four user-supplied photographs from the uploaded ZIP. The first appears on the journey; all four are available through the detail gallery controls. Detail photographs use contain sizing to preserve the complete scene. See public/images/events/cricket/ASSETS.md for provenance.
 
-### Cultural: The Festival Frequency
+### Cultural: The Festival Street
 
-The dedicated /cultural route is an interactive festival broadcast: The Stage (4 events), The Frame (3), The Playground (6). Switching channels transforms the artwork, composition, typography and event index. Hover/focus previews an event; the first tap opens its accessible detail panel. The Cultural-only signal transition originates at the existing homepage stage and takes approximately 1.2–1.6 seconds. Event facts, image arrays and contact/registration references remain in events.js; pending values are not invented. No external media or new dependencies are required. Run `node src/cultural/channels.test.mjs` to verify every Cultural record is mapped exactly once.
+The /cultural route is one original illustrated festival street: Performance Boulevard (4 events), Creator’s Alley (3), Challenge District (6). Angled wayfinding signs move between districts, transforming architecture accents, signage, lighting and poster arrangements in roughly 0.85 seconds. Every event has an original interactive poster and a visible directory entry. Selecting either opens its fullscreen native detail; close restores the same district, position and focus. The Cultural-only entry transition expands festival banners from the existing homepage stage (roughly 1.49 seconds of timeline animation). Event facts, photos and contact/registration references remain centralized in events.js; no missing values are invented. Run `node src/cultural/districts.test.mjs` to verify every record belongs to exactly one district. No new dependencies, external media or real-campus geography claims.

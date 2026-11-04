@@ -1,0 +1,15 @@
+export default function PosterArtwork({kind}){
+ return <svg viewBox="0 0 300 220" className={`street-poster-art art-${kind}`} fill="none" aria-hidden="true">
+  {kind==='rhythm'&&<g stroke="currentColor">{[25,55,85,115].map(r=><ellipse key={r} cx="150" cy="112" rx={r} ry={r*.7} strokeWidth={r===85?18:2}/>)}<path d="M40 180L260 30M28 160L248 10" strokeWidth="3"/></g>}
+  {kind==='gesture'&&<g fill="currentColor"><circle cx="160" cy="42" r="9"/><path d="M154 56C145 77 136 86 120 81L74 56L70 60L119 94L141 92C140 108 125 129 112 139L164 139C163 120 165 104 171 89L203 68L226 35L222 32L195 61L171 66Z"/><path d="M121 139C101 158 83 168 65 170L65 175C96 178 113 163 136 153L166 172L212 176L214 171L174 162L163 139Z"/><path d="M81 121C130 190 213 162 219 96" fill="none" stroke="currentColor" strokeWidth="1"/></g>}
+  {kind==='voice'&&<g stroke="currentColor" strokeWidth="3">{[0,1,2,3,4].map(n=><path key={n} d={`M15 ${75+n*17}C65 ${10+n*17} 100 ${150+n*17} 150 ${85+n*17}S235 ${15+n*17} 285 ${85+n*17}`}/>)}</g>}
+  {kind==='dance'&&<g fill="currentColor"><path d="M24 44H103L160 110L103 177H24L82 110Z"/><path d="M145 44H220L277 110L220 177H145L204 110Z" opacity=".5"/></g>}
+  {(kind==='frame'||kind==='video'||kind==='film')&&<g stroke="currentColor" strokeWidth="2"><path d="M30 44V22H65M235 22H270V44M30 176V198H65M235 198H270V176"/>{kind==='frame'?<><circle cx="150" cy="110" r="64"/><path d="M150 46L205 78L205 142L150 174L95 142L95 78ZM95 78H162L193 132L150 174L108 132L137 80"/></>:kind==='video'?<><path d="M48 62H206V174H48ZM68 42H226V154M88 22H246V134"/><path d="M111 91L156 117L111 143Z" fill="currentColor"/></>:<><path d="M29 61H271V160H29Z"/><path d="M35 49H265M35 172H265" strokeDasharray="7 8"/><path d="M131 85L175 111L131 137Z" fill="currentColor"/></>}</g>}
+  {kind==='clue'&&<g stroke="currentColor" strokeWidth="2"><path d="M27 51L109 24L190 49L274 24V181L190 207L109 180L27 207ZM109 24V180M190 49V207"/><path d="M61 148C62 81 139 88 145 131S216 176 232 84" strokeDasharray="5 6"/><path d="M217 68L246 97M217 97L246 68" strokeWidth="5"/><circle cx="61" cy="148" r="7" fill="currentColor"/></g>}
+  {kind==='challenge'&&<g stroke="currentColor" strokeWidth="3"><circle cx="64" cy="110" r="32"/><path d="M115 144L150 76L185 144ZM208 78H273V143H208Z"/></g>}
+  {kind==='bracket'&&<g stroke="currentColor" strokeWidth="4"><path d="M25 30H83V80H25M25 140H83V190H25M83 55H125V165H83M125 110H176M275 30H217V80H275M275 140H217V190H275M217 55H176V165H217"/></g>}
+  {kind==='speed'&&<g fill="currentColor"><path d="M147 18L67 124H141L107 205L238 84H162L201 18Z"/><path d="M30 71H94M20 92H76M6 113H61" stroke="currentColor" strokeWidth="3"/></g>}
+  {kind==='versus'&&<g stroke="currentColor" strokeWidth="3"><path d="M22 36L126 110L22 183ZM278 36L174 110L278 183Z"/><path d="M168 32L125 193" strokeWidth="13"/></g>}
+  {kind==='auction'&&<g stroke="currentColor" strokeWidth="2"><path d="M44 35H256V185H44Z"/><path d="M44 73H256M114 73V185M185 73V185"/><text x="150" y="150" textAnchor="middle" fill="currentColor" stroke="none" fontFamily="Arial" fontSize="60" fontWeight="800">BID</text><path d="M63 52H96M129 52H162M198 52H231"/></g>}
+ </svg>;
+}

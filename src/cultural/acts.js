@@ -1,9 +1,24 @@
 import { events } from '../data/events.js';
 
-const definitions = [
-  { id:'stage', number:'01', title:'The Stage', line:'Make yourself heard.', kind:'performance', caption:'Voices. Bodies. A room that moves.', words:['FEEL','IT ALL.'], ids:['battle-of-bands','classical-dance','singing-competition','dancing-competition'] },
-  { id:'frame', number:'02', title:'The Frame', line:'Change the way we see.', kind:'visual', caption:'Find a story only you can tell.', words:['A NEW','POINT OF VIEW.'], ids:['photography-competition','videography-competition','short-film-competition'] },
-  { id:'playground', number:'03', title:'The Playground', line:'Your next move starts here.', kind:'play', caption:'Instinct. Strategy. A little audacity.', words:['MAKE','YOUR MOVE.'], ids:['treasure-hunt','squid-game','bgmi','free-fire','valorant-tournament','ipl-auction'] },
+const definitions=[
+ {id:'performance',number:'01',title:'Performance Boulevard',short:'Performance',kind:'performance',line:'Follow the sound. Find your people.',sign:'MAKE SOME NOISE',ids:['battle-of-bands','classical-dance','singing-competition','dancing-competition']},
+ {id:'creators',number:'02',title:"Creator’s Alley",short:'Creators',kind:'visual',line:'A different story around every corner.',sign:'LOOK A LITTLE CLOSER',ids:['photography-competition','videography-competition','short-film-competition']},
+ {id:'challenge',number:'03',title:'Challenge District',short:'Challenge',kind:'play',line:'Take a chance. Make your next move.',sign:'COME OUT & PLAY',ids:['treasure-hunt','squid-game','bgmi','free-fire','valorant-tournament','ipl-auction']},
 ];
-export const culturalActs=definitions.map(channel=>({...channel,events:channel.ids.map(id=>events.find(event=>event.id===id&&event.category==='cultural')).filter(Boolean)}));
-export const culturalEventCount=culturalActs.reduce((count,channel)=>count+channel.events.length,0);
+export const culturalDistricts=definitions.map(district=>({...district,events:district.ids.map(id=>events.find(event=>event.id===id&&event.category==='cultural')).filter(Boolean)}));
+export const culturalEventCount=culturalDistricts.reduce((count,district)=>count+district.events.length,0);
+export const posterDesigns={
+ 'battle-of-bands':{art:'rhythm',tone:'coral',headline:['BATTLE','OF BANDS'],note:'Turn it up.'},
+ 'classical-dance':{art:'gesture',tone:'cream',headline:['Classical','Dance'],note:'Every movement, a story.'},
+ 'singing-competition':{art:'voice',tone:'orange',headline:['SING','YOUR HEART OUT.'],note:'Singing Competition'},
+ 'dancing-competition':{art:'dance',tone:'lime',headline:['MOVE','THE STREET.'],note:'Freestyle / Techno / Mass'},
+ 'photography-competition':{art:'frame',tone:'cream',headline:['A NEW','POINT OF VIEW.'],note:'Photography Competition'},
+ 'videography-competition':{art:'video',tone:'lilac',headline:['LIFE','IN MOTION.'],note:'Videography Competition'},
+ 'short-film-competition':{art:'film',tone:'night',headline:['SHORT FILM.','BIG FEELING.'],note:'Short Film Competition'},
+ 'treasure-hunt':{art:'clue',tone:'cream',headline:['FOLLOW','THE CLUE.'],note:'Treasure Hunt'},
+ 'squid-game':{art:'challenge',tone:'coral',headline:['SQUID','GAME'],note:'Trust your next move.'},
+ bgmi:{art:'bracket',tone:'lime',headline:['BGMI'],note:'Bring your squad.'},
+ 'free-fire':{art:'speed',tone:'orange',headline:['FREE','FIRE'],note:'Make your moment.'},
+ 'valorant-tournament':{art:'versus',tone:'lilac',headline:['VALORANT'],note:'Tournament'},
+ 'ipl-auction':{art:'auction',tone:'orange',headline:['IPL','AUCTION'],note:'Your call. Your bid.'},
+};
