@@ -1,6 +1,6 @@
 # Next steps
 
-UI/UX tooling: pull the setup and restart the local agent; complete 21st.dev and Figma authorization on your own machine, enable trusted project MCP configuration and verify Motion/Figma connectivity. Verify skill discovery in Antigravity. See UI_UX_SKILLS.md. No website redesign is part of this tooling installation.
+UI/UX tooling: pull the setup and restart the local agent; complete 21st.dev login on your own machine, enable trusted project MCP configuration and verify Motion connectivity. Figma plugin authentication is verified in this session; authorize the separate local Codex CLI only if using it. Verify skill discovery in Antigravity. See UI_UX_SKILLS.md. No website redesign is part of this tooling installation.
 
 1. Obtain verified official logo files, real festival/event photography and approved posters. Replace the current concert concept art and logo display reference through src/data/assets.js; retain correct disclosure/provenance until approved replacements exist. Follow public/ASSET_GUIDE.md.
 2. Confirm event descriptions/rules, date assignments, times, venues, both student coordinators and registration/contact details. Populate events.js; keep unknown values null. Verify destinations before enabling actions.

@@ -32,7 +32,7 @@ npx skills@1.7.6 list -a codex --json
 
 The published Motion 14.2.0 installer adds both free and Motion+ MCP entries, whereas the current repository/docs separate the premium option. This setup retains only the free `motion` entry. Recheck `.codex/config.toml` after rerunning that installer.
 
-## MCP and authorization still needed
+## MCP connections and remaining authorization
 
 [Figma official setup](https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/) documents `codex mcp add figma --url https://mcp.figma.com/mcp`. That command failed here because the user-level Codex config is read-only. The supported project configuration is saved instead:
 
@@ -49,10 +49,10 @@ Both entries validate with Codex configuration overrides. This managed session d
 Complete these steps on your own machine:
 
 1. Run `npx @21st-dev/cli@1.18.0 login`, approve the browser sign-in, then run `npx @21st-dev/cli@1.18.0 whoami`. The cloud login reached the browser URL but its localhost callback cannot authenticate your local machine; it was cancelled. Status remains **not logged in**.
-2. After Figma appears in `codex mcp list`, run `codex mcp login figma` and approve Figma access. Alternatively install and authorize the official Figma plugin in the Codex app. No Figma connection is confirmed here.
+2. **Figma plugin connected and authenticated in this session:** the official `figma_whoami` check passed after authorization. No design files were created or modified. The separate local Codex CLI connection is optional; if using it, confirm Figma appears in `codex mcp list`, then run `codex mcp login figma` if it needs authorization. Plugin authorization does not prove that a separate local CLI is signed in.
 3. Check Motion's MCP tools in your agent. The free server requires no account. Motion+ is optional and not configured.
 
-The cloud network allowlist excludes these hosted MCP/application domains, so live MCP tool calls and account authorization could not be verified. No tokens or credentials are included. Antigravity skills are available in the shared folder; its MCP connections must be added in Antigravity's own settings if wanted. No unsupported global Antigravity configuration was written.
+The executor network allowlist excludes these hosted MCP/application domains, so direct shell connectivity remains unverified. The connected Figma plugin uses its own integration and its authenticated account check succeeded. Motion live connectivity and 21st.dev login remain pending. No tokens or credentials are included. Antigravity skills are available in the shared folder; its MCP connections must be added in Antigravity's own settings if wanted. No unsupported global Antigravity configuration was written.
 
 ## Verification and references
 

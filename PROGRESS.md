@@ -2,7 +2,7 @@
 
 ## UI/UX agent tooling
 
-Installed project-local UI UX Pro Max, selected Vercel web/React skills, Anthropic frontend-design, 21st.dev skills and Motion AI Kit. Added project Codex MCP settings for free Motion and Figma. Website code, assets and dependencies are unchanged; check/build passed. Account authorization and live MCP activation remain pending in this managed environment. See UI_UX_SKILLS.md for exact versions, verification and local setup steps.
+Installed project-local UI UX Pro Max, selected Vercel web/React skills, Anthropic frontend-design, 21st.dev skills and Motion AI Kit. Added project Codex MCP settings for free Motion and Figma. Website code, assets and dependencies are unchanged; check/build passed. The Figma plugin is connected and its authenticated account check passed. Separate local CLI MCP activation, Motion live connectivity and 21st.dev login remain pending. See UI_UX_SKILLS.md for exact versions, verification and local setup steps.
 
 ## Current website
 
