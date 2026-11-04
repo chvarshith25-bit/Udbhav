@@ -1,6 +1,6 @@
 # Next steps
 
-Review the new Cultural stage/playbill on physical iOS/Android, Safari/Firefox and with a screen reader. Preserve the three-act mapping and fixed preview dimensions; confirm schedules, venue, both coordinators and registration/contact details in events.js before enabling destinations. Supply approved event images via each record’s images array; original poster studies remain the missing/error fallback. Keep Cultural motion scoped away from homepage, intro, Sports and Technical.
+Review THE FESTIVAL FREQUENCY Cultural channels on physical iOS/Android, Safari/Firefox and screen readers. Preserve the distinct Stage/Frame/Playground compositions, fixed preview dimensions, keyboard channel navigation and native modal scroll/focus return. Confirm event facts and registration/contact destinations in events.js; populate approved photographs through images arrays. Original studies remain the missing/error fallback. Keep homepage, intro, Sports, Technical and all other transitions protected.
 
 Verify the VJIT logo on the owner’s browser after refreshing the new deployment. The original asset/colors/placement are retained; the rendering no longer uses a nested SVG mask.
 

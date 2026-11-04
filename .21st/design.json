@@ -42,7 +42,7 @@
   },
   "constraints": {
     "must": [
-      "Preserve intro, shared VJIT header, category pages and route transitions",
+      "Preserve intro, shared VJIT header, homepage, Sports and Technical; Cultural redesign and its own transition are explicitly authorized",
       "Exactly three primary entrances; sponsors are secondary",
       "Single-screen homepage with dedicated mobile entrances",
       "No invented photography, campus geography or sponsorship facts"
@@ -59,6 +59,11 @@
       "scope": "homepage",
       "decision": "The Festival Is Yours: one original layered festival ground, spatial category entrances, one active lighting zone, simpler mobile signs and a secondary native sponsor dialog.",
       "source": "User-supplied Interactive Festival Arena Homepage brief"
+    },
+    {
+      "scope": "cultural",
+      "decision": "The Festival Frequency: three transforming broadcast environments, expressive event indexes, original vector studies and a stage-origin flowing signal transition. Preserve all canonical event facts and native details.",
+      "source": "User-supplied Cultural: The Festival Frequency brief"
     }
   ],
   "evidence": [

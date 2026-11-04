@@ -228,3 +228,13 @@ The previous home used the restored golden concert concept artwork, oversized UD
 ## Cultural redesign — November 4, 2026
 
 The former shared Cultural editorial list and clay curtain effect were replaced by THE STAGE COMES ALIVE. Technical retains the original shared category template. Homepage, intro, Sports, shared branding and canonical event data were preserved.
+
+## Superseded Cultural stage/playbill implementation
+
+## Cultural — THE STAGE COMES ALIVE
+
+Replaced the shared Cultural category template with a warm original SVG main stage, oversized title, theatrical depth and three curated acts. Performance (4), Visual stories (3), Festival play (6) reference all existing Cultural records. Expressive typographic titles drive masked poster previews and open a Cultural-only large native detail panel. Gallery support, all event facts, two coordinators and registration/contact fields retain centralized data and honest pending states. No external photos, fabricated facts, fonts or dependencies added.
+
+Cultural navigation alone now dims the old page, sweeps warm stage spotlights, animates a microphone/ribbon and rhythmic wave, expands CULTURAL and parts fabric curtains. Existing provider history, route commit, focus, reduced-motion and recovery behavior is preserved; other transition sequences are unchanged. Homepage, VJIT branding, approved intro, Sports, Technical, assets, shared styles and event data are byte-identical to the baseline.
+
+Verification: production build and 26-event integrity check pass; six intro session tests pass; focused React correctness lint on new Cultural code passes. Local 21st review reports zero errors/warnings, with informational palette-token suggestions for the original artwork. Chromium visually reviewed desktop/mobile; automated checks exercised 65 event openings across 1920/1440/1366/390/360 widths, all three groups, keyboard tabs, Escape/focus return, history and reduced motion with no runtime errors or horizontal overflow. Testing exposed and fixed mobile preview-height displacement; preview dimensions are now stable. Physical devices and Safari/Firefox remain unverified. Pre-existing provider hook-dependency lint findings are outside this scoped change; its lifecycle was not rewritten.

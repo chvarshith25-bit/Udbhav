@@ -1,12 +1,16 @@
 # Current progress — November 4, 2026
 
-## Cultural — THE STAGE COMES ALIVE
+## Cultural — THE FESTIVAL FREQUENCY
 
-Replaced the shared Cultural category template with a warm original SVG main stage, oversized title, theatrical depth and three curated acts. Performance (4), Visual stories (3), Festival play (6) reference all existing Cultural records. Expressive typographic titles drive masked poster previews and open a Cultural-only large native detail panel. Gallery support, all event facts, two coordinators and registration/contact fields retain centralized data and honest pending states. No external photos, fabricated facts, fonts or dependencies added.
+Replaced the stage/playbill concept with LIVE FROM UDHBHAV 2K27: a contemporary interactive broadcast canvas. The Stage uses performance typography, warm lights and sculptural ribbons; The Frame becomes a cinematic contact sheet with a film-strip event index; The Playground uses competition typography, bracket-field artwork and a match index. Switching channels coordinates composition, artwork, typography and event navigation in a finite scoped GSAP timeline. No player UI, autoplay audio, equalizer, microphone icon, external images, fonts, WebGL or new dependencies.
 
-Cultural navigation alone now dims the old page, sweeps warm stage spotlights, animates a microphone/ribbon and rhythmic wave, expands CULTURAL and parts fabric curtains. Existing provider history, route commit, focus, reduced-motion and recovery behavior is preserved; other transition sequences are unchanged. Homepage, VJIT branding, approved intro, Sports, Technical, assets, shared styles and event data are byte-identical to the baseline.
+All 13 Cultural records are mapped exactly once (4/3/6), with the requested Stage ordering. Focus/hover previews an event in stable geometry; first-tap touch opens it. The native detail preserves channel state, every canonical field, two coordinators, contact/registration destinations, multiple-image navigation and missing-image fallback. Unknown facts remain pending. Channel and detail animation initialization failures revert to usable content.
 
-Verification: production build and 26-event integrity check pass; six intro session tests pass; focused React correctness lint on new Cultural code passes. Local 21st review reports zero errors/warnings, with informational palette-token suggestions for the original artwork. Chromium visually reviewed desktop/mobile; automated checks exercised 65 event openings across 1920/1440/1366/390/360 widths, all three groups, keyboard tabs, Escape/focus return, history and reduced motion with no runtime errors or horizontal overflow. Testing exposed and fixed mobile preview-height displacement; preview dimensions are now stable. Physical devices and Safari/Firefox remain unverified. Pre-existing provider hook-dependency lint findings are outside this scoped change; its lifecycle was not rewritten.
+The Cultural-only transition reads existing homepage stage geometry (or the compact entrance link), expands a rhythmic light pulse and flowing signal, resolves CULTURAL and reveals the new page through that signal. Its animation timelines total 1.24 seconds, plus route commit. It never mutates homepage scenery. Existing routing, heading focus, history, duplicate protection and recovery remain unchanged. Obsolete stage art, equalizer, curtain sequence and unused motion hook were removed.
+
+Verification: event integrity/build, seven focused data/session tests and targeted React/accessibility lint pass. Local 21st review has zero errors/warnings; original palette values generate informational suggestions. Chromium desktop/mobile checks cover 1920×1080, 1440×900, 1366×768, 390×844 and 360×844; all 65 event openings, touch, keyboard tabs, rapid channel changes, focus/scroll return, history, reduced motion and two-image broken-gallery fallback pass without runtime/GSAP errors or horizontal overflow. Injected channel/detail GSAP failures leave browsing and native close usable. Fresh approved intro → homepage → all three categories → Back also passes. Main source protection hashes confirm homepage, intro, VJIT/header, Sports, Technical, sponsors, shared CSS, event/assets data, registration, provider lifecycle and dependencies unchanged. Physical devices, Safari/Firefox and screen-reader testing remain outstanding.
+
+Installed Frontend Design, UI UX Pro Max, Motion best practices, 21st project context/local review and current Web Interface Guidelines informed the bespoke design. Hosted 21st search requires sign-in and Motion MCP is not connected; no hosted templates or gated motion source were used.
 
 ## VJIT logo rendering
 
@@ -53,7 +57,7 @@ Retired the old montage scene, its controls and the isolated playback harness. T
 
 ## Preserved website
 
-Interactive single-screen festival-arena homepage; Sports nine-arena journey and four supplied Cricket photos; Cultural theatrical playbill and Technical editorial page/details; existing route transitions and supporting routes. Restored concert concept art and colored logo reference retain their provenance/disclosure. Event facts and media remain centralized, with unknown details null.
+Interactive single-screen festival-arena homepage; Sports nine-arena journey and four supplied Cricket photos; Cultural three-channel broadcast and Technical editorial page/details; existing route transitions and supporting routes. Restored concert concept art and colored logo reference retain their provenance/disclosure. Event facts and media remain centralized, with unknown details null.
 
 ## Agent tooling
 

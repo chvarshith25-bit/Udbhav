@@ -38,7 +38,7 @@ There are no playback controls or replay options. On the first home entry in a t
 
 Run session regression tests with `node src/intro/introSession.test.mjs`. Browser verification covers playback, controls absence, session refresh/history/navigation, mobile rotation, reduced motion and initialization failure.
 
-Category navigation uses real React Router URLs and distinct GSAP transitions: diagonal Sports wipe, Cultural spotlight-and-curtain stage reveal and Technical panels. Use TransitionLink for internal links. The old route stays mounted until covered; the new route commits before uncovering. Modified clicks, Back/Forward, heading focus and error recovery are preserved.
+Category navigation uses real React Router URLs and distinct GSAP transitions: diagonal Sports wipe, Cultural stage-origin signal reveal and Technical panels. Use TransitionLink for internal links. The old route stays mounted until covered; the new route commits before uncovering. Modified clicks, Back/Forward, heading focus and error recovery are preserved.
 
 ## Interactive homepage
 
@@ -89,6 +89,6 @@ npm exec --yes --package=@biomejs/biome -- biome lint --only=correctness/noUnuse
 
 Cricket uses four user-supplied photographs from the uploaded ZIP. The first appears on the journey; all four are available through the detail gallery controls. Detail photographs use contain sizing to preserve the complete scene. See public/images/events/cricket/ASSETS.md for provenance.
 
-### Cultural: The Stage Comes Alive
+### Cultural: The Festival Frequency
 
-The dedicated /cultural route uses original theatrical SVG scenery and a three-act interactive playbill: Performance (4), Visual stories (3), Festival play (6). Hover/focus previews a poster; selecting any title opens a large accessible native detail panel. Event facts/gallery references remain centralized in events.js. Pending contacts, schedules and registration stay unconfirmed. No new dependencies or external media are required.
+The dedicated /cultural route is an interactive festival broadcast: The Stage (4 events), The Frame (3), The Playground (6). Switching channels transforms the artwork, composition, typography and event index. Hover/focus previews an event; the first tap opens its accessible detail panel. The Cultural-only signal transition originates at the existing homepage stage and takes approximately 1.2–1.6 seconds. Event facts, image arrays and contact/registration references remain in events.js; pending values are not invented. No external media or new dependencies are required. Run `node src/cultural/channels.test.mjs` to verify every Cultural record is mapped exactly once.

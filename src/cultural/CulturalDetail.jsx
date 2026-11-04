@@ -19,12 +19,13 @@ export default function CulturalDetail({ event, act, onDismiss, opener }) {
     document.body.style.overflow='hidden';
     if(gap)document.body.style.paddingRight=`${parseFloat(getComputedStyle(document.body).paddingRight)+gap}px`;
     el.showModal();
-    const context=gsap.context(()=>{
+    const context=gsap.context(()=>{},el);
+    try{context.add(()=>{
       if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
         gsap.fromTo(el.querySelector('.culture-detail-curtain'),{scaleX:1},{scaleX:0,transformOrigin:'right center',duration:.5,ease:'power3.inOut'});
         gsap.fromTo(el.querySelector('.culture-detail-info'),{opacity:0,y:12},{opacity:1,y:0,duration:.35,delay:.15});
       }
-    },el);
+    })}catch{context.revert()}
     return()=>{
       context.revert();if(el.open)el.close();
       document.body.style.overflow=previousOverflow;document.body.style.paddingRight=previousPadding;
@@ -39,7 +40,7 @@ export default function CulturalDetail({ event, act, onDismiss, opener }) {
   return <dialog ref={dialog} className="cultural-detail" aria-labelledby="culture-detail-title" aria-describedby="culture-detail-description" onClose={()=>{if(!dialog.current?.open)onDismiss()}} onCancel={e=>{e.preventDefault();close()}} onClick={e=>{
     if(e.target!==e.currentTarget)return;const r=e.currentTarget.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)close();
   }}>
-    <header className="culture-detail-header"><span>UDHBHAV 2K27 / ACT {act.number}</span><span>{act.title}</span><button type="button" onClick={close} aria-label="Close Cultural event details"><X size={23} aria-hidden="true"/></button></header>
+    <header className="culture-detail-header"><span>UDHBHAV 2K27 / CH {act.number}</span><span>{act.title}</span><button type="button" onClick={close} aria-label="Close Cultural event details"><X size={23} aria-hidden="true"/></button></header>
     <div className="culture-detail-scroll"><div className="culture-detail-body">
       <div className="culture-detail-media">
         {image && failedSrc!==image.src ? <img src={image.src} alt={image.alt||event.title} onError={()=>setFailedSrc(image.src)} width="720" height="960"/> : <CulturalPoster event={event} act={act}/>}

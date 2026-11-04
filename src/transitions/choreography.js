@@ -11,7 +11,7 @@ export function themeFor(path) { return transitionThemes[path.slice(1)] ? path.s
 
 // Only the provider owns these nodes. Page GSAP and Motion never animate them.
 export function coverPage(overlay, shell, theme, trigger, onCovered) {
-  if (theme === 'cultural') return coverCultural(overlay, shell, onCovered);
+  if (theme === 'cultural') return coverCultural(overlay, shell, onCovered, trigger);
   const panels = overlay.querySelectorAll('.transition-panel');
   const copy = overlay.querySelector('.transition-copy');
   gsap.set(overlay, { visibility: 'visible' });
