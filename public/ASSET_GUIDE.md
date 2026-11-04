@@ -20,6 +20,6 @@ All other gallery/category/event visuals are original SVG/CSS placeholders. Cric
 
 Images use `{ src: '/images/...', alt: 'Accurate description' }`. Hero images may also provide srcSet and sizes. Unfilled slots remain null/empty. The current logo reference uses whiteBackgroundMask for its 1000×355 white-backed artwork; omit that option for an approved transparent logo.
 
-AssetVisual restores the designed fallback if a source fails. Preserve existing image regions/aspect ratios, test mobile crops and optimize formats/dimensions. Do not represent unrelated imagery as real festival coverage. The eight-second opening itself reads no asset references and remains functional with images blocked.
+AssetVisual restores the designed fallback if a source fails. Preserve existing image regions/aspect ratios, test mobile crops and optimize formats/dimensions. Do not represent unrelated imagery as real festival coverage. The 9.8-second THE FESTIVAL COMES ALIVE opening itself reads no asset references and remains functional with images blocked.
 
 Sports has all nine named folders and a mapping guide at images/events/SPORTS_ASSETS.md. SportImage displays the first photo on the journey and supports additional detail images; missing or failed photos restore the sport’s SVG study.

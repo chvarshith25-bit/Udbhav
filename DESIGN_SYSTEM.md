@@ -6,16 +6,18 @@ Ink #171914; paper #f3f2eb; lime #d7f34d. Muted #77796f; rules #d6d7cd. Sports a
 
 Gutters: clamp(22px, 4.5vw, 88px). Standard section padding: 95px desktop / 65px mobile. Breakpoints: 760px mobile and 1100px intermediate. Fluid display type uses tight tracking; small labels use spaced uppercase. Prefer hairline dividers, straight edges and expressive whitespace over repeated cards.
 
-The restored golden concert concept image supports the warm spark/lime identity. Its responsive WebPs and the colored logo reference are centralized in assets.js. The logo's alpha mask removes the white plate without recoloring its artwork. Do not add unrelated visual effects or imagery.
+The restored golden concert concept image supports the warm light/lime identity. Its responsive WebPs and the colored logo reference are centralized in assets.js. The logo's alpha mask removes the white plate without recoloring its artwork. Do not add unrelated visual effects or imagery.
 
 ## Motion ownership
 
-- IntroSequence: eight-second opening and initial homepage handoff only. GSAP context reverts every affected inline style.
+- IntroSequence: 9.8-second festival film and initial/replay homepage handoff only. GSAP context reverts every affected inline style.
 - useFestivalMotion: normal homepage entrance on mounts not owned by the intro; scoped GSAP lifecycle and reduced-motion handling.
 - PageTransitionProvider/choreography: route-shell fading, cover/reveal panels and transition labels. GSAP only.
 - Motion: standard Cultural/Technical dialog UI. Sports details disable that entrance and use their own GSAP cover. Do not assign a second animation system to the same node.
 
-Opening timing: spark 0–0.8s; drawn three-energy field 0.8–3.5s; wordmark/year reveal around 3.5–5s; identity hold; homepage alignment/reveal 6.3–8s. Ten-second recovery timer. No media/sound/WebGL dependency. Session key `udbhav:intro:v1`; direct category entry and reduced motion bypass it. Skip/Escape and interruption recovery remain available.
+Opening timing: Sports court and controlled basketball drop/rebound 0–2.2s; Cultural stage-light/microphone scene 2.2–4.4s; Technical coding interface 4.4–6.5s; full UDHBHAV / 2K27 identity, institution and dates 6.5–8.5s; measured homepage handoff 8.5–9.8s. The impact pool is reused as stage lighting, beams converge into the editor frame, and category emblems travel toward the homepage entry points. Palette stays ink, paper, lime, warm copper/light and restrained periwinkle.
+
+FestivalScenes contains recognizable original SVG/HTML graphics, not stock media or random code. Intro styles live in src/intro/intro.css. Twelve-second fail-open timer. No media, sound or WebGL dependency. Session key `udbhav:intro:v1` remains unchanged. Reduced motion and direct category entries bypass the film. Skip/Escape and interruption recovery remain; explicit Replay on the homepage resets only active playback, not normal session rules. Suppress normal hero motion while a replay owns its targets, and retain that suppression until the current homepage mount ends.
 
 Route choreography: diagonal lime Sports cover, opposing clay Cultural curtains, staggered periwinkle Technical columns; paper panels for other destinations. Roughly one second per navigation. Keep the old route mounted until fully covered and the destination ready before revealing. Three-second recovery timer prevents stale overlays/locks. Reduced motion skips choreography immediately.
 

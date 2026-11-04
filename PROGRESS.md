@@ -1,59 +1,45 @@
-# Current progress — November 2, 2026
+# Current progress — November 4, 2026
 
-## Completed implementation
+## Current website
 
-- React/Vite/Tailwind project with React Router and maintainable event/asset modules.
-- Single-screen homepage; dedicated Sports, Cultural and Technical pages; separate About, Schedule/Annual Day, Gallery and Contact/Partners routes.
-- All 26 requested events: nine Sports arenas in a connected journey, thirteen Cultural & Activities and four Technical events in searchable lists. Reusable event details retain nullable facts and two coordinator slots.
-- Original eight-second procedural opening, session persistence, Skip/Escape, reduced-motion bypass, interruption handling, focus restoration and ten-second fail-open recovery.
-- Distinct GSAP category transitions with route readiness, duplicate-click guards, Back/Forward handling, direct-route support and a three-second recovery timer.
-- Restored golden concert concept image and colored transparent logo reference at the user's request. Category/event/gallery placeholders remain original SVG/CSS. Asset references are centralized and failed sources have designed fallbacks.
-- Three confirmed festival dates, calendar export and Annual Day highlight; unconfirmed event programme and contacts stay in coming-soon states.
-- Vercel configuration, SPA redirects and existing owner-private Sites deployment.
+- Multi-page React/Vite festival site with a single-screen homepage and real Sports/Cultural/Technical routes. About, schedule/Annual Day, gallery and contact remain separate routes.
+- Sports retains THE ROAD TO GLORY: nine connected arenas, progressive SVG path, sport-specific detail openings and photo-ready fallbacks. Cricket has four user-supplied photos. Cultural/Technical retain their editorial event browsers and native details.
+- Homepage retains the restored golden concert concept image and colored logo reference. Event facts and media remain centralized. No new photography, logos, external fonts, video, audio or WebGL were added for this intro update.
 
-## Current assets and missing content
+## Replaced opening: THE FESTIVAL COMES ALIVE
 
-The hero is AI-generated concept art, not actual event photography. The logo is a restored display reference, not verified official approval. No verified event photos, posters or video are assumed. Official logo approval, real photography, event rules/descriptions, individual schedule assignments, venues, coordinators, registration URLs and contact details remain pending. Partners are unannounced.
+Original 9.8-second connected sequence, built with React, GSAP, SVG, CSS and a meaningful illustrative coding interface:
 
-## Verification evidence
+1. Sports, 0–2.2s: dark perspective court, controlled spotlight and a stylized basketball drop/rebound.
+2. Cultural, 2.2–4.4s: the impact expands into a stage-light pool, revealing a microphone, truss and sweeping spotlights.
+3. Technical, 4.4–6.5s: converging light becomes an editing canvas with festival data and three category previews.
+4. Identity, 6.5–8.5s: complete UDHBHAV / 2K27, institution and January 28–30, 2027 dates, with recognizable category emblems.
+5. Enter, 8.5–9.8s: wordmark aligns into the live homepage; emblems move toward category entries; dates/logo/navigation reveal without a hard cut.
 
-Previous behavior/layout sessions verified in Chromium on Linux:
+The rejected spark/abstract-orbit opening has been removed from current source/styles. Existing route-transition choreography and category page source were not redesigned.
 
-- Eight-second intro timing, homepage handoff, skip/focus, new-session playback, same-session refresh/category-return suppression, reduced motion, mobile and all direct category URLs.
-- Interruption recovery, blocked storage and injected initialization failure; no stale hidden/inert homepage.
-- Category transitions, direct reloads, Back/Forward, repeated clicks, interrupted history, event search/dialogs and mobile navigation.
-- Responsive route layouts at 360–1920px; short desktop homepage layouts without overlapping controls.
-- Procedural fallbacks with images/media blocked and deliberately broken future asset references.
-- Restored concert file loading, colored logo alpha mask, intro handoff and responsive presentation.
+## Playback, accessibility and recovery
 
-No known functional bugs in exercised flows. Safari/Firefox, physical-device performance and assistive-technology review remain pending. The project has no global npm lint script; focused React correctness lint for the new/adapted Sports modules passes and is documented in README.md. Latest event-data and production build checks pass.
+- Session key `udbhav:intro:v1` preserves first-session behavior, refresh suppression and direct-category bypass. No automatic replay on returning home.
+- Added a homepage Replay intro control. Skip and Escape work for automatic and manual playback; manual completion restores Replay focus.
+- Reduced motion bypasses immediately, including an accessible announcement when Replay is requested. Background remains inert during playback; keyboard focus stays on Skip.
+- Normal hero entrance cleans up before replay, avoiding animation conflicts and post-intro flashes. GSAP context reverts all homepage/overlay styles.
+- Resize, hidden tab, page departure and motion-preference changes finish safely. Initialization failure restores the homepage; watchdog is twelve seconds. No layout-shifting intro elements.
 
-## Repository and deployment
+## Verification
 
-Canonical source: https://github.com/chvarshith25-bit/Udbhav
+- Chromium: all five scenes, measured 9–10-second duration, full identity, continuous homepage handoff, Replay/Skip/focus, refresh/session suppression and homepage/category navigation PASS.
+- Mobile with every external image/media request blocked: coding scene, identity, completion and no horizontal overflow PASS.
+- Narrow portrait and compact landscape: editing canvas stays inside viewport without clipped content; identity and Skip framing PASS.
+- Reduced-motion Replay bypass, direct Sports/Cultural/Technical entry, resize/Escape recovery and no runtime errors PASS.
+- Injected initialization failure, subsequent Replay, all category event counts/dialogs and Cricket gallery regression PASS. Replay also safely interrupts an in-progress normal hero entrance without causing a second entrance or opacity flash.
+- Focused React correctness lint on the seven intro/home-handoff modules PASS. Event-data checks and production build run before publication; final outcome is reported in chat.
+
+Safari/Firefox, screen-reader review and physical-device performance review remain pending. Official event schedules, contacts, approved logo provenance and remaining real imagery are still pending; none was invented.
+
+## Source and deployment
+
+Canonical repository: https://github.com/chvarshith25-bit/Udbhav
 Owner-private site: https://udbhav-2k27-vjit.arcaneharp16.chatgpt.site/
 
-The implementation, asset tree and configuration in this folder match the latest requested design. The current session consolidates the brief, design system, agent instructions, asset guide and next steps to remove contradictory historical claims. Earlier notes are preserved in docs/SESSION_HISTORY.md. Publication results are reported in chat.
-
-## Sports journey redesign — THE ROAD TO GLORY
-
-- Replaced only the Sports listing with a nine-arena journey in the exact requested order. Ink/lime introduction, alternating editorial chapters, individual SVG sport graphics and a connected winding road. Mobile has a gently curved side rail and sticky progress/arena-jump control.
-- SVG geometry is measured from actual waypoint elements and rebuilt with ResizeObserver. GSAP ScrollTrigger draws the progress stroke and emphasizes the active arena under natural scrolling. No pinned sections or scroll hijacking.
-- Nine distinctive GSAP event openings, roughly 0.85–0.95s: Basketball circle/court, Football directional pitch wipe, Volleyball net panels, Table Tennis ball/split, Cricket arc, Badminton diagonal lift, Chess tiles, Carroms ripple and Kabaddi boundaries. Reduced motion opens directly.
-- Adapted the existing native dialog for fullscreen Sports detail while retaining every event field, two coordinators, image controls and unavailable-contact states. Closing explicitly restores source scroll and focus; Back navigation cleans up the dialog and body styles.
-- Added reusable SportImage, original nine-game SportGraphic and src/data/sportsAssets.js. Main/additional photos can be added through one mapping; no official photos were invented. Cricket photos were subsequently supplied and imported as described below. Prepared all nine public image folders and SPORTS_ASSETS.md.
-- Chromium PASS: all nine ordered chapters/clickable openings, path progression and alignment at five widths, native modal focus/close/scroll restoration, all nine mobile keyboard/reduced-motion details, browser Back cleanup and Cultural/Technical dialog regression. No runtime errors.
-- Chromium PASS: main/additional image mapping, next/previous controls, missing-image fallback and closing after image changes; all chapter reveals and direct arena jump. Desktop/mobile visual review completed.
-- Initial QA exposed missing explicit scroll restoration; corrected and retested successfully. Event data integrity checks include the exact arena order and image-map relationship. Focused React correctness lint passes across the eight new/adapted modules (unused code/imports, hook dependencies, JSX keys, assignment expressions and duplicate keys). Build and event checks are run before publication; final outcomes are reported in chat.
-- Homepage, eight-second intro, shared category transition choreography and Cultural/Technical layouts are preserved. Physical-device/Safari/Firefox review and real event facts/assets remain pending.
-
-- Final refinement: desktop road follows measured inter-chapter gaps with rounded corners so the connecting line stays visible around compositions; mobile retains the gently curved side rail. Opening effects also fail open on viewport resize.
-
-- Final regression: preserved eight-second intro, restored concert/logo loading, homepage-to-Sports transition and same-session intro suppression PASS. Final production build is clean; focused React correctness lint passes.
-
-## Cricket photo import
-
-Added all three images from the user-uploaded ZIP, optimized as WebP at original dimensions. The first is the Cricket journey/main image; all three appear in its detail gallery. Central references and descriptive alt text are in sportsAssets.js. Detail images preserve the full composition; no event-date/year claims are inferred. Other Sports placeholders and all animations remain unchanged. Data/build checks and desktop/mobile gallery verification are run before publication.
-
-- The second uploaded ZIP contains one additional Cricket image, now included as cricket-04.webp. Cricket has four photos total; the original first photograph remains the main image. Gallery controls and provenance documentation include both uploads.
-- Cricket import verification: event/data checks and production build PASS. Desktop/mobile browser checks PASS for all four actual images, main-photo loading, next/previous and wrap controls, contain sizing, focus restoration and no horizontal overflow/runtime errors.
+Earlier implementation notes are preserved in docs/SESSION_HISTORY.md. Current source, brief, design system and next steps describe this festival-themed opening. The Windows OneDrive folder is separate from this cloud workspace; use Git pull or the repository ZIP for local updates.

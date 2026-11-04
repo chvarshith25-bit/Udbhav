@@ -12,7 +12,9 @@ Routes: `/`, `/sports`, `/cultural`, `/technical`, `/about`, `/schedule`, `/gall
 
 ## Opening and navigation
 
-THE BIRTH OF UDHBHAV is an eight-second GSAP/SVG/CSS ident: spark, three converging trajectories, drawn orbital/diamond paths, identity reveal, then measured homepage handoff. It is independent of external media and runs once per tab session. Skip/Escape, reduced-motion bypass, interruption recovery and session persistence are required.
+THE FESTIVAL COMES ALIVE is a 9.8-second original festival film: recognizable basketball/court action (0–2.2s), theatrical stage/microphone/spotlights (2.2–4.4s), a meaningful coding interface and category previews (4.4–6.5s), complete UDHBHAV identity/institution/dates (6.5–8.5s), then a measured homepage handoff (8.5–9.8s). Ball impact becomes a stage-light pool; converging stage beams open the coding canvas; the interface resolves into one identity. No abstract-line opening, isolated-letter sequence or disconnected category text slides.
+
+The film is independent of external media and runs automatically once per tab session. Skip/Escape, reduced-motion bypass, interruption recovery and session persistence are required. A homepage Replay intro control provides deliberate replay without restarting on normal navigation. No category page or homepage composition redesign is part of this change.
 
 GSAP route transitions remain separate: diagonal lime Sports wipe, clay Cultural curtains and periwinkle Technical panels. The previous page remains until covered; the destination commits before reveal. Preserve Back/Forward, duplicate-click protection, native link modifiers, focus and recovery timers.
 

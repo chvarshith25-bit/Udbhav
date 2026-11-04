@@ -32,7 +32,9 @@ Stack: React 19, Vite 7, Tailwind 4, React Router 7, GSAP/ScrollTrigger, Motion 
 | `/gallery` | Procedural placeholder awaiting real photography |
 | `/contact` | Registration/contact and partner announcement states |
 
-The eight-second first-session opening uses only GSAP, SVG, CSS and typography, then aligns its wordmark into the homepage. Skip/Escape, reduced motion, interruption handling and fail-open recovery are supported. Session key `udbhav:intro:v1` prevents replay after completion, interruption, refresh or category navigation. Direct non-home entries bypass and consume the opening. To replay during development, remove that sessionStorage key and reload `/` with reduced motion off.
+THE FESTIVAL COMES ALIVE is an original 9.8-second first-session opening: a basketball/court impact becomes a theatrical stage, stage beams become a coding canvas, and the three experiences resolve into the full UDHBHAV identity before aligning into the homepage. It uses GSAP, inline SVG, CSS and meaningful festival interface copy, with no media/dependency downloads. Skip/Escape, reduced motion, session persistence and interruption recovery are supported.
+
+Session key `udbhav:intro:v1` suppresses automatic replay after completion, interruption, refresh or category navigation. Direct non-home entries bypass and consume the opening. The homepage's Replay intro control intentionally starts it again; reduced-motion users receive an immediate bypass announcement. Manual completion/skip returns focus to Replay. The normal homepage entrance is cleaned up before replay to prevent competing animations.
 
 Category navigation uses real React Router URLs and distinct GSAP transitions: diagonal Sports wipe, Cultural curtains and Technical panels. Use TransitionLink for internal links. The old route stays mounted until covered; the new route commits before uncovering. Modified clicks, Back/Forward, heading focus and error recovery are preserved.
 
@@ -46,7 +48,7 @@ See public/ASSET_GUIDE.md for directories and replacement instructions. The open
 
 ## Source structure
 
-- `src/intro/`: opening controller, session state, sequence and overlay.
+- `src/intro/`: opening controller, session state, scene graphics, GSAP sequence, overlay and isolated intro.css.
 - `src/transitions/`: route readiness/history controller and GSAP choreography.
 - `src/pages/`: home, category and festival-information pages.
 - `src/sections/`, `src/components/`: reusable content, dialogs, navigation and visual fallbacks.
