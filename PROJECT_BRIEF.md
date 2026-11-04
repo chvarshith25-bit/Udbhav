@@ -6,13 +6,13 @@ Vidya Jyothi Institute of Technology, Hyderabad. Festival: January 28–30, 2027
 
 ## Experience
 
-Preserve THE FESTIVAL IN MOTION: oversized editorial type, ink/paper/lime colors, original line-based graphics, intentional whitespace and restrained movement. The homepage occupies one desktop viewport; mobile/short screens keep accessible content rather than clipping it. Category pages are distinct React Router routes. Sports is a winding nine-arena journey; Cultural/Technical retain searchable editorial lists. All use accessible reusable event details.
+Preserve THE FESTIVAL IN MOTION: oversized editorial type, ink/paper/lime colors, original line-based graphics, intentional whitespace and restrained movement. The homepage is THE FESTIVAL IS YOURS: one original interactive SVG festival ground, three spatial entrances, finite category lighting, real event-name previews and a secondary native Sponsors overlay. It occupies one viewport at common desktop/mobile sizes; exceptional short/zoomed screens retain accessible content rather than clipping it. Mobile uses distinct vector signs rather than essential map interaction. Sponsors data stays empty until approved records are supplied. Category pages are distinct React Router routes. Sports is a winding nine-arena journey; Cultural/Technical retain searchable editorial lists. All use accessible reusable event details.
 
 Routes: `/`, `/sports`, `/cultural`, `/technical`, `/about`, `/schedule`, `/gallery`, `/contact`. Category navigation must not become anchor scrolling. Supporting content is preserved on its own routes. Unknown paths and rendering errors have return-home states.
 
 ## Opening and navigation
 
-THE CAMPUS TAKEOVER is approved and integrated: a nine-second continuous illustrated festival ground with court, stage and technology pavilion. Floodlights activate, the giant display counts 03/02/01, the whole ground illuminates and the camera moves through the UDHBHAV identity into the unchanged homepage. Preserve the approved scenery, animation keyframes, easing, transitions and timing exactly; it is not a depiction of VJIT's real campus.
+THE CAMPUS TAKEOVER is approved and integrated: a nine-second continuous illustrated festival ground with court, stage and technology pavilion. Floodlights activate, the giant display counts 03/02/01, the whole ground illuminates and the camera moves through the UDHBHAV identity into the current homepage. Preserve the approved scenery, animation keyframes, easing, transitions and timing exactly; it is not a depiction of VJIT's real campus.
 
 No visible intro controls, replay, skip, pause, progress or debugging UI. Automatic first home-entry playback claims `udbhav:intro:v1` at start, before initialization. Refresh, navigation, return home and Back/Forward cannot replay it. Reduced motion and direct category entries bypass/consume the opening. Fail open on initialization errors; restore all homepage styles and access. The separate review entry reuses production code.
 
@@ -20,7 +20,7 @@ GSAP route transitions remain separate: diagonal lime Sports wipe, clay Cultural
 
 ## Current visual assets
 
-At the user's latest request, the homepage displays the previous golden concert concept artwork and the header displays the previous colored logo reference with a transparent background. The concert is AI-generated, not actual event photography. The references are not proof of official approval. Keep the concept disclosure and accurate provenance.
+The homepage now uses original SVG festival scenery. The existing header displays the unchanged colored logo reference with a transparent background, in the same position/proportions/style. The previous golden concert concept artwork remains in the asset registry; it is AI-generated, not event photography or official approval. Preserve provenance when reusing it. No sponsor names or logos have been supplied.
 
 Gallery/category/event fallbacks remain original procedural artwork. Real photographs, posters, verified logos and video are pending. Site/category references belong in src/data/assets.js; event photographs belong in events.js. Missing or failed sources must show designed fallbacks. Follow public/ASSET_GUIDE.md.
 

@@ -23,7 +23,7 @@ Stack: React 19, Vite 7, Tailwind 4, React Router 7, GSAP/ScrollTrigger, Motion 
 
 | Route | Content |
 | --- | --- |
-| `/` | Single-screen hero, restored concert concept background, colored logo reference, dates and three category links |
+| `/` | THE FESTIVAL IS YOURS: interactive SVG festival ground, three spatial entrances, original VJIT branding and secondary Sponsors overlay |
 | `/sports` | THE ROAD TO GLORY: nine connected arena chapters, progressive SVG path and sport-specific fullscreen details |
 | `/cultural` | Thirteen cultural/activity events, including gaming/strategy |
 | `/technical` | Four technical events |
@@ -39,6 +39,14 @@ There are no playback controls or replay options. On the first home entry in a t
 Run session regression tests with `node src/intro/introSession.test.mjs`. Browser verification covers playback, controls absence, session refresh/history/navigation, mobile rotation, reduced motion and initialization failure.
 
 Category navigation uses real React Router URLs and distinct GSAP transitions: diagonal Sports wipe, Cultural curtains and Technical panels. Use TransitionLink for internal links. The old route stays mounted until covered; the new route commits before uncovering. Modified clicks, Back/Forward, heading focus and error recovery are preserved.
+
+## Interactive homepage
+
+The homepage continues the approved intro into one original festival ground. Sports, Cultural and Technical entrances activate court floodlights/ball, stage lighting or digital pavilion details. Only one zone is active. Real event names come from existing data; native TransitionLink navigation and page transitions are preserved. Keyboard focus provides the same response as hover, and touch links navigate on the first tap. Finite GSAP motion respects reduced motion and is suspended during intro/modal/route ownership.
+
+Desktop entrances share hit regions with their illustrated zones. Mobile has a simplified composition with large vector symbols and visible event previews rather than a miniature interactive map. Sponsors & partners opens an accessible native dialog backed by src/data/sponsors.js; it is secondary navigation and currently contains no sponsor records or logos. Escape, backdrop, Close and return focus are supported.
+
+Homepage implementation: src/home/ (scenery, motion, data adapter, sponsor modal and scoped CSS), sections/Hero.jsx and pages/HomePage.jsx. Shared header/logo, intro, category/details and transition source remain unchanged. The original concert concept asset remains in the asset registry but is no longer the homepage background.
 
 ## Content and assets
 

@@ -10,11 +10,19 @@ Ink #171914; paper #f3f2eb; lime #d7f34d. Muted #77796f; rules #d6d7cd. Sports a
 
 Gutters: clamp(22px, 4.5vw, 88px). Standard section padding: 95px desktop / 65px mobile. Breakpoints: 760px mobile and 1100px intermediate. Fluid display type uses tight tracking; small labels use spaced uppercase. Prefer hairline dividers, straight edges and expressive whitespace over repeated cards.
 
-The restored golden concert concept image supports the warm light/lime identity. Its responsive WebPs and the colored logo reference are centralized in assets.js. The logo's alpha mask removes the white plate without recoloring its artwork. Do not add unrelated visual effects or imagery.
+The homepage extends the ink/paper/lime identity into THE FESTIVAL IS YOURS: one SVG court/stage/pavilion environment with restrained sage, clay and blue light. The previous concert concept image remains available; its responsive WebPs and the unchanged colored logo reference are centralized in assets.js. The logo's alpha mask removes the white plate without recoloring its artwork. Do not add unrelated visual effects or imagery.
+
+## Homepage arena and Sponsors
+
+Keep UDHBHAV as the centerpiece and preserve the shared VJIT header without CSS overrides. Three non-card spatial entrance signs connect to the existing routes; desktop hit regions include their scenery. Active state is centralized, with one lighting zone and real data-derived event previews. Finite GSAP opacity/transform/detail changes react to input, not endless loops. Mobile has dedicated symbols/signs; the ambient panorama is optional at small heights. No real-campus geography or photography claims.
+
+Sponsors & partners is a secondary venue-style entrance. Use the native dialog and centralized sponsor data; no fictitious names, logos or tiers. Preserve focus containment, Escape/backdrop/close, body-style restoration and return focus. New homepage rules are scoped through home-page.arena-home and arena-/sponsors- classes so category styles remain untouched.
 
 ## Motion ownership
 
 - IntroSequence: nine-second Campus Takeover film and initial homepage handoff only. GSAP context reverts every affected inline style.
+- useArenaMotion: homepage SVG nodes only; finite input-driven lighting/detail effects, disabled while the intro/modal/route owns access.
+- SponsorsOverlay: its dialog content entrance only, with a scoped GSAP lifecycle.
 - useFestivalMotion: normal homepage entrance on mounts not owned by the intro; scoped GSAP lifecycle and reduced-motion handling.
 - PageTransitionProvider/choreography: route-shell fading, cover/reveal panels and transition labels. GSAP only.
 - Motion: standard Cultural/Technical dialog UI. Sports details disable that entrance and use their own GSAP cover. Do not assign a second animation system to the same node.

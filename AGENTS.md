@@ -4,12 +4,12 @@ Read README.md, PROJECT_BRIEF.md, DESIGN_SYSTEM.md, PROGRESS.md and NEXT_STEPS.m
 
 ## Conventions
 
-- React + Vite + Tailwind v4; JavaScript ESM and JSX. React Router is required. Use TransitionLink for internal navigation. Keep `/` a single-screen hero and category pages at `/sports`, `/cultural`, `/technical`.
+- React + Vite + Tailwind v4; JavaScript ESM and JSX. React Router is required. Use TransitionLink for internal navigation. Keep `/` a single-screen interactive festival arena and category pages at `/sports`, `/cultural`, `/technical`.
 - All official event facts belong in src/data/events.js. Preserve exactly three primary categories and 26 requested events. Gaming is a Cultural subgroup. Unknown dates, venues, times, people, contacts and URLs stay null; no invented claims or arbitrary destinations.
-- Site/category media references belong in src/data/assets.js. The restored golden concert image is disclosed AI-generated concept art; the colored logo is a restored display reference. Neither establishes official approval. Do not remove these requested references merely because official assets are pending. Never present generated/stock imagery as real event coverage.
+- Site/category media references belong in src/data/assets.js. The restored golden concert image is disclosed AI-generated concept art; the colored logo is a restored display reference. Neither establishes official approval. The current homepage intentionally uses original SVG scenery per the newer homepage brief; retain the concert reference in the registry for future use. Never present generated/stock imagery as real event coverage.
 - Keep SVG/CSS fallbacks and AssetVisual error handling. Use public/ASSET_GUIDE.md for future media placement and accurate alt text. Preserve aspect ratios/crops when assets change.
 - GSAP owns the intro, normal hero entrance and route transitions on distinct nodes. Motion owns standard dialog UI; Sports disables that entrance and uses its own GSAP opening cover. Clean up effects and respect reduced motion. No overlapping animation ownership.
-- IntroController stays above the route provider, never in a route. Preserve the approved nine-second THE CAMPUS TAKEOVER scenery, keyframes, easing and handoff. No playback/testing controls or replay/skip handlers. Claim session key `udbhav:intro:v1` before initialization; refresh/navigation/history must never replay. Reduced motion/direct category visits bypass and consume the opening. Fail open on initialization errors or stalled playback, with proper cleanup. Resize preserves playback; no Escape or visibility skip. Suppress the normal hero entrance only for the intro-owned mount. Homepage/category composition and route choreography remain unchanged.
+- IntroController stays above the route provider, never in a route. Preserve the approved nine-second THE CAMPUS TAKEOVER scenery, keyframes, easing and handoff. No playback/testing controls or replay/skip handlers. Claim session key `udbhav:intro:v1` before initialization; refresh/navigation/history must never replay. Reduced motion/direct category visits bypass and consume the opening. Fail open on initialization errors or stalled playback, with proper cleanup. Resize preserves playback; no Escape or visibility skip. Suppress the normal hero entrance only for the intro-owned mount. Category composition and route choreography remain unchanged.
 - Route transitions keep the old page until covered and the destination until ready. Preserve Back/Forward, modified clicks, duplicate-click protection, heading focus and three-second recovery timer.
 - Preserve semantic controls, focus handling, native dialog behavior and deliberate mobile layouts. Do not add dependencies/backends without a requirement.
 - Preserve .openai/hosting.json identity and private audience. Never commit credentials, node_modules, dist or deployment archives.
@@ -17,6 +17,10 @@ Read README.md, PROJECT_BRIEF.md, DESIGN_SYSTEM.md, PROGRESS.md and NEXT_STEPS.m
 ## End of session
 
 Run npm run check and npm run build. Use meaningful browser verification for behavior/layout changes when available; report limits honestly. Update current progress, actionable next steps and affected design/brief instructions. Preserve useful history in docs/SESSION_HISTORY.md rather than appending contradictory current-state claims. Commit and synchronize authorized source changes to the shared repository.
+
+## Homepage ownership
+
+THE FESTIVAL IS YOURS lives in src/home/, sections/Hero.jsx and pages/HomePage.jsx. Preserve header/logo markup and shared styles exactly. Three TransitionLink entrances share real event previews and a single active lighting state; mobile uses distinct vector signs and first-tap navigation. Finite GSAP scene effects respect reduced motion and do not own intro or route-transition nodes. Sponsors is secondary, implemented as a native modal with centralized src/data/sponsors.js and no invented records. Keep focus/scroll restoration and keyboard/touch behavior. No homepage photographs are required.
 
 ## Sports ownership
 

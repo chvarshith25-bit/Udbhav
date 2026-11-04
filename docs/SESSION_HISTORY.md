@@ -219,3 +219,8 @@ Canonical repository: https://github.com/chvarshith25-bit/Udbhav
 Owner-private site: https://udbhav-2k27-vjit.arcaneharp16.chatgpt.site/
 
 Earlier implementation notes are preserved in docs/SESSION_HISTORY.md. Current source, brief, design system and next steps describe this festival-themed opening. The Windows OneDrive folder is separate from this cloud workspace; use Git pull or the repository ZIP for local updates.
+
+
+## Homepage before The Festival Is Yours — November 4, 2026
+
+The previous home used the restored golden concert concept artwork, oversized UDHBHAV/2027 type and three basic category links. The approved nine-second Campus Takeover intro and control-free once-per-tab session behavior were already shipped; its imagined-ground caption was removed at the owner's request. The new homepage-only brief authorizes replacing that home visual while keeping the header/logo, intro, category pages, events and route transitions unchanged. The old artwork stays in the asset registry and Git history; it is not official festival photography.

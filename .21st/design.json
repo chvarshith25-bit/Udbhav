@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "project": {
+    "name": "udbhav-2k27",
+    "productType": "College festival entrance",
+    "stack": [
+      "react",
+      "tailwind-v4",
+      "vite"
+    ]
+  },
+  "sources": {
+    "tokens": [],
+    "components": [],
+    "assets": [
+      "public/images"
+    ],
+    "instructions": [
+      "AGENTS.md"
+    ]
+  },
+  "design": {
+    "colorMode": "dark",
+    "colors": {
+      "ink": "#171914",
+      "paper": "#f3f2eb",
+      "lime": "#d7f34d",
+      "cultural": "#dbad91",
+      "technical": "#b8c7ec"
+    },
+    "typography": {},
+    "spacing": {},
+    "radius": {},
+    "shadows": {},
+    "motion": {},
+    "density": "unknown"
+  },
+  "components": {
+    "installed": [],
+    "preferredPrimitives": [],
+    "patterns": []
+  },
+  "constraints": {
+    "must": [
+      "Preserve intro, shared VJIT header, category pages and route transitions",
+      "Exactly three primary entrances; sponsors are secondary",
+      "Single-screen homepage with dedicated mobile entrances",
+      "No invented photography, campus geography or sponsorship facts"
+    ],
+    "avoid": [
+      "Component kits",
+      "WebGL",
+      "Continuous decorative loops",
+      "Unrelated stock photography"
+    ]
+  },
+  "decisions": [
+    {
+      "scope": "homepage",
+      "decision": "The Festival Is Yours: one original layered festival ground, spatial category entrances, one active lighting zone, simpler mobile signs and a secondary native sponsor dialog.",
+      "source": "User-supplied Interactive Festival Arena Homepage brief"
+    }
+  ],
+  "evidence": [
+    {
+      "fact": "project.instructions",
+      "source": "AGENTS.md"
+    },
+    {
+      "fact": "project.stack:react",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:tailwind-v4",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:vite",
+      "source": "package.json"
+    }
+  ],
+  "generatedAt": "2026-11-04T16:09:41.805Z"
+}

@@ -1,5 +1,17 @@
 # Current progress — November 4, 2026
 
+## Homepage: THE FESTIVAL IS YOURS
+
+Replaced only the homepage presentation with an original interactive festival ground: sports court, cultural stage and technical pavilion, unified by ink/ivory/lime, original SVG scenery and the existing UDHBHAV typography. Header/college branding is unchanged. No external photography, fonts, component kits, WebGL or new dependencies. This illustration makes no real-campus geography claim; the previous concert concept asset remains available in the registry.
+
+Three spatial entrance links activate the relevant lighting, court detail/ball, stage beam or digital pavilion. One zone is active at a time. Real event previews come from events.js via home/arenaData.js. The illustrated desktop regions share their entrance links' hit areas; mouse/focus are equivalent, touch navigates on the first tap. Returning to neutral restores the balanced scene. Motion is finite and input-driven; reduced motion preserves instant highlighting without animated transforms. Home SVG motion and existing route transitions own different nodes.
+
+Mobile uses three legible venue signs with distinct original vector symbols and two real event names each. Its panorama is atmospheric and omitted on very short screens. Sponsors & partners is a secondary venue-style button, not a fourth category. Its native modal has a real empty state from data/sponsors.js, no invented sponsors/logos, focus containment, Escape/backdrop/close controls, opener-focus return and scroll/style restoration. Approved future records can populate the same showcase.
+
+Verification: production build, existing event integrity checks, six unchanged intro-session tests, focused Biome React correctness lint, and 21st local review (zero errors/warnings; informational palette suggestions for original SVG art). Chromium checks cover desktop/mobile/compact/landscape, one active zone, actual event names, hover/focus/touch, stable entrance geometry, sponsor modal, route transitions/Back, reduced motion and full intro-to-new-home handoff. Physical devices and Safari/Firefox remain unverified.
+
+Protected-file hash comparison confirms intro source/behavior, shared header/logo and styles, category pages/details, data/assets, registration/navigation/route-transition code, hosting identity and package files remain byte-identical. Scoped implementation is in src/home/, sections/Hero.jsx, pages/HomePage.jsx and data/sponsors.js. Installed skills informed a bespoke design; 21st hosted search/generation is not connected, and no templates were retrieved.
+
 ## Approved opening: THE CAMPUS TAKEOVER
 
 Removed the visible imagined-ground/campus caption at the owner’s request. Scene illustration, timing, transitions and playback behavior are unchanged.
@@ -21,7 +33,7 @@ Retired the old montage scene, its controls and the isolated playback harness. T
 
 ## Preserved website
 
-Single-screen homepage; Sports nine-arena journey and four supplied Cricket photos; Cultural/Technical editorial pages and details; existing route transitions and supporting routes. Restored concert concept art and colored logo reference retain their provenance/disclosure. Event facts and media remain centralized, with unknown details null.
+Interactive single-screen festival-arena homepage; Sports nine-arena journey and four supplied Cricket photos; Cultural/Technical editorial pages and details; existing route transitions and supporting routes. Restored concert concept art and colored logo reference retain their provenance/disclosure. Event facts and media remain centralized, with unknown details null.
 
 ## Agent tooling
 

@@ -1,5 +1,7 @@
 # Next steps
 
+Review THE FESTIVAL IS YOURS homepage on physical iOS/Android and Safari/Firefox. Keep the shared VJIT branding, approved nine-second intro and existing category transitions unchanged. Verify hover/focus/touch lighting, small-screen signs and the Sponsors overlay. Add only organizer-approved sponsor records to src/data/sponsors.js; do not invent tiers, names or logos.
+
 The intro’s imagined-ground/campus caption is removed; preserve the existing nine-second animation and control-free playback.
 
 THE CAMPUS TAKEOVER is approved and integrated with automatic once-per-tab playback and no controls. Review the main and review URLs in a fresh browser session; a same-tab refresh intentionally bypasses the film. Preserve the approved animation unchanged. Physical-device and Safari/Firefox verification remain outstanding.

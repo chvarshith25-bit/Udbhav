@@ -8,5 +8,5 @@ export default function HomePage() {
   const introOnMount = useRef(introActive);
   useLayoutEffect(() => { if (introActive) introOnMount.current = true; }, [introActive]);
   useFestivalMotion(root, !introOnMount.current && !introActive);
-  return <main ref={root} className="home-page"><Hero/></main>;
+  return <main ref={root} className="home-page arena-home"><Hero/></main>;
 }
