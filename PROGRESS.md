@@ -1,57 +1,28 @@
 # Current progress — November 4, 2026
 
-## Isolated concept review: THE CAMPUS TAKEOVER
+## Approved opening: THE CAMPUS TAKEOVER
 
-Built a separate nine-second React/GSAP prototype in prototypes/campus-takeover. One original night-time festival ground contains a sports court, central stage/display and technology pavilion. Floodlights activate, the physical display counts 03/02/01, the whole ground lights up and the identity moves into a read-only reuse of the current homepage components. The illustration explicitly does not represent VJIT's real campus. No new photography, fonts, video, audio or runtime dependencies.
+The approved nine-second continuous festival-ground film is now the production opening. The prototype scenery is byte-identical; animation keyframes, easing, camera movement, lighting, countdown and homepage handoff timing are preserved. Court, stage and technology pavilion share one imagined environment, explicitly not VJIT's actual campus. No new media, fonts, audio, WebGL or dependencies.
 
-Replay, Pause/Play, keyboard timeline scrubbing, Skip/Escape, reduced-motion still, hidden-tab pause, resize recalculation and replay after preview category navigation passed Chromium checks. Full playback measured approximately nine seconds; desktop, 390×844, 360×640 and 844×390 layouts were checked, with no runtime errors or horizontal overflow. The title bridge aligns with the homepage within browser rounding. Normal event checks and production build passed; the production entry, intro/session controller, category pages, styles, assets and package files remain unchanged.
+Playback is automatic once per browser-tab session, with no Pause, Play, Replay, Skip, progress or debug controls. `udbhav:intro:v1` is marked `complete` before animation initialization, so even a mid-animation refresh bypasses it. Route navigation, Back/Forward and returning home never replay it. Reduced motion bypasses immediately. Direct category visits retain their URLs and consume the opening rather than playing it later on return home. Blocked storage falls back to document memory.
 
-Private isolated review: https://udbhav-campus-takeover-review.arcaneharp16.chatgpt.site/ . This separate Site has its own identity; the existing UDHBHAV deployment is not replaced. **Awaiting creative approval before any integration.** See prototypes/campus-takeover/README.md for local commands and art direction.
+The controller stays above the route provider. Homepage content is inert during playback, the normal hero entrance remains suppressed for this mount, and completion restores access and heading focus without scroll jumping. Escape, Space, resizing and hidden-tab events do not skip the film. Resize recalculates the measured handoff at the same playhead. Initialization failure restores the homepage immediately; a visible-tab progress watchdog recovers stalled playback. GSAP contexts/listeners/timers are cleaned up, including Strict Mode.
 
-## UI/UX agent tooling
-
-Installed project-local UI UX Pro Max, selected Vercel web/React skills, Anthropic frontend-design, 21st.dev skills and Motion AI Kit. Added project Codex MCP settings for free Motion and Figma. Website code, assets and dependencies are unchanged; check/build passed. The Figma plugin is connected and its authenticated account check passed. Separate local CLI MCP activation, Motion live connectivity and 21st.dev login remain pending. See UI_UX_SKILLS.md for exact versions, verification and local setup steps.
-
-## Current website
-
-- Multi-page React/Vite festival site with a single-screen homepage and real Sports/Cultural/Technical routes. About, schedule/Annual Day, gallery and contact remain separate routes.
-- Sports retains THE ROAD TO GLORY: nine connected arenas, progressive SVG path, sport-specific detail openings and photo-ready fallbacks. Cricket has four user-supplied photos. Cultural/Technical retain their editorial event browsers and native details.
-- Homepage retains the restored golden concert concept image and colored logo reference. Event facts and media remain centralized. No new photography, logos, external fonts, video, audio or WebGL were added for this intro update.
-
-## Replaced opening: THE FESTIVAL COMES ALIVE
-
-Original 9.8-second connected sequence, built with React, GSAP, SVG, CSS and a meaningful illustrative coding interface:
-
-1. Sports, 0–2.2s: dark perspective court, controlled spotlight and a stylized basketball drop/rebound.
-2. Cultural, 2.2–4.4s: the impact expands into a stage-light pool, revealing a microphone, truss and sweeping spotlights.
-3. Technical, 4.4–6.5s: converging light becomes an editing canvas with festival data and three category previews.
-4. Identity, 6.5–8.5s: complete UDHBHAV / 2K27, institution and January 28–30, 2027 dates, with recognizable category emblems.
-5. Enter, 8.5–9.8s: wordmark aligns into the live homepage; emblems move toward category entries; dates/logo/navigation reveal without a hard cut.
-
-The rejected spark/abstract-orbit opening has been removed from current source/styles. Existing route-transition choreography and category page source were not redesigned.
-
-## Playback, accessibility and recovery
-
-- Session key `udbhav:intro:v1` preserves first-session behavior, refresh suppression and direct-category bypass. No automatic replay on returning home.
-- Added a homepage Replay intro control. Skip and Escape work for automatic and manual playback; manual completion restores Replay focus.
-- Reduced motion bypasses immediately, including an accessible announcement when Replay is requested. Background remains inert during playback; keyboard focus stays on Skip.
-- Normal hero entrance cleans up before replay, avoiding animation conflicts and post-intro flashes. GSAP context reverts all homepage/overlay styles.
-- Resize, hidden tab, page departure and motion-preference changes finish safely. Initialization failure restores the homepage; watchdog is twelve seconds. No layout-shifting intro elements.
+Retired the old montage scene, its controls and the isolated playback harness. The review entry now runs the same control-free website code. Main website: https://udbhav-2k27-vjit.arcaneharp16.chatgpt.site/ . Review URL: https://udbhav-campus-takeover-review.arcaneharp16.chatgpt.site/ . Each keeps its own hosting identity and private audience.
 
 ## Verification
 
-- Chromium: all five scenes, measured 9–10-second duration, full identity, continuous homepage handoff, Replay/Skip/focus, refresh/session suppression and homepage/category navigation PASS.
-- Mobile with every external image/media request blocked: coding scene, identity, completion and no horizontal overflow PASS.
-- Narrow portrait and compact landscape: editing canvas stays inside viewport without clipped content; identity and Skip framing PASS.
-- Reduced-motion Replay bypass, direct Sports/Cultural/Technical entry, resize/Escape recovery and no runtime errors PASS.
-- Injected initialization failure, subsequent Replay, all category event counts/dialogs and Cricket gallery regression PASS. Replay also safely interrupts an in-progress normal hero entrance without causing a second entrance or opacity flash.
-- Focused React correctness lint on the seven intro/home-handoff modules PASS. Event-data checks and production build run before publication; final outcome is reported in chat.
+- Six session tests pass (`node src/intro/introSession.test.mjs`): start-time claim/early reload, fresh sessions, legacy recorded sessions, reduced motion, direct category visits and blocked-storage memory fallback.
+- Chromium: full nine-second automatic playback, exclusive 03/02/01 display, identity/handoff, no controls, Escape/Space cannot skip, early refresh, all three category links, Back/Forward, home return and same-session refresh.
+- Fresh mobile session, 390×844 and 844×390 rotation, continuous playback after resize, no horizontal overflow, reduced-motion bypass and injected initialization failure that restores homepage styles. No runtime errors or GSAP warnings.
+- Event integrity and production build pass. Homepage/category source, shared styles, navigation/transition code, assets and package files remain unchanged. Physical devices and Safari/Firefox remain unverified.
 
-Safari/Firefox, screen-reader review and physical-device performance review remain pending. Official event schedules, contacts, approved logo provenance and remaining real imagery are still pending; none was invented.
+## Preserved website
 
-## Source and deployment
+Single-screen homepage; Sports nine-arena journey and four supplied Cricket photos; Cultural/Technical editorial pages and details; existing route transitions and supporting routes. Restored concert concept art and colored logo reference retain their provenance/disclosure. Event facts and media remain centralized, with unknown details null.
 
-Canonical repository: https://github.com/chvarshith25-bit/Udbhav
-Owner-private site: https://udbhav-2k27-vjit.arcaneharp16.chatgpt.site/
+## Agent tooling
 
-Earlier implementation notes are preserved in docs/SESSION_HISTORY.md. Current source, brief, design system and next steps describe this festival-themed opening. The Windows OneDrive folder is separate from this cloud workspace; use Git pull or the repository ZIP for local updates.
+Project-local UI UX Pro Max, selected Vercel web/React skills, Anthropic frontend-design, 21st.dev and Motion AI Kit remain installed. Figma plugin authentication was verified. See UI_UX_SKILLS.md for separate local account/MCP setup still needed.
+
+Prior opening/prototype verification is archived in docs/SESSION_HISTORY.md. Windows OneDrive requires a Git pull or repository download; it is separate from this cloud checkout.

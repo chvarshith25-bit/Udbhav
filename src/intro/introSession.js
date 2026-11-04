@@ -1,9 +1,9 @@
 export const INTRO_SESSION_KEY = 'udbhav:intro:v1';
 let claimedInMemory = false;
 
-export function markIntro(status = 'complete') {
+export function markIntro() {
   claimedInMemory = true;
-  try { sessionStorage.setItem(INTRO_SESSION_KEY, status); } catch { /* Private storage: retain this document's session in memory. */ }
+  try { sessionStorage.setItem(INTRO_SESSION_KEY, 'complete'); } catch { /* Private storage: retain this document's session in memory. */ }
 }
 export function shouldPlayIntro(pathname) {
   let recorded = claimedInMemory;

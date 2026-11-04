@@ -1,8 +1,8 @@
 # Design system
 
-## Isolated motion study — pending approval
+## Approved opening direction
 
-THE CAMPUS TAKEOVER lives only in prototypes/campus-takeover. Its single elevated festival-ground illustration extends the existing ink/paper/lime with night #080f12, warm floodlight #efce8d and desaturated pavilion blue. Layered scenery, physical floodlights, a countdown display, crowd/festoon/perimeter illumination and a measured homepage typography handoff replace montage only within this prototype. It makes no claim about VJIT's actual campus layout. Prototype-only styles and GSAP nodes are separate from all production animation owners; do not apply this direction to the existing website until approved.
+THE CAMPUS TAKEOVER is a nine-second continuous illustrated festival ground. Preserve the approved SVG composition, ink/paper/lime palette, night #080f12, warm floodlight #efce8d and desaturated pavilion blue. Court, stage, technology pavilion, countdown display, crowd/festoon/perimeter illumination and camera/title handoff share one environment. No real-campus layout claim. All playback/testing controls are removed; the scene design and animation remain unchanged.
 
 ## Tokens and composition
 
@@ -14,14 +14,14 @@ The restored golden concert concept image supports the warm light/lime identity.
 
 ## Motion ownership
 
-- IntroSequence: 9.8-second festival film and initial/replay homepage handoff only. GSAP context reverts every affected inline style.
+- IntroSequence: nine-second Campus Takeover film and initial homepage handoff only. GSAP context reverts every affected inline style.
 - useFestivalMotion: normal homepage entrance on mounts not owned by the intro; scoped GSAP lifecycle and reduced-motion handling.
 - PageTransitionProvider/choreography: route-shell fading, cover/reveal panels and transition labels. GSAP only.
 - Motion: standard Cultural/Technical dialog UI. Sports details disable that entrance and use their own GSAP cover. Do not assign a second animation system to the same node.
 
-Opening timing: Sports court and controlled basketball drop/rebound 0–2.2s; Cultural stage-light/microphone scene 2.2–4.4s; Technical coding interface 4.4–6.5s; full UDHBHAV / 2K27 identity, institution and dates 6.5–8.5s; measured homepage handoff 8.5–9.8s. The impact pool is reused as stage lighting, beams converge into the editor frame, and category emblems travel toward the homepage entry points. Palette stays ink, paper, lime, warm copper/light and restrained periwinkle.
+Opening timing remains identical to the approved prototype: quiet ground 0–1.1s; floodlights 1.1–3s; 03/02/01 display 3–6s; whole-ground/identity illumination 6–7.25s; camera and measured homepage handoff 7.25–9s. FestivalGround is the unchanged original SVG scenery. Intro styles live in src/intro/intro.css. No media, sound or WebGL dependency.
 
-FestivalScenes contains recognizable original SVG/HTML graphics, not stock media or random code. Intro styles live in src/intro/intro.css. Twelve-second fail-open timer. No media, sound or WebGL dependency. Session key `udbhav:intro:v1` remains unchanged. Reduced motion and direct category entries bypass the film. Skip/Escape and interruption recovery remain; explicit Replay on the homepage resets only active playback, not normal session rules. Suppress normal hero motion while a replay owns its targets, and retain that suppression until the current homepage mount ends.
+Session key `udbhav:intro:v1` is claimed before initialization. No playback controls, Escape skip or replay handler. Reduced motion/direct category visits bypass the film. Resize preserves the current playhead; hidden-tab events do not deliberately pause or skip. Initialization failure and stalled-animation recovery restore access. Suppress normal hero entrance for the intro-owned mount; no second animation system owns the film nodes.
 
 Route choreography: diagonal lime Sports cover, opposing clay Cultural curtains, staggered periwinkle Technical columns; paper panels for other destinations. Roughly one second per navigation. Keep the old route mounted until fully covered and the destination ready before revealing. Three-second recovery timer prevents stale overlays/locks. Reduced motion skips choreography immediately.
 

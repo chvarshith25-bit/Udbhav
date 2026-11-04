@@ -12,11 +12,9 @@ Routes: `/`, `/sports`, `/cultural`, `/technical`, `/about`, `/schedule`, `/gall
 
 ## Opening and navigation
 
-Separate concept under review: THE CAMPUS TAKEOVER, a nine-second continuous illustrated festival-ground prototype in prototypes/campus-takeover. It is not a real-campus depiction and is not integrated into the website. Its own entry, router and build isolate the review from the current opening. Creative approval is required before replacement; the production behavior described below stays current.
+THE CAMPUS TAKEOVER is approved and integrated: a nine-second continuous illustrated festival ground with court, stage and technology pavilion. Floodlights activate, the giant display counts 03/02/01, the whole ground illuminates and the camera moves through the UDHBHAV identity into the unchanged homepage. Preserve the approved scenery, animation keyframes, easing, transitions and timing exactly; it is not a depiction of VJIT's real campus.
 
-THE FESTIVAL COMES ALIVE is a 9.8-second original festival film: recognizable basketball/court action (0–2.2s), theatrical stage/microphone/spotlights (2.2–4.4s), a meaningful coding interface and category previews (4.4–6.5s), complete UDHBHAV identity/institution/dates (6.5–8.5s), then a measured homepage handoff (8.5–9.8s). Ball impact becomes a stage-light pool; converging stage beams open the coding canvas; the interface resolves into one identity. No abstract-line opening, isolated-letter sequence or disconnected category text slides.
-
-The film is independent of external media and runs automatically once per tab session. Skip/Escape, reduced-motion bypass, interruption recovery and session persistence are required. A homepage Replay intro control provides deliberate replay without restarting on normal navigation. No category page or homepage composition redesign is part of this change.
+No visible intro controls, replay, skip, pause, progress or debugging UI. Automatic first home-entry playback claims `udbhav:intro:v1` at start, before initialization. Refresh, navigation, return home and Back/Forward cannot replay it. Reduced motion and direct category entries bypass/consume the opening. Fail open on initialization errors; restore all homepage styles and access. The separate review entry reuses production code.
 
 GSAP route transitions remain separate: diagonal lime Sports wipe, clay Cultural curtains and periwinkle Technical panels. The previous page remains until covered; the destination commits before reveal. Preserve Back/Forward, duplicate-click protection, native link modifiers, focus and recovery timers.
 
