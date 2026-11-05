@@ -1,3 +1,4 @@
+import SportsTransition from '../sports/SportsTransition';
 import TechnicalTransition from '../technical/TechnicalTransition';
 import CulturalTransition from '../cultural/CulturalTransition';
 import { createContext, useContext, useLayoutEffect, useEffect, useRef, useState } from 'react';
@@ -132,6 +133,7 @@ export default function PageTransitionProvider({ children }) {
   return <TransitionContext.Provider value={{ go, busyRef, displayLocation }}>
     <div ref={shell} className="route-shell" data-pathname={displayLocation.pathname} inert={busy} aria-busy={busy}>{children(displayLocation)}</div>
     <div ref={overlay} className="transition-overlay" data-theme={theme} aria-hidden="true">
+      <SportsTransition/>
       <CulturalTransition/>
       <TechnicalTransition/>
       {[0,1,2,3].map(i => <div className={`transition-panel panel-${i}`} key={i}/>)}

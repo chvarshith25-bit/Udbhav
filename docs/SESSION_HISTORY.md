@@ -270,3 +270,11 @@ Verification: production build, 26-event integrity, eight focused Technical/Cult
 Failure testing targets the actual loaded GSAP module. It exposed a stale route-overlay interception after a thrown context callback; callbacks now catch initialization errors internally before reverting outside the context, preventing leaked animation ownership. Injected entry/mode/detail failures preserve exact selected geometry, accessible details and Close; restoring animation allows normal mode motion and Back navigation. Reduced motion settles native SVG attributes immediately. Partial route timelines are killed and callbacks have fail-open recovery.
 
 Protected hashes and normalized integration comparisons confirm homepage/VJIT, approved intro, Sports, Cultural Street, sponsors, event/assets data, registration, shared styles/dependencies, provider lifecycle and non-Technical choreography unchanged. Shared changes are limited to the Technical overlay import/node and two early dispatches. Installed Frontend Design, UI UX Pro Max, Motion best practices, 21st local context/review and current Web Interface Guidelines informed the bespoke implementation; hosted 21st search requires sign-in and Motion MCP remains unavailable.
+
+
+## November 5, 2026 — Sports journey superseded
+
+The previous THE ROAD TO GLORY design is archived. The new user brief replaces its winding path, chapters and jump control with THE ARENA TAKEOVER. Historical description:
+
+
+Sports alone is redesigned as an interactive journey: Basketball, Football, Volleyball, Table Tennis, Cricket, Badminton, Chess, Carroms and Kabaddi. A continuous responsive SVG passes through measured waypoint positions, illuminates with scroll progress and tracks the active arena. Alternating desktop chapters become a simplified mobile side rail. Distinct sport graphics and roughly 0.85–0.95-second opening effects lead into a fullscreen native detail dialog. Reduced motion reveals details immediately. Close restores source scroll/focus; route changes clean up the modal. No event-specific routes are introduced. Existing homepage, intro, category transition controller and Technical layouts remain unchanged.

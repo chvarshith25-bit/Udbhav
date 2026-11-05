@@ -1,3 +1,4 @@
+import { coverSports, revealSports } from '../sports/sportsTransition';
 import { coverTechnical, revealTechnical } from '../technical/technicalTransition';
 import { coverCultural, revealCultural } from '../cultural/culturalTransition';
 import gsap from 'gsap';
@@ -12,6 +13,7 @@ export function themeFor(path) { return transitionThemes[path.slice(1)] ? path.s
 
 // Only the provider owns these nodes. Page GSAP and Motion never animate them.
 export function coverPage(overlay, shell, theme, trigger, onCovered) {
+  if (theme === 'sports') return coverSports(overlay, shell, onCovered, trigger);
   if (theme === 'technical') return coverTechnical(overlay, shell, onCovered, trigger);
   if (theme === 'cultural') return coverCultural(overlay, shell, onCovered, trigger);
   const panels = overlay.querySelectorAll('.transition-panel');
@@ -32,6 +34,7 @@ export function coverPage(overlay, shell, theme, trigger, onCovered) {
   return tl;
 }
 export function revealPage(overlay, theme, onRevealed) {
+  if (theme === 'sports') return revealSports(overlay, onRevealed);
   if (theme === 'technical') return revealTechnical(overlay, onRevealed);
   if (theme === 'cultural') return revealCultural(overlay, onRevealed);
   const panels = overlay.querySelectorAll('.transition-panel');

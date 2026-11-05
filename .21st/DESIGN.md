@@ -20,3 +20,8 @@ The current brief supersedes the broadcast concept with **The Festival Street**.
 ## Technical design context
 
 The current Technical-only brief supersedes the machine concept with **The Build Room**: a tactile student-maker worktable, four recognizable object buttons and full-size vertical mobile workbench. Laptop → Codeathon; notes/sketches → Ideathon; engineering drawings/model materials → Branch-wise Hackathons; exhibition board/concept model → Project Expo. Warm neutrals/wood, graphite, subtle blue and selective orange/lime support original physical illustration, refined shadows and clear editorial type. Focus/hover lifts the selected surface, activates relevant micro-motion and displays its canonical description without reflow. Preserve keyboard precedence over stationary-pointer scroll. Detail motion starts at the actual clicked object, with native Close/focus/scroll/state recovery. The entry expands from the pavilion into the same lamp-lit table, without editing homepage source. No real-facility/project/photo claims, machine showroom, hacker dashboard, generic cards, WebGL or new packages. Protect homepage/VJIT, intro, Sports, Cultural Street, sponsors, registration and all shared route source.
+
+
+## Sports — The Arena Takeover
+
+One persistent transforming arena, charcoal/ivory/lime competition signage, all nine native sport selectors, distinct court/board geometry and equipment, finite motion and deliberately different type compositions. Mobile uses a three-column full-name index with a full-size arena. Keep the homepage/VJIT, intro, Cultural Street and Technical Build Room unchanged. No stock/fabricated photography or continuous effects.

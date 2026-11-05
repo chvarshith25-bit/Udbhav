@@ -1,0 +1,12 @@
+.takeover-route{display:none}
+.transition-overlay[data-theme=sports] .takeover-route{display:block;position:absolute;inset:0;color:#eeeedf;overflow:hidden}
+.transition-overlay[data-theme=sports] .transition-copy,.transition-overlay[data-theme=sports] .transition-panel[class]{display:none}
+.takeover-route-pool{position:absolute;inset:0;background:#20271f;clip-path:circle(0 at 30% 60%)}
+.takeover-route-light{position:absolute;inset:-40% -30%;background:linear-gradient(90deg,transparent 25%,#eff2c977 48%,transparent 65%);transform:skewX(-20deg);opacity:0;pointer-events:none}
+.takeover-route-floor{position:absolute;width:min(1000px,90vw);left:50%;top:57%;transform:translate(-50%,-50%);opacity:0}
+.takeover-route-floor>.takeover-court{width:100%;height:auto}
+.takeover-route-word{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:22px;opacity:0}
+.takeover-route-word>span{font:8px Arial,Helvetica,sans-serif;letter-spacing:.1em;color:#c1cc9f}
+.takeover-route-word>strong{font:800 clamp(95px,24vw,380px)/.8 Arial,Helvetica,sans-serif;letter-spacing:-.08em}
+.takeover-route-word>small{font:9px Arial,Helvetica,sans-serif;letter-spacing:.1em;color:#d7f34d}
+@media(max-width:760px){.takeover-route-word{gap:20px}.takeover-route-word>strong{font-size:26vw}.takeover-route-word>span{font-size:6px}.takeover-route-word>small{font-size:7px}.takeover-route-floor{width:140vw;top:55%}}

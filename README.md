@@ -24,7 +24,7 @@ Stack: React 19, Vite 7, Tailwind 4, React Router 7, GSAP/ScrollTrigger, Motion 
 | Route | Content |
 | --- | --- |
 | `/` | THE FESTIVAL IS YOURS: interactive SVG festival ground, three spatial entrances, original VJIT branding and secondary Sponsors overlay |
-| `/sports` | THE ROAD TO GLORY: nine connected arena chapters, progressive SVG path and sport-specific fullscreen details |
+| `/sports` | THE ARENA TAKEOVER: one transforming arena, nine directly selectable sports and sport-specific native details |
 | `/cultural` | Thirteen cultural/activity events, including gaming/strategy |
 | `/technical` | THE BUILD ROOM: four tactile workspace objects opening independent competition details |
 | `/about` | Festival introduction |
@@ -38,7 +38,7 @@ There are no playback controls or replay options. On the first home entry in a t
 
 Run session regression tests with `node src/intro/introSession.test.mjs`. Browser verification covers playback, controls absence, session refresh/history/navigation, mobile rotation, reduced motion and initialization failure.
 
-Category navigation uses real React Router URLs and distinct GSAP transitions: diagonal Sports wipe, Cultural stage-origin festival-banner reveal and Technical pavilion-to-overhead-workspace reveal. Use TransitionLink for internal links. The old route stays mounted until covered; the new route commits before uncovering. Modified clicks, Back/Forward, heading focus and error recovery are preserved.
+Category navigation uses real React Router URLs and distinct GSAP transitions: Sports-zone floodlight/directional arena reveal, Cultural stage-origin festival-banner reveal and Technical pavilion-to-overhead-workspace reveal. Use TransitionLink for internal links. The old route stays mounted until covered; the new route commits before uncovering. Modified clicks, Back/Forward, heading focus and error recovery are preserved.
 
 ## Interactive homepage
 
@@ -62,8 +62,8 @@ See public/ASSET_GUIDE.md for directories and replacement instructions. The open
 - `src/transitions/`: route readiness/history controller and GSAP choreography.
 - `src/pages/`: home, category and festival-information pages.
 - `src/sections/`, `src/components/`: reusable content, dialogs, navigation and visual fallbacks.
-- `src/data/`: event facts, Sports journey chapter metadata and centralized media references.
-- `src/sports/`: responsive path/ScrollTrigger hook, nine original vector graphics, reusable photo fallback and game-specific opening choreography.
+- `src/data/`: canonical event facts and centralized media references.
+- `src/sports/`: nine arena configurations, persistent court/board SVG, scoped selection motion, native details and Sports-only route choreography.
 - `src/styles/`, `src/animations/`: shared tokens, responsive layouts and page motion.
 - `public/`: local assets, reserved official-asset folders and hosting redirects.
 - `scripts/check-events.mjs`: event-data integrity checks.
@@ -75,19 +75,13 @@ Vercel: import the GitHub repository; build `npm run build`, output `dist`. verc
 
 Codex and Antigravity use the same GitHub repository. Read AGENTS.md and the project documents before editing, fetch collaborator changes, avoid force pushes, and update progress/next steps after each session. The Sites source repository is a separate deployment mirror. The application source, assets and configuration in this checkout are the current implementation.
 
-## Sports journey
+## Sports — The Arena Takeover
 
-Sports has nine arenas in the requested order, connected by a continuous SVG measured from the actual waypoint positions. Desktop chapters alternate composition; mobile uses a gently curved side rail. Natural scrolling draws the path and updates the sticky progress/jump control. Opening an arena uses its game-specific GSAP transition inside the shared native dialog; all existing event fields and image controls remain. Closing restores the source scroll position and button focus. There are no event-specific routes; browser Back/Forward continues between category pages and cleans up any open detail.
+All nine sports are directly selectable from one arena-wayfinding index. Hover/focus previews a cue; click transforms the same floor, court/board geometry, equipment, typography and information. Mobile has a full-name three-column selector and a purpose-built arena below it. Explore opens native details through a short sport-specific cover. Close restores the active sport, source scroll and focus. Browser Back/Forward continues between routes; no event routes or forced sequence are introduced. Entry expands from the homepage Sports zone through a floodlight sweep into the arena (roughly 1.4 seconds).
 
-Populate sportsAssets[<event-id>].images with approved `{ src, alt }` objects. The first image is the main journey/detail image; remaining images appear in the detail controls. Missing/broken images restore the matching original SVG sport graphic. Cricket currently has four user-supplied photographs; all other Sports arenas retain vector placeholders. See public/images/events/SPORTS_ASSETS.md.
+Populate sportsAssets[<event-id>].images with approved `{ src, alt }` objects. Main/additional detail images retain contain sizing; missing/broken media restores the matching original SVG study. Cricket retains four previously supplied photographs, without claiming official event coverage. The main arena uses procedural graphics independently of photographs. See src/sports/README.md and public/images/events/cricket/ASSETS.md.
 
-Focused React correctness lint for Sports changes can be run without adding a runtime dependency:
-
-```sh
-npm exec --yes --package=@biomejs/biome -- biome lint --only=correctness/noUnusedVariables --only=correctness/noUnusedImports --only=correctness/useExhaustiveDependencies --only=correctness/useJsxKeyInIterable --only=suspicious/noAssignInExpressions --only=suspicious/noDuplicateObjectKeys src/sports src/pages/SportsPage.jsx src/data/sportsAssets.js src/data/sportsJourney.js src/components/EventDialog.jsx
-```
-
-Cricket uses four user-supplied photographs from the uploaded ZIP. The first appears on the journey; all four are available through the detail gallery controls. Detail photographs use contain sizing to preserve the complete scene. See public/images/events/cricket/ASSETS.md for provenance.
+Checks: `node src/sports/arenaData.test.mjs`, `npm run check`, `npm run build`. Focused Biome React/accessibility lint runs against the new Sports files without adding dependencies. Legacy journey helpers remain for compatibility but are not consumed by the new Sports page.
 
 ### Cultural: The Festival Street
 

@@ -1,5 +1,7 @@
 # Next steps
 
+Review THE ARENA TAKEOVER on physical iOS/Android, Safari/Firefox and screen readers. Preserve all nine visible full-name selectors, persistent floor, distinct sport identities, mobile composition, selected-state/focus/scroll restoration and Sports-only entry. Recheck rapid switching, early Close, reduced motion, failed initialization and Back/Forward after changes. Add only approved photographs through sportsAssets.js; retain the four supplied Cricket records and avoid official coverage claims. Canonical dates, times, venues, coordinators and contact/registration data remain pending. See src/sports/README.md.
+
 Review THE BUILD ROOM on physical iOS/Android, Safari/Firefox and screen readers. Preserve the four recognizable full-hit-area object buttons, reserved captions, movement-based hover/focus precedence and vertical mobile layout. Recheck clicked-object origin/scale and table handoff after layout changes, early Close/Back, reduced motion and initialization failure. Supply only approved Technical images and confirmed rules/eligibility/branch tracks in canonical event data; follow src/technical/README.md. Keep the illustrated worktable/concept models distinct from real facilities/projects.
 
 Review THE FESTIVAL STREET on physical iOS/Android, Safari/Firefox and screen readers. Preserve connected street geometry, three distinct district compositions, tilted poster hit areas, native wayfinding, visible directory and fullscreen detail focus/scroll return. Confirm schedules, venues, both coordinators and contacts in events.js; add only approved event photographs through images arrays. Poster designs remain the missing/error fallback. Keep the approved intro, homepage/VJIT, Sports, Technical, sponsors and all other transitions untouched.
@@ -28,7 +30,7 @@ UI/UX tooling: pull the setup and restart the local agent; complete 21st.dev log
 Optional sound is not implemented. Add it only if requested, with an explicit user-activated control.
 
 9. Add approved Sports photographs in public/images/events/<sport-id>/ and populate src/data/sportsAssets.js. Verify main/additional images, crop, alt text and broken-image fallback before replacing the vector studies.
-10. Review the Sports winding path and nine opening effects on physical devices and Safari/Firefox. Recheck marker alignment after layout changes, native detail scrolling, source-position restoration, keyboard jump controls and reduced motion.
+10. Review the Sports arena and nine opening effects on physical devices and Safari/Firefox. Recheck court framing after layout changes, native detail scrolling, source-position restoration, keyboard selectors and reduced motion.
 
 - Cricket now has four supplied photos. Review those crops and provide approved images for the other eight arenas when available; no need to change the gallery component or page structure.
 

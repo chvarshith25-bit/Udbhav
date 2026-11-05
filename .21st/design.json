@@ -42,7 +42,7 @@
   },
   "constraints": {
     "must": [
-      "Preserve intro, shared VJIT header, homepage, Sports and Cultural Festival Street; Technical redesign and its own transition are explicitly authorized",
+      "Preserve approved intro, shared VJIT header, homepage, Cultural Festival Street and Technical Build Room; Sports Arena Takeover and its own transition are explicitly authorized",
       "Exactly three primary entrances; sponsors are secondary",
       "Single-screen homepage with dedicated mobile entrances",
       "No invented photography, campus geography or sponsorship facts"
@@ -79,6 +79,11 @@
       "scope": "technical",
       "decision": "The Build Room supersedes Invention Engine: tactile overhead worktable with four recognizable student-maker objects, reserved hover/focus descriptions, clicked-object detail transitions and a full-size vertical mobile workbench.",
       "source": "User-supplied Technical: The Build Room brief"
+    },
+    {
+      "scope": "sports",
+      "decision": "The Arena Takeover supersedes Road to Glory: one persistent morphing sports floor, nine directly accessible configurations, unboxed wayfinding, full-size mobile arena and independent sport-specific native detail covers.",
+      "source": "User-supplied Sports: The Arena Takeover brief"
     }
   ],
   "evidence": [
