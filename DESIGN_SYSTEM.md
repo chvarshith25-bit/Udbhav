@@ -6,7 +6,7 @@ THE CAMPUS TAKEOVER is a nine-second continuous illustrated festival ground. Pre
 
 ## Tokens and composition
 
-Ink #171914; paper #f3f2eb; lime #d7f34d. Muted #77796f; rules #d6d7cd. Sports artwork uses sage, Cultural clay and Technical soft periwinkle. Use the system Arial/Helvetica stack and Georgia for editorial italics. No external font downloads.
+Ink #171914; paper #f3f2eb; lime #d7f34d. Muted #77796f; rules #d6d7cd. Sports artwork uses sage, Cultural clay and Technical electric blue/graphite on warm off-white. Use the system Arial/Helvetica stack and Georgia for editorial italics. No external font downloads.
 
 Gutters: clamp(22px, 4.5vw, 88px). Standard section padding: 95px desktop / 65px mobile. Breakpoints: 760px mobile and 1100px intermediate. Fluid display type uses tight tracking; small labels use spaced uppercase. Prefer hairline dividers, straight edges and expressive whitespace over repeated cards.
 
@@ -25,13 +25,13 @@ Sponsors & partners is a secondary venue-style entrance. Use the native dialog a
 - SponsorsOverlay: its dialog content entrance only, with a scoped GSAP lifecycle.
 - useFestivalMotion: normal homepage entrance on mounts not owned by the intro; scoped GSAP lifecycle and reduced-motion handling.
 - PageTransitionProvider/choreography: route-shell fading, cover/reveal panels and transition labels. GSAP only.
-- Motion: standard Technical dialog UI. Cultural owns its native dialog reveal with GSAP. Sports details disable that entrance and use their own GSAP cover. Do not assign a second animation system to the same node.
+- Technical owns persistent SVG assembly motion, its blueprint route clone and native detail covers on separate nodes. Cultural owns its native dialog reveal with GSAP. Sports details disable that entrance and use their own GSAP cover. Do not assign a second animation system to the same node.
 
 Opening timing remains identical to the approved prototype: quiet ground 0–1.1s; floodlights 1.1–3s; 03/02/01 display 3–6s; whole-ground/identity illumination 6–7.25s; camera and measured homepage handoff 7.25–9s. FestivalGround is the unchanged original SVG scenery. Intro styles live in src/intro/intro.css. No media, sound or WebGL dependency.
 
 Session key `udbhav:intro:v1` is claimed before initialization. No playback controls, Escape skip or replay handler. Reduced motion/direct category visits bypass the film. Resize preserves the current playhead; hidden-tab events do not deliberately pause or skip. Initialization failure and stalled-animation recovery restore access. Suppress normal hero entrance for the intro-owned mount; no second animation system owns the film nodes.
 
-Route choreography: diagonal lime Sports cover, Cultural stage-origin lighting and expressive festival-banner reveal, staggered periwinkle Technical columns; paper panels for other destinations. Cultural targets 1.2–1.8 seconds (1.49 seconds of timeline animation plus the route commit); other routes retain their existing timing. Keep the old route mounted until fully covered and the destination ready before revealing. Three-second recovery timer prevents stale overlays/locks. Reduced motion skips choreography immediately.
+Route choreography: diagonal lime Sports cover, Cultural stage-origin lighting and expressive festival-banner reveal, Technical pavilion-origin blueprint and measured assembly handoff; paper panels for other destinations. Cultural targets 1.2–1.8 seconds (1.49 seconds of timeline animation plus the route commit); other routes retain their existing timing. Keep the old route mounted until fully covered and the destination ready before revealing. Three-second recovery timer prevents stale overlays/locks. Reduced motion skips choreography immediately.
 
 ## Responsive and accessible behavior
 
@@ -60,3 +60,11 @@ Angled wayfinding signs select Performance Boulevard, Creator’s Alley and Chal
 All 13 records map exactly once. acts.js holds their original poster-art direction: rhythm circles/strings, graceful gesture, voice curves, directional dance, photographic aperture, moving frame, widescreen film, folded clue map, challenge symbols, bracket, velocity mark, versus field and auction board. Finite focus/hover motion uses the same mask/translation/scale families. CSS owns each poster’s outer tilt; GSAP owns only inner artwork. New photos populate canonical image arrays, while reused PosterSurface provides the missing/error fallback.
 
 The native fullscreen detail preserves channel-independent event facts, both coordinator slots and registration/contact actions. Pending values stay pending. Native modal behavior plus explicit focus wrapping handles the one-control empty-contact state; Escape/Close and route changes restore source styles/focus/scroll. Reduced motion bypasses all transforms and initialization errors preserve content. No continuous decorative loops, autoplay sound, extra dependencies, WebGL or external fonts. Other routes/branding remain protected.
+
+## Technical — THE INVENTION ENGINE
+
+Warm off-white #f1f0e8, graphite #242b31, electric blue #174fd3, orange #e96e38 and structural metal tones. Strong negative space frames an original 2.5D invention: four cartridges connect to a rotor/core above a layered base and gantry. Fine drafting guides are decorative; no fake code, circuit-board glow, stock photography, real-project claims or heavy 3D engine. Arial/Helvetica preserves the festival’s bold Technical identity; Georgia carries the studio invitation.
+
+Four architectural labels directly select independent Codeathon/Ideathon/Branch-wise Hackathons/Project Expo experiences. The same SVG nodes, connection paths and display envelope evolve between complete mode configurations in modes.js; no illustration swap or completion gate. A persistent GSAP context owns only assembly attributes and kills prior motion without reverting position on each selection. Native SVG attributes settle reduced motion and initialization failures to the exact selected mode. Mobile provides a compact two-column selector, a deliberately cropped/simplified assembly without secondary drafting annotations, followed by readable event context and natural scroll.
+
+The Technical-only route clone expands from existing pavilion geometry, draws blueprint paths, fills the assembly and measures the destination SVG to align its handoff. Its timelines total roughly 1.4 seconds plus route commit. Shared router lifecycle, other category choreography, homepage source/animation, approved intro and branding remain untouched. Native details have dedicated logic-column, idea-unfold, build-module and exhibition-envelope openings (roughly 0.88–0.97 seconds), an always-available Close button, finite watchdog and inert recovery. Images, rules/eligibility, optional branch tracks and all contacts come from canonical event records. Unknown information stays pending.

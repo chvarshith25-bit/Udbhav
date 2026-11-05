@@ -42,7 +42,7 @@
   },
   "constraints": {
     "must": [
-      "Preserve intro, shared VJIT header, homepage, Sports and Technical; Cultural redesign and its own transition are explicitly authorized",
+      "Preserve intro, shared VJIT header, homepage, Sports and Cultural Festival Street; Technical redesign and its own transition are explicitly authorized",
       "Exactly three primary entrances; sponsors are secondary",
       "Single-screen homepage with dedicated mobile entrances",
       "No invented photography, campus geography or sponsorship facts"
@@ -69,6 +69,11 @@
       "scope": "cultural",
       "decision": "The Festival Street supersedes the broadcast concept: one illustrated street, district wayfinding, shared architecture, unique event-poster surfaces and fullscreen details. Cultural-only stage-origin banner transition.",
       "source": "User-supplied Cultural Festival Street brief"
+    },
+    {
+      "scope": "technical",
+      "decision": "The Invention Engine: bright architectural studio, one persistent 2.5D assembly with four configurations, architectural event labels, pavilion-origin blueprint handoff and distinct native detail openings.",
+      "source": "User-supplied Technical: The Invention Engine brief"
     }
   ],
   "evidence": [

@@ -1,5 +1,7 @@
 # Next steps
 
+Review THE INVENTION ENGINE on physical iOS/Android, Safari/Firefox and screen readers. Preserve one persistent assembly and direct access to all four independent events. Verify pavilion/blueprint alignment after layout changes, interrupted mode/detail motion, reduced-motion/static settlement, modal focus/position restoration and error recovery. Add only approved Technical images and confirmed rules/eligibility/branch tracks to canonical event records; follow src/technical/README.md. Do not fabricate branches or real-project claims.
+
 Review THE FESTIVAL STREET on physical iOS/Android, Safari/Firefox and screen readers. Preserve connected street geometry, three distinct district compositions, tilted poster hit areas, native wayfinding, visible directory and fullscreen detail focus/scroll return. Confirm schedules, venues, both coordinators and contacts in events.js; add only approved event photographs through images arrays. Poster designs remain the missing/error fallback. Keep the approved intro, homepage/VJIT, Sports, Technical, sponsors and all other transitions untouched.
 
 Verify the VJIT logo on the owner’s browser after refreshing the new deployment. The original asset/colors/placement are retained; the rendering no longer uses a nested SVG mask.

@@ -1,4 +1,16 @@
-# Current progress — November 4, 2026
+# Current progress — November 5, 2026
+
+## Technical — THE INVENTION ENGINE
+
+Replaced the shared Technical category list with a bright architectural studio: warm off-white/graphite, electric-blue precision details, selective orange and one original persistent 2.5D mechanical assembly. Four independent event labels directly select Codeathon (logic core), Ideathon (idea generator), Branch-wise Hackathons (build station) and Project Expo (innovation gallery). The same module/core/gantry/rotor/base/envelope nodes and connection paths transform between complete configurations; no illustration swap, fake terminal, random floating-cube scene, gated sequence, new dependency or WebGL. Responsive mobile uses a compact selector, simplified drafting detail and a deliberately reframed assembly, with natural scrolling.
+
+The Technical-only pavilion-origin entry draws a viewport blueprint, fills that same invention and measures the destination canvas for its alignment/handoff (1.4 seconds of timelines plus route commit). Event names reveal with the selected configuration. Four native fullscreen event openings use logic columns, idea unfolding, module assembly and exhibition masking (0.88–0.97 seconds), with an always-available Close button, recovery timer and inert-content cleanup. Details preserve canonical facts, two coordinators, WhatsApp/phone/email actions, main/additional images and missing-image fallback; optional supplied rules/eligibility/branch tracks are supported without inventing facts. See src/technical/README.md for image-ready paths and data fields.
+
+Verification: production build, 26-event integrity, eight focused Technical/Cultural/intro-session tests and targeted React/accessibility lint pass. Local 21st review has zero errors/warnings with informational palette suggestions. Chromium checks cover 1920×1080, 1440×900, 1366×768, 820×900, 390×844 and 360×844: all 24 mode/detail combinations, identical persistent SVG nodes across modes, four distinct geometries, rapid switching, touch/keyboard, interrupted opening, focus/scroll/mode return, Back/Forward, reduced motion, two-image broken-gallery fallback and supplied optional rules/eligibility pass with no runtime/GSAP errors or horizontal overflow. Final mobile regression rechecks the cleanup/typography refinement. Fresh approved intro → homepage → all three routes → Back passes. Physical devices, Safari/Firefox and screen-reader review remain outstanding.
+
+Failure testing targets the actual loaded GSAP module. It exposed a stale route-overlay interception after a thrown context callback; callbacks now catch initialization errors internally before reverting outside the context, preventing leaked animation ownership. Injected entry/mode/detail failures preserve exact selected geometry, accessible details and Close; restoring animation allows normal mode motion and Back navigation. Reduced motion settles native SVG attributes immediately. Partial route timelines are killed and callbacks have fail-open recovery.
+
+Protected hashes and normalized integration comparisons confirm homepage/VJIT, approved intro, Sports, Cultural Street, sponsors, event/assets data, registration, shared styles/dependencies, provider lifecycle and non-Technical choreography unchanged. Shared changes are limited to the Technical overlay import/node and two early dispatches. Installed Frontend Design, UI UX Pro Max, Motion best practices, 21st local context/review and current Web Interface Guidelines informed the bespoke implementation; hosted 21st search requires sign-in and Motion MCP remains unavailable.
 
 ## Cultural — THE FESTIVAL STREET
 
@@ -57,7 +69,7 @@ Retired the old montage scene, its controls and the isolated playback harness. T
 
 ## Preserved website
 
-Interactive single-screen festival-arena homepage; Sports nine-arena journey and four supplied Cricket photos; Cultural illustrated festival street and Technical editorial page/details; existing route transitions and supporting routes. Restored concert concept art and colored logo reference retain their provenance/disclosure. Event facts and media remain centralized, with unknown details null.
+Interactive single-screen festival-arena homepage; Sports nine-arena journey and four supplied Cricket photos; Cultural illustrated festival street and Technical Invention Engine; existing route transitions and supporting routes. Restored concert concept art and colored logo reference retain their provenance/disclosure. Event facts and media remain centralized, with unknown details null.
 
 ## Agent tooling
 
