@@ -1,40 +1,43 @@
 import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
-import InventionArt from './InventionArt';
+import WorkObject from './WorkObject';
+import { technicalModes } from './modes';
 
-export default function TechnicalOpening({modeIndex,content}){
+export default function TechnicalOpening({modeIndex,content,origin,kind}){
  const root=useRef(null);
  useLayoutEffect(()=>{
   if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   const el=root.current,context=gsap.context(()=>{},el);
-  let timer;
-  const finish=()=>{clearTimeout(timer);el.style.display='none';if(content.current)content.current.inert=false};
-  let failed=false;
-  try{context.add(()=>{try{
-   el.style.display='block';if(content.current)content.current.inert=true;
-   const q=gsap.utils.selector(el),timeline=gsap.timeline({onComplete:finish});
-   if(modeIndex===0){
-    timeline.fromTo(q('.technical-opening-panel'),{scaleY:0},{scaleY:1,transformOrigin:'top',duration:.3,stagger:.04,ease:'power3.out'},0)
-     .fromTo(q('.technical-opening-art'),{opacity:0,y:15},{opacity:1,y:0,duration:.25},.2)
-     .to(el,{clipPath:'inset(0 0 100% 0)',duration:.45,ease:'power3.inOut'},.43);
-   }else if(modeIndex===1){
-    timeline.fromTo(q('.technical-opening-panel'),{scaleX:0,rotation:-5},{scaleX:1,rotation:0,transformOrigin:'left',duration:.4,stagger:.04,ease:'power3.out'},0)
-     .fromTo(q('.technical-opening-art'),{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:.35},.2)
-     .to(el,{clipPath:'inset(0 0 0 100%)',duration:.45,ease:'power3.inOut'},.48);
-   }else if(modeIndex===2){
-    timeline.fromTo(q('.technical-opening-panel'),{xPercent:index=>index%2?-105:105},{xPercent:0,duration:.4,stagger:.035,ease:'power3.out'},0)
-     .fromTo(q('.technical-opening-art'),{scale:.9,opacity:0},{scale:1,opacity:1,duration:.3},.2)
-     .to(q('.technical-opening-panel'),{yPercent:-105,duration:.45,stagger:.03,ease:'power3.inOut'},.43)
-     .to(q('.technical-opening-art'),{opacity:0,duration:.3},.52);
-   }else{
-    timeline.fromTo(q('.technical-opening-art'),{scale:.8,opacity:0},{scale:1,opacity:1,duration:.45,ease:'power3.out'},0)
-     .fromTo(q('.technical-opening-halo'),{scale:.5,opacity:0},{scale:1,opacity:1,duration:.45},0)
-     .to(el,{clipPath:'circle(0% at 50% 50%)',duration:.5,ease:'power3.inOut'},.4);
-   }
-   timer=setTimeout(()=>{context.revert();finish()},1500);
-  }catch{failed=true}})}catch{failed=true}
-  if(failed){context.revert();finish()}
-  return()=>{clearTimeout(timer);context.revert();if(content.current)content.current.inert=false};
- },[modeIndex,content]);
- return <div ref={root} className={`technical-opening technical-opening-${modeIndex}`} aria-hidden="true"><div className="technical-opening-panels">{[0,1,2,3].map(i=><div key={i} className="technical-opening-panel"/>)}</div><div className="technical-opening-halo"/><div className="technical-opening-art"><InventionArt modeIndex={modeIndex}/></div></div>;
+  let frame,timer,finished=false;
+  const finish=()=>{if(finished)return;finished=true;clearTimeout(timer);cancelAnimationFrame(frame);el.style.display='none';if(content.current)content.current.inert=false};
+  el.style.display='block';if(content.current)content.current.inert=true;
+  timer=setTimeout(()=>{context.revert();finish()},1500);
+  frame=requestAnimationFrame(()=>{
+   if(finished||!el.isConnected)return;
+   let failed=false;
+   try{context.add(()=>{try{
+    const q=gsap.utils.selector(el),bounds=el.getBoundingClientRect();
+    const target=content.current.querySelector('.technical-photo-study>.work-object-illustration')??content.current.querySelector('.tech-detail-media');
+    const to=target.getBoundingClientRect(),from=origin??to;
+    const clone=q('.technical-opening-clone');
+    gsap.set(clone,{x:from.left+from.width/2-bounds.left-220,y:from.top+from.height/2-bounds.top-175,scale:Math.min((from.viewWidth??from.width)/440,(from.viewHeight??from.height)/350),rotation:from.rotation??0,opacity:1});
+    const timeline=gsap.timeline({onComplete:finish});
+    timeline.to(clone,{x:to.left+to.width/2-bounds.left-220,y:to.top+to.height/2-bounds.top-175,scale:Math.min(to.width/440,to.height/350),rotation:0,duration:.65,ease:'power3.inOut'},0);
+    if(modeIndex===0)timeline.fromTo(q('.object-code-content'),{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:.48},.12);
+    else if(modeIndex===1)timeline.fromTo(q('.object-note-accent'),{attr:{transform:'translate(-10 8) rotate(12 331 126)'}},{attr:{transform:'translate(0 0) rotate(8 331 126)'},duration:.6,ease:'power3.out'},.05);
+    else if(modeIndex===2)timeline.fromTo(q('.object-drawing-lines'),{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:.6},.05);
+    else {
+     timeline.fromTo(q('.object-board-left'),{attr:{transform:'translate(143 0) scale(.7 1) translate(-143 0)'},opacity:.6},{attr:{transform:'translate(143 0) scale(1 1) translate(-143 0)'},opacity:1,duration:.6,ease:'power3.out'},.05);
+     timeline.fromTo(q('.object-board-right'),{attr:{transform:'translate(304 0) scale(.7 1) translate(-304 0)'},opacity:.6},{attr:{transform:'translate(304 0) scale(1 1) translate(-304 0)'},opacity:1,duration:.6,ease:'power3.out'},.05);
+    }
+    const mask=modeIndex===0?'inset(0 0 100% 0)':modeIndex===1?'inset(0 0 0 100%)':modeIndex===2?'inset(100% 0 0 0)':'circle(0% at 50% 50%)';
+    timeline.to(q('.technical-opening-paper'),{clipPath:mask,duration:.43,ease:'power3.inOut'},.4)
+     .to(q('.technical-opening-label'),{opacity:0,duration:.2},.4)
+     .to(clone,{opacity:0,duration:.12},.76);
+   }catch{failed=true}})}catch{failed=true}
+   if(failed){context.revert();finish()}
+  });
+  return()=>{clearTimeout(timer);cancelAnimationFrame(frame);context.revert();finish()};
+ },[modeIndex,content,origin]);
+ return <div ref={root} className={`technical-opening technical-opening-${modeIndex}`} aria-hidden="true"><div className="technical-opening-paper"/><div className="technical-opening-clone"><WorkObject kind={kind}/></div><span className="technical-opening-label">{technicalModes[modeIndex].event.title} / THE BUILD ROOM</span></div>;
 }

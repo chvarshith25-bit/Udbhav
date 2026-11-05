@@ -1,10 +1,10 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { X, ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import InventionArt from './InventionArt';
+import WorkObject from './WorkObject';
 import TechnicalOpening from './TechnicalOpening';
 
 const pending = 'To be announced';
-export default function TechnicalDetail({ mode, onDismiss, opener }) {
+export default function TechnicalDetail({ mode, origin, onDismiss, opener }) {
   const event=mode.event;
   const modeIndex=Number(mode.number)-1;
   const dialog=useRef(null);
@@ -26,7 +26,9 @@ export default function TechnicalDetail({ mode, onDismiss, opener }) {
       if(el.open)el.close();
       document.body.style.overflow=previousOverflow;document.body.style.paddingRight=previousPadding;
       requestAnimationFrame(()=>{
-        if(!el.open && opener?.isConnected){window.scrollTo({top:savedY,left:0,behavior:'instant'});opener.focus({preventScroll:true});}
+        const current=document.activeElement;
+        const canReturn=!current||current===document.body||current===opener||!current.isConnected||el.contains(current);
+        if(!el.open && opener?.isConnected && canReturn){window.scrollTo({top:savedY,left:0,behavior:'instant'});opener.focus({preventScroll:true});}
       });
     };
   },[opener]);
@@ -44,7 +46,7 @@ export default function TechnicalDetail({ mode, onDismiss, opener }) {
     <header className="tech-detail-header"><span>UDHBHAV 2K27 / EXPERIENCE {mode.number}</span><span>{mode.name}</span><button type="button" onClick={close} aria-label="Close Technical event details"><X size={23} aria-hidden="true"/></button></header>
     <div className="tech-detail-stage"><div ref={content} className="tech-detail-scroll"><div className="tech-detail-body">
       <div className="tech-detail-media">
-        {image && failedSrc!==image.src ? <img src={image.src} alt={image.alt||event.title} onError={()=>setFailedSrc(image.src)} width="720" height="960"/> : <div className="technical-photo-study"><span>UD / INVENTION STUDY {mode.number}</span><InventionArt modeIndex={modeIndex}/><strong>{event.title}</strong><p>Original assembly study. Event photographs coming soon.</p></div>}
+        {image && failedSrc!==image.src ? <img src={image.src} alt={image.alt||event.title} onError={()=>setFailedSrc(image.src)} width="720" height="960"/> : <div className="technical-photo-study"><span>UD / THE BUILD ROOM / {mode.number}</span><WorkObject kind={mode.kind}/><strong>{event.title}</strong><p>Original workspace illustration. Event photographs coming soon.</p></div>}
         {images.length>1 && <div className="tech-gallery-controls"><button type="button" aria-label="Previous event image" onClick={()=>setImageIndex((imageIndex+images.length-1)%images.length)}><ChevronLeft aria-hidden="true"/></button><span>{imageIndex+1} / {images.length}</span><button type="button" aria-label="Next event image" onClick={()=>setImageIndex((imageIndex+1)%images.length)}><ChevronRight aria-hidden="true"/></button></div>}
 
       </div>
@@ -55,6 +57,6 @@ export default function TechnicalDetail({ mode, onDismiss, opener }) {
         <section className="tech-registration" aria-label="Registration information"><h3>Registration</h3>{event.registrationWhatsapp?<a className="tech-registration-link" href={event.registrationWhatsapp} target="_blank" rel="noreferrer">Register / enquire on WhatsApp <ArrowUpRight size={18} aria-hidden="true"/></a>:<p>Registration information is coming soon.</p>}</section>
         <dl className="tech-contact-facts"><div><dt>Contact number</dt><dd>{event.contactPhone?<a href={`tel:${event.contactPhone}`}>{event.contactPhone}</a>:pending}</dd></div><div><dt>WhatsApp</dt><dd>{event.registrationWhatsapp?<a href={event.registrationWhatsapp} target="_blank" rel="noreferrer">Open WhatsApp <ArrowUpRight size={13} aria-hidden="true"/></a>:pending}</dd></div><div><dt>Email</dt><dd>{event.contactEmail?<a href={`mailto:${event.contactEmail}`}>{event.contactEmail}</a>:pending}</dd></div></dl>
       </div>
-    </div></div><TechnicalOpening modeIndex={modeIndex} content={content}/></div>
+    </div></div><TechnicalOpening modeIndex={modeIndex} content={content} origin={origin} kind={mode.kind}/></div>
   </dialog>;
 }

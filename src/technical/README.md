@@ -1,8 +1,8 @@
-# The Invention Engine
+# The Build Room
 
-The Technical page uses four independent event modes from the canonical `src/data/events.js` records. `modes.js` stores only the concept labels and assembly configurations. `InventionArt` is one persistent SVG: module, core, gantry, rotor, base and display-envelope nodes move together. A scoped GSAP owner interrupts the old timeline and starts from current attributes; it never replaces the object when selecting a mode. Reduced motion and initialization failure apply the selected configuration directly. Catch animation errors inside GSAP context callbacks before reverting outside them, so a failed callback cannot retain a global context or capture the route controller’s later cleanup.
+Four independent canonical Technical events map to a laptop, notebook/sticky notes, engineering drawings/materials and an exhibition board/concept model. `modes.js` stores only object art direction and canonical event references. `WorkObject` supplies reusable original SVG illustrations; `Worktable` shares the page and route-entry geometry without generic cards. CSS owns resting tilt and GSAP owns separate inner lift/art nodes. Mobile is a deliberately vertical workbench.
 
-`TechnicalTransition` reads the existing homepage pavilion bounds, draws a blueprint and aligns the same assembly with the destination canvas. `TechnicalOpening` owns only its cover and content inert state, leaving the modal Close button available. The native detail owns scrolling, focus containment and source-position restoration.
+Pointer previews respond to actual movement; scroll under a stationary pointer cannot override keyboard focus. Preview captions reserve their full height. `TechnicalOpening` measures actual clicked viewport bounds, untransformed SVG size and tilt, then aligns that illustration with the native detail’s photo study. It cancels RAF/timers/animations and restores inert state on early Close. Catch GSAP errors inside context callbacks before reverting outside them, preventing leaked global animation context. Native details preserve event fields, focus containment and source position; delayed focus return must not steal a later user choice.
 
 ## Real photographs and confirmed information
 
@@ -13,7 +13,7 @@ No event photographs are installed. Add approved files under:
 - `public/images/events/branch-wise-hackathons/`
 - `public/images/events/project-expo/`
 
-Reference them through the corresponding canonical event's `images` array in `src/data/events.js`, using `{ src, alt }` objects. The first image is the main photograph; later entries form the gallery. Use accurate alt text and optimized WebP/AVIF/JPEG assets. Do not alter the Sports image mappings. Missing/failed images retain the original assembly study. No component changes are required when the event arrays are populated.
+Reference them through the corresponding canonical event's `images` array in `src/data/events.js`, using `{ src, alt }` objects. The first image is the main photograph; later entries form the gallery. Use accurate alt text and optimized WebP/AVIF/JPEG assets. Do not alter the Sports image mappings. Missing/failed images retain the original workspace illustration. No component changes are required when the event arrays are populated.
 
 The detail also accepts organizer-supplied optional `rules` (string or string array), `eligibility` (string), and `branchTracks` (string array for Branch-wise Hackathons) on that same canonical event record. Keep unconfirmed fields absent/null. Existing date/time/venue, both coordinator slots and WhatsApp/phone/email fields feed the native actions directly. Never invent branch names, rules or contact destinations.
 

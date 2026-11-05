@@ -26,7 +26,7 @@ Stack: React 19, Vite 7, Tailwind 4, React Router 7, GSAP/ScrollTrigger, Motion 
 | `/` | THE FESTIVAL IS YOURS: interactive SVG festival ground, three spatial entrances, original VJIT branding and secondary Sponsors overlay |
 | `/sports` | THE ROAD TO GLORY: nine connected arena chapters, progressive SVG path and sport-specific fullscreen details |
 | `/cultural` | Thirteen cultural/activity events, including gaming/strategy |
-| `/technical` | THE INVENTION ENGINE: four independent events, one evolving mechanical study and unique fullscreen details |
+| `/technical` | THE BUILD ROOM: four tactile workspace objects opening independent competition details |
 | `/about` | Festival introduction |
 | `/schedule` | Confirmed festival dates, calendar export and Annual Day highlight |
 | `/gallery` | Procedural placeholder awaiting real photography |
@@ -38,7 +38,7 @@ There are no playback controls or replay options. On the first home entry in a t
 
 Run session regression tests with `node src/intro/introSession.test.mjs`. Browser verification covers playback, controls absence, session refresh/history/navigation, mobile rotation, reduced motion and initialization failure.
 
-Category navigation uses real React Router URLs and distinct GSAP transitions: diagonal Sports wipe, Cultural stage-origin festival-banner reveal and Technical pavilion-to-blueprint assembly. Use TransitionLink for internal links. The old route stays mounted until covered; the new route commits before uncovering. Modified clicks, Back/Forward, heading focus and error recovery are preserved.
+Category navigation uses real React Router URLs and distinct GSAP transitions: diagonal Sports wipe, Cultural stage-origin festival-banner reveal and Technical pavilion-to-overhead-workspace reveal. Use TransitionLink for internal links. The old route stays mounted until covered; the new route commits before uncovering. Modified clicks, Back/Forward, heading focus and error recovery are preserved.
 
 ## Interactive homepage
 
@@ -93,6 +93,6 @@ Cricket uses four user-supplied photographs from the uploaded ZIP. The first app
 
 The /cultural route is one original illustrated festival street: Performance Boulevard (4 events), Creator’s Alley (3), Challenge District (6). Angled wayfinding signs move between districts, transforming architecture accents, signage, lighting and poster arrangements in roughly 0.85 seconds. Every event has an original interactive poster and a visible directory entry. Selecting either opens its fullscreen native detail; close restores the same district, position and focus. The Cultural-only entry transition expands festival banners from the existing homepage stage (roughly 1.49 seconds of timeline animation). Event facts, photos and contact/registration references remain centralized in events.js; no missing values are invented. Run `node src/cultural/districts.test.mjs` to verify every record belongs to exactly one district. No new dependencies, external media or real-campus geography claims.
 
-### Technical: The Invention Engine
+### Technical: The Build Room
 
-A bright architectural studio centers on one persistent SVG invention. Codeathon, Ideathon, Branch-wise Hackathons and Project Expo move and reconnect the same components into four distinct configurations. All four selectors are immediately accessible; they are independent competitions. Each event opens through its own 0.88–0.97-second precision reveal into a native fullscreen detail. Closing preserves selected mode and source position. The pavilion-origin entry expands into a blueprint, assembles the same object and aligns it with the page. Unknown facts remain pending, and no projects, branch tracks or photographs are fabricated. See src/technical/README.md for centralized photo, rule and eligibility fields. Run `node src/technical/modes.test.mjs` for mapping/configuration integrity.
+The Technical page is an original overhead student-maker worktable. A laptop opens Codeathon, notes/sketches open Ideathon, drawings/model materials open Branch-wise Hackathons, and an exhibition board/concept model opens Project Expo. Native object buttons lift/react on hover or focus, reveal descriptions in reserved captions and open details from the clicked object’s actual position/scale. Mobile becomes a vertical workbench with full-size objects. The Technical-only entry expands from the existing pavilion into a lamp-lit overhead table (roughly 1.41 seconds plus route commit). Details preserve selected workspace state, photo galleries, optional confirmed rules/eligibility/tracks and existing contacts/registration. No missing facts, real facilities, student prototypes or photographs are invented. See src/technical/README.md.
