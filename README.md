@@ -32,11 +32,9 @@ Stack: React 19, Vite 7, Tailwind 4, React Router 7, GSAP/ScrollTrigger, Motion 
 | `/gallery` | Procedural placeholder awaiting real photography |
 | `/contact` | Registration/contact and partner announcement states |
 
-THE CAMPUS TAKEOVER is the approved nine-second opening: one night-time festival ground, synchronized court/stage/pavilion floodlights, a giant 03/02/01 countdown, full-ground illumination and the UDHBHAV identity moving seamlessly into the homepage. The approved SVG scenery, keyframes, easing and timing are preserved. It is original illustration, not VJIT's real campus layout.
+THE GRAND UNVEILING is the eight-second opening. Two bronze gates open onto one night arena shared by a sprint and a live performance. The camera gives each its moment before the festival identity appears and the scene lifts onto the live homepage. The intro shows only UDBHAV 2K27 and Sports & Cultural Fest. The rest of the site still shows its previous festival information.
 
-There are no playback controls or replay options. On the first home entry in a tab session, the intro starts automatically and marks `udbhav:intro:v1` complete **before** animation initialization. Refreshing during or after playback cannot restart it. Category navigation, home return and Back/Forward do not replay it. Direct non-home entries and reduced motion bypass and consume the opening. Normal playback runs uninterrupted; resize preserves the playhead. Initialization failure restores the homepage immediately; stalled playback has recovery. GSAP cleanup restores styles and unlocks homepage access/focus on completion. The review entry under prototypes/campus-takeover uses this same implementation.
-
-Run session regression tests with `node src/intro/introSession.test.mjs`. Browser verification covers playback, controls absence, session refresh/history/navigation, mobile rotation, reduced motion and initialization failure.
+The opening plays once per tab. Skip Intro returns focus to the homepage heading. Reduced motion and direct inner routes bypass playback. Reload, navigation and history do not replay it. A watchdog and GSAP cleanup restore access if animation fails. The review entry under `prototypes/campus-takeover` runs the same production code. Run session checks with `node src/intro/introSession.test.mjs`.
 
 Category navigation uses real React Router URLs and distinct GSAP transitions: Sports-zone floodlight/directional arena reveal, Cultural stage-origin festival-banner reveal and Technical pavilion-to-overhead-workspace reveal. Use TransitionLink for internal links. The old route stays mounted until covered; the new route commits before uncovering. Modified clicks, Back/Forward, heading focus and error recovery are preserved.
 

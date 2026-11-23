@@ -2,7 +2,7 @@
 
 ## Approved opening direction
 
-THE CAMPUS TAKEOVER is a nine-second continuous illustrated festival ground. Preserve the approved SVG composition, ink/paper/lime palette, night #080f12, warm floodlight #efce8d and desaturated pavilion blue. Court, stage, technology pavilion, countdown display, crowd/festoon/perimeter illumination and camera/title handoff share one environment. No real-campus layout claim. All playback/testing controls are removed; the scene design and animation remain unchanged.
+THE GRAND UNVEILING uses blackened bronze gates, midnight teal shadows, a vermilion track and amber stage lighting. The gates use perspective transforms over a separate camera layer. A separate portrait composition stacks the track and stage and reserves dark sky for the cream-and-bronze identity.
 
 ## Tokens and composition
 
@@ -20,16 +20,14 @@ Sponsors & partners is a secondary venue-style entrance. Use the native dialog a
 
 ## Motion ownership
 
-- IntroSequence: nine-second Campus Takeover film and initial homepage handoff only. GSAP context reverts every affected inline style.
+- IntroSequence: eight-second THE GRAND UNVEILING film and initial homepage handoff. GSAP context reverts every affected inline style.
 - useArenaMotion: homepage SVG nodes only; finite input-driven lighting/detail effects, disabled while the intro/modal/route owns access.
 - SponsorsOverlay: its dialog content entrance only, with a scoped GSAP lifecycle.
 - useFestivalMotion: normal homepage entrance on mounts not owned by the intro; scoped GSAP lifecycle and reduced-motion handling.
 - PageTransitionProvider/choreography: route-shell fading, cover/reveal panels and transition labels. GSAP only.
 - Technical owns object lift/art micro-motion, its worktable route clone and selected-object detail covers on separate nodes. Cultural owns its native dialog reveal with GSAP. Sports details disable that entrance and use their own GSAP cover. Do not assign a second animation system to the same node.
 
-Opening timing remains identical to the approved prototype: quiet ground 0–1.1s; floodlights 1.1–3s; 03/02/01 display 3–6s; whole-ground/identity illumination 6–7.25s; camera and measured homepage handoff 7.25–9s. FestivalGround is the unchanged original SVG scenery. Intro styles live in src/intro/intro.css. No media, sound or WebGL dependency.
-
-Session key `udbhav:intro:v1` is claimed before initialization. No playback controls, Escape skip or replay handler. Reduced motion/direct category visits bypass the film. Resize preserves the current playhead; hidden-tab events do not deliberately pause or skip. Initialization failure and stalled-animation recovery restore access. Suppress normal hero entrance for the intro-owned mount; no second animation system owns the film nodes.
+Opening timing: gates through 1.9s, equal 1.45-second track and stage camera moves from 1.48–4.38s, pullback and identity through 7.25s, then lettering exit and a bottom-up handoff at 8s. The Skip Intro button has a 44px minimum touch target and a visible keyboard focus ring. The session key is claimed before initialization. Reduced motion and direct inner routes bypass the film. CSS adapts the composition on rotation while GSAP keeps its playhead. Failures release the page and return focus.
 
 Route choreography: Sports-zone floodlight/directional arena reveal, Cultural stage-origin lighting and expressive festival-banner reveal, Technical pavilion-to-overhead-worktable handoff; paper panels for other destinations. Cultural targets 1.2–1.8 seconds (1.49 seconds of timeline animation plus the route commit); Sports targets approximately 1.4 seconds; other routes retain their existing timing. Keep the old route mounted until fully covered and the destination ready before revealing. Three-second recovery timer prevents stale overlays/locks. Reduced motion skips choreography immediately.
 

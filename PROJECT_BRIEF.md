@@ -12,9 +12,9 @@ Routes: `/`, `/sports`, `/cultural`, `/technical`, `/about`, `/schedule`, `/gall
 
 ## Opening and navigation
 
-THE CAMPUS TAKEOVER is approved and integrated: a nine-second continuous illustrated festival ground with court, stage and technology pavilion. Floodlights activate, the giant display counts 03/02/01, the whole ground illuminates and the camera moves through the UDHBHAV identity into the current homepage. Preserve the approved scenery, animation keyframes, easing, transitions and timing exactly; it is not a depiction of VJIT's real campus.
+THE GRAND UNVEILING takes place in a single imagined night arena. Bronze starting gates open, the camera follows the running track and then the performance stage, and the identity appears over a wide view of both before the scene lifts onto the homepage. The intro shows Sports & Cultural Fest and omits dates, Technical and Annual Day. The existing routes and data still reflect the previous site brief.
 
-No visible intro controls, replay, skip, pause, progress or debugging UI. Automatic first home-entry playback claims `udbhav:intro:v1` at start, before initialization. Refresh, navigation, return home and Back/Forward cannot replay it. Reduced motion and direct category entries bypass/consume the opening. Fail open on initialization errors; restore all homepage styles and access. The separate review entry reuses production code.
+Automatic playback is limited to the first home entry in a tab and claims `udbhav:intro:v1` before animation initialization. Skip Intro, reduced motion and failure recovery restore access and focus. Direct inner routes bypass playback. The review entry reuses production code.
 
 GSAP route transitions remain separate: Sports-zone floodlight sweep and directional arena-floor reveal, stage-origin lighting and choreographed festival banners opening into the street and a Technical pavilion entrance expanding into a lamp-lit overhead worktable. The previous page remains until covered; the destination commits before reveal. Preserve Back/Forward, duplicate-click protection, native link modifiers, focus and recovery timers.
 

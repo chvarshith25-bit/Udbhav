@@ -1,27 +1,199 @@
-.campus-opening{--ct-night:#080f12;--ct-warm:#efce8d;--ct-muted:#9eada3;--ct-line:#ffffff26;min-height:100svh;background:var(--ct-night);font-family:Arial,Helvetica,sans-serif;color:var(--paper);isolation:isolate}
-.ct-homepage{position:relative;z-index:0;min-height:100svh}
-.ct-film{position:fixed;inset:0;z-index:1100;overflow:hidden;background:var(--ct-night);color:var(--paper)}
-.ct-film:focus{outline:none}
-.ct-world{position:absolute;width:100%;aspect-ratio:1.6;left:0;top:50%;margin-top:-31.25%;container-type:inline-size;will-change:transform,opacity}
-.ct-ground{display:block;width:100%;height:auto;overflow:visible}
-.ct-night,.ct-vignette{position:absolute;inset:0;pointer-events:none}
-.ct-night{background:#020608;opacity:.34}
-.ct-vignette{background:linear-gradient(180deg,#080f12 0%,transparent 22%,transparent 68%,#080f12 96%),radial-gradient(ellipse at 50% 48%,transparent 25%,#03080ba8 100%)}
-.ct-beam{mix-blend-mode:screen;pointer-events:none;filter:blur(3px)}
-.ct-screen{position:absolute;left:34.75%;top:16.9%;width:30.5%;height:19.1%;display:flex;align-items:center;justify-content:center;overflow:hidden;color:var(--paper);text-align:center}
-.ct-number{position:absolute;inset:0;display:grid;place-items:center;font-size:10cqw;line-height:1;font-weight:800;letter-spacing:-.075em;font-variant-numeric:tabular-nums;color:#e5edc8;text-shadow:0 0 28px #d7f34d24}
-.ct-screen-caption{position:absolute;bottom:9%;font-size:.7cqw;letter-spacing:.24em;color:#aebc9d}
-.ct-screen-id{width:100%;display:flex;flex-direction:column;align-items:center}
-.ct-screen-word{display:block;font-size:4.7cqw;line-height:.95;letter-spacing:-.075em;font-weight:900;white-space:nowrap}
-.ct-screen-year{display:flex;align-items:center;justify-content:center;font-size:4cqw;line-height:1;letter-spacing:-.06em;color:var(--lime);font-weight:400;margin-top:.3cqw}
-.ct-screen-star{display:block;width:1em;height:1em;font-size:.7em;line-height:1;margin-left:.35em}
-.ct-screen-date{font-size:.68cqw;letter-spacing:.14em;margin-top:1cqw;color:#b9c3ad}
-.ct-bridge{position:fixed;z-index:2;left:0;top:0;visibility:hidden;line-height:.95;font-weight:900;white-space:nowrap;color:var(--paper);pointer-events:none}
-.ct-film-meta{position:absolute;top:max(32px,env(safe-area-inset-top));left:4.5%;display:flex;align-items:center;gap:28px;font-size:10px;letter-spacing:.14em;color:#b4c0b3}
-.ct-film-meta>span:first-child{display:flex;align-items:center;gap:10px;color:var(--paper)}
-.ct-film-meta i{display:block;width:5px;height:5px;border-radius:50%;background:var(--lime)}
-@media(min-aspect-ratio:19/10){.ct-world{width:88%;left:6%;margin-top:-27.5%}}
-@media(max-width:600px){.ct-world{width:145%;left:-22.5%;top:47%;margin-top:-45.3%}.ct-film-meta{left:22px;top:26px;font-size:9px}.ct-screen-word{font-size:4.7cqw}.ct-vignette{background:linear-gradient(180deg,#080f12 0%,transparent 28%,transparent 58%,#080f12 83%),radial-gradient(ellipse at 50% 43%,transparent 36%,#03080b55 100%)}}
-@media(max-height:540px) and (min-width:601px){.ct-film-meta{top:18px}.ct-world{width:85%;left:7.5%;margin-top:-26.56%}}
-@media(prefers-reduced-motion:reduce){.ct-world{will-change:auto}}
-html.is-intro-active,html.is-intro-active body{overflow:hidden;overscroll-behavior:none}
+@font-face {
+  font-family: "Unveiling Barlow";
+  src: url('./unveiling/barlow-condensed-800-italic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+html.is-intro-active,
+html.is-intro-active body {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.play-intro {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  isolation: isolate;
+  overflow: hidden;
+  overflow: clip;
+  outline: none;
+  background: #172424;
+  color: #fbebcf;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grand-arena,
+.grand-camera,
+.grand-camera img,
+.grand-light,
+.grand-gates {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.grand-camera {
+  --grand-sport-x: 5.5;
+  --grand-sport-y: -2;
+  --grand-sport-scale: 1.15;
+  --grand-stage-x: -7.4;
+  --grand-stage-y: 2.4;
+  --grand-stage-scale: 1.22;
+  transform-origin: 50% 55%;
+}
+.grand-camera img { object-fit: cover; object-position: 50% 54%; }
+
+.grand-gates {
+  perspective: 1050px;
+  perspective-origin: 50% 52%;
+}
+
+.grand-gate {
+  position: absolute;
+  inset-block: 0;
+  width: calc(50% + 1px);
+  background-color: #192524;
+  background-image: url('./unveiling/gates.webp');
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 80px 16px #0d1616a3, 0 0 45px #10171680;
+  backface-visibility: hidden;
+}
+
+.grand-gate--left {
+  left: 0;
+  background-position: left center;
+  transform-origin: left center;
+}
+
+.grand-gate--right {
+  right: 0;
+  background-position: right center;
+  transform-origin: right center;
+}
+
+.grand-seam {
+  position: absolute;
+  inset: 0 auto 0 50%;
+  width: 2px;
+  opacity: .12;
+  background: linear-gradient(transparent, #fce0aa 40%, #f0bf71 65%, transparent);
+  box-shadow: 0 0 16px 3px #f0bf7152;
+}
+
+.grand-light--sport {
+  opacity: .88;
+  background: radial-gradient(ellipse at 25% 64%, transparent 10%, #13282347 38%, #09151de8 86%);
+}
+
+.grand-light--culture {
+  opacity: 0;
+  background: radial-gradient(ellipse at 76% 51%, transparent 15%, #17202450 38%, #091619df 87%);
+}
+
+.grand-light--identity {
+  opacity: 0;
+  background: linear-gradient(180deg, #08151af5, #0c151bcc 31%, #101c2259 53%, transparent 69%, #0816146b);
+}
+
+.grand-identity {
+  position: absolute;
+  inset-inline: max(1rem, env(safe-area-inset-left), env(safe-area-inset-right));
+  top: 24%;
+  transform: translateY(-43%);
+  pointer-events: none;
+  text-align: center;
+}
+
+.grand-identity h2 {
+  opacity: 0;
+  margin: 0;
+  color: #fff2d7;
+  font-family: "Unveiling Barlow", "Arial Narrow", Arial, sans-serif;
+  font-size: clamp(4.5rem, min(13vw, 22svh), 14rem);
+  font-style: italic;
+  font-weight: 800;
+  line-height: .83;
+  letter-spacing: -.015em;
+  text-shadow: 0 .018em #b98b64, 0 .031em #805944, 0 .07em .14em #080e13db;
+}
+
+.grand-identity h2 span { color: #edaf69; }
+
+.grand-identity p {
+  opacity: 0;
+  margin: clamp(.9rem, 2.4svh, 1.6rem) 0 0;
+  color: #fff0d8;
+  font-size: clamp(.875rem, 1.45vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 14px #101719;
+}
+
+.play-skip {
+  position: absolute;
+  z-index: 2;
+  top: max(14px, calc(env(safe-area-inset-top) + 9px));
+  right: max(14px, calc(env(safe-area-inset-right) + 9px));
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 12px;
+  border: 1px solid #f2d1a678;
+  border-radius: 3px;
+  background: #142322eb;
+  color: #fff3df;
+  font: 700 14px Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.play-skip:hover { border-color: #fad6a4; color: #fad6a4; }
+.play-skip:focus-visible { outline: 2px solid #ffce91; outline-offset: 3px; }
+.play-skip:active { transform: scale(.97); }
+
+@media (orientation: portrait) {
+  .grand-camera {
+    --grand-sport-x: 0;
+    --grand-sport-y: -6;
+    --grand-sport-scale: 1.105;
+    --grand-stage-x: 0;
+    --grand-stage-y: 4.5;
+    --grand-stage-scale: 1.15;
+  }
+  .grand-camera img { object-position: 50% 52%; }
+  .grand-gates { perspective: 850px; }
+  .grand-gate { background-size: max(470px, 200%) 100%; }
+  .grand-light--sport {
+    background: radial-gradient(ellipse at 49% 72%, transparent 12%, #17282a4d 36%, #0d1a22df 91%);
+  }
+  .grand-light--culture {
+    background: radial-gradient(ellipse at 53% 43%, transparent 15%, #1c20254a 37%, #101816db 90%);
+  }
+  .grand-light--identity {
+    background: linear-gradient(180deg, #111e22e8, #111e22bf 29%, #12212640 47%, transparent 62%, #08161440);
+  }
+  .grand-identity { top: 23%; }
+  .grand-identity h2 { font-size: min(24vw, 13svh, 9.25rem); }
+  .grand-identity h2 span { display: block; font-size: .68em; margin-top: .1em; }
+  .grand-identity p { margin-top: .85rem; letter-spacing: .14em; }
+}
+
+@media (orientation: portrait) and (min-aspect-ratio: 3/4) {
+  .grand-identity h2 { font-size: min(17vw, 15svh, 9rem); }
+  .grand-identity h2 span { display: inline; }
+}
+
+@media (max-height: 460px) and (orientation: landscape) {
+  .grand-identity { top: 25%; }
+  .grand-identity h2 { font-size: 22svh; }
+  .grand-identity p { margin-top: .6rem; letter-spacing: .12em; }
+}

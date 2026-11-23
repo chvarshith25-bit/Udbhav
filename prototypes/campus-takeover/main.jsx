@@ -1,2 +1,2 @@
-// The review URL now exercises the same approved, control-free behavior.
+// This review entry exercises the production intro and session behavior.
 import '../../src/main.jsx';

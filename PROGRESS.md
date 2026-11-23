@@ -1,4 +1,4 @@
-# Current progress — November 5, 2026
+# Current progress — November 23, 2026
 
 ## Sports — THE ARENA TAKEOVER
 
@@ -60,24 +60,15 @@ Verification: production build, existing event integrity checks, six unchanged i
 
 Protected-file hash comparison confirms intro source/behavior, shared header/logo and styles, category pages/details, data/assets, registration/navigation/route-transition code, hosting identity and package files remain byte-identical. Scoped implementation is in src/home/, sections/Hero.jsx, pages/HomePage.jsx and data/sponsors.js. Installed skills informed a bespoke design; 21st hosted search/generation is not connected, and no templates were retrieved.
 
-## Approved opening: THE CAMPUS TAKEOVER
+## Opening: THE GRAND UNVEILING
 
-Removed the visible imagined-ground/campus caption at the owner’s request. Scene illustration, timing, transitions and playback behavior are unchanged.
+Current validation: npm run check, all six intro session tests and the production build pass. A direct execution of the GSAP timeline verifies its exact eight-second duration, readable identity hold and fully cleared cover at completion. Track and stage camera movements each receive 1.45 seconds. The subtitle has a 14px minimum; the controller cancels pending focus restoration on unmount.
 
-The approved nine-second continuous festival-ground film is now the production opening. The prototype scenery is byte-identical; animation keyframes, easing, camera movement, lighting, countdown and homepage handoff timing are preserved. Court, stage and technology pavilion share one imagined environment, explicitly not VJIT's actual campus. No new media, fonts, audio, WebGL or dependencies.
+Browser verification is blocked in this session: sites-preview failed because the browser relay did not become ready. Mobile/desktop runtime appearance, frame continuity and physical-device performance remain unverified. Publishing is also blocked: Sites get_site returned project_not_found for the existing manifest identity. The identity and audience configuration are preserved; no replacement Site was registered.
 
-Playback is automatic once per browser-tab session, with no Pause, Play, Replay, Skip, progress or debug controls. `udbhav:intro:v1` is marked `complete` before animation initialization, so even a mid-animation refresh bypasses it. Route navigation, Back/Forward and returning home never replay it. Reduced motion bypasses immediately. Direct category visits retain their URLs and consume the opening rather than playing it later on return home. Blocked storage falls back to document memory.
+The eight-second opening takes place in a single illustrated night arena. The bronze gates swing apart, camera and light move from the running lanes to the performance stage, and the final identity holds over the shared ground. Landscape and portrait use their own artwork and camera positions. The film lifts away to reveal the live homepage. Skip Intro, session handling, reduced motion and recovery are preserved.
 
-The controller stays above the route provider. Homepage content is inert during playback, the normal hero entrance remains suppressed for this mount, and completion restores access and heading focus without scroll jumping. Escape, Space, resizing and hidden-tab events do not skip the film. Resize recalculates the measured handoff at the same playhead. Initialization failure restores the homepage immediately; a visible-tab progress watchdog recovers stalled playback. GSAP contexts/listeners/timers are cleaned up, including Strict Mode.
-
-Retired the old montage scene, its controls and the isolated playback harness. The review entry now runs the same control-free website code. Main website: https://udbhav-2k27-vjit.arcaneharp16.chatgpt.site/ . Review URL: https://udbhav-campus-takeover-review.arcaneharp16.chatgpt.site/ . Each keeps its own hosting identity and private audience.
-
-## Verification
-
-- Six session tests pass (`node src/intro/introSession.test.mjs`): start-time claim/early reload, fresh sessions, legacy recorded sessions, reduced motion, direct category visits and blocked-storage memory fallback.
-- Chromium: full nine-second automatic playback, exclusive 03/02/01 display, identity/handoff, no controls, Escape/Space cannot skip, early refresh, all three category links, Back/Forward, home return and same-session refresh.
-- Fresh mobile session, 390×844 and 844×390 rotation, continuous playback after resize, no horizontal overflow, reduced-motion bypass and injected initialization failure that restores homepage styles. No runtime errors or GSAP warnings.
-- Event integrity and production build pass. Homepage/category source, shared styles, navigation/transition code, assets and package files remain unchanged. Physical devices and Safari/Firefox remain unverified.
+The redesign is limited to the intro. The homepage, category routes, schedule and metadata still use the previous event information.
 
 ## Preserved website
 
